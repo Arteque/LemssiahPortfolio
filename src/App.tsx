@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMessage, faMoon } from "@fortawesome/free-solid-svg-icons"
 import Container from "./Components/Container"
 import Socials from "./Components/Socials"
+import KontaktForm from "./Components/KontaktForm"
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
       <footer>
         
       </footer>
+      <KontaktForm />
       <button className="text-prime hover:text-prime-100 hover:bg-bg duration-[.3s] fixed bottom-10 right-10 rounded-[50%] bg-bg w-[4rem] h-[4rem] flex justify-center items-center shadow-lg">
         <FontAwesomeIcon icon={faMessage} size="xl" />
       </button>
