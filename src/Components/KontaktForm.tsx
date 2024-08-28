@@ -1,8 +1,16 @@
+import { FC } from "react"
+import "./KontaktForm.css"
 
 
-const KontaktForm = () => {
+interface KontaktFormProps {
+    show: boolean
+}
+const KontaktForm:FC<KontaktFormProps> = ({show, ...props}) => {
+
+
+
     return <>
-        <form className=" bg-bg w-[450px] shadow-lg p-5 rounded-lg fixed bottom-10 right-[8rem] top-[10vh] overflow-y-auto overflow-hidden z-[9999]">
+        <form  className={`main-kontaktform bg-bg w-[450px] shadow-lg p-5 rounded-lg fixed bottom-10 right-[8rem] top-[10vh] overflow-y-auto overflow-hidden z-[9999] ${show}`} {...props}>
             
                 <h2 className="font-bold uppercase text-prime border border-bg rounded-lg p-5 text-center mb-5">Kontaktieren Sie mich</h2>
             

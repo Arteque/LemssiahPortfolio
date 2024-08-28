@@ -1,0 +1,13 @@
+form.main-kontaktform{
+    opacity: 0;
+    transform:translateY(50px);
+    pointer-events: none;
+    filter:blur(10px);
+    transition: all 2s cubic-bezier(0.25, 1.46, 0.45, 1);
+}
+form.main-kontaktform.show{
+    opacity:1;
+    transform:translateY(0);
+    filter:blur(0);
+    pointer-events: auto;
+}

@@ -4,8 +4,16 @@ import { faMessage, faMoon } from "@fortawesome/free-solid-svg-icons"
 import Container from "./Components/Container"
 import Socials from "./Components/Socials"
 import KontaktForm from "./Components/KontaktForm"
+import { useState } from "react"
 
 function App() {
+
+const [showkontakt, setShowkontakt] = useState(false)
+
+
+
+
+
   return (
     <>
       <Header>
@@ -38,15 +46,22 @@ function App() {
       <main>
         <section id="hero-section">
           <Container>
-            
+             <div className="slider">
+                <div className="slider__media"></div>
+                <div className="slider__content">
+                  <h2>Ahmed Lemssiah <br />
+                    <span>Mediengestalter</span>
+                  </h2>
+                </div>
+             </div>
           </Container>
         </section>
       </main>
       <footer>
         
       </footer>
-      <KontaktForm />
-      <button className="text-prime hover:text-prime-100 hover:bg-bg duration-[.3s] fixed bottom-10 right-10 rounded-[50%] bg-bg w-[4rem] h-[4rem] flex justify-center items-center shadow-lg">
+      <KontaktForm show={showkontakt ? 'show' : ''}/>
+      <button className="text-prime hover:text-prime-100 hover:bg-bg duration-[.3s] fixed bottom-10 right-10 rounded-[50%] bg-bg w-[4rem] h-[4rem] flex justify-center items-center shadow-lg" onClick={() => {setShowkontakt(prev => !prev)}}>
         <FontAwesomeIcon icon={faMessage} size="xl" />
       </button>
     </>
