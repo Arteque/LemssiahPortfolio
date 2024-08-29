@@ -33,24 +33,31 @@ const [showkontakt, setShowkontakt] = useState(false)
                   <span className="text-second font-text whitespace-nowrap">Web Designer</span>
                 </h1>
               </div>
-              <ul className="flex items-center justify-center gap-2">
-                <li><a href="" className=" inline-block text-prime hover:text-second font-medium p-2 px-4 m-1 transition-all duration-[.3] ease-in-out"> Start</a></li>
-                <li><a href="" className=" inline-block text-prime hover:text-second font-medium p-2 px-4 m-1 transition-all duration-[.3] ease-in-out"> About</a></li>
-                <li><a href="" className=" inline-block text-prime hover:text-second font-medium p-2 px-4 m-1 transition-all duration-[.3] ease-in-out"> Services</a></li>
-                <li><a href="" className=" inline-block text-prime hover:text-second font-medium p-2 px-4 m-1 transition-all duration-[.3] ease-in-out"> Portfolio</a></li>
-              </ul>
+              <nav className="">
+                <ul className="absolute top-10 right-1 left-1 bg-bg py-5 z-[999]  md:flex md:items-center md:justify-center md:gap-2 md:bg-opacity-0">
+                  <li><a href="" className=" inline-block text-prime hover:text-second font-medium p-2 px-4 m-1 transition-all duration-[.3] ease-in-out"> Start</a></li>
+                  <li><a href="" className=" inline-block text-prime hover:text-second font-medium p-2 px-4 m-1 transition-all duration-[.3] ease-in-out"> About</a></li>
+                  <li><a href="" className=" inline-block text-prime hover:text-second font-medium p-2 px-4 m-1 transition-all duration-[.3] ease-in-out"> Services</a></li>
+                  <li><a href="" className=" inline-block text-prime hover:text-second font-medium p-2 px-4 m-1 transition-all duration-[.3] ease-in-out"> Portfolio</a></li>
+                </ul>
+              </nav>
               <button className="w-fit p-2 px-4 bg-second text-bg rounded-sm font-bold uppercase hover:bg-second-100 hover:text-prime transition-all duration-[.3] ease-in-out">Kontakt</button>
           </div>
         </Container>
       </Header>
       <main>
-        <section id="hero-section">
+        <section id="hero-section" className="min-h-[50svh]">
           <Container>
              <div className="slider">
-                <div className="slider__media"></div>
+                <div className="slider__media">
+                  <div className="slider__main-image">
+                    <img className="max-w-[70vw] mx-auto" src="./AvatarMain.svg" alt="Ahmed Lemssiah Avatar" />
+                  </div>
+                </div>
                 <div className="slider__content">
-                  <h2>Ahmed Lemssiah <br />
-                    <span>Mediengestalter</span>
+                  <h2 className="text-center">
+                    <strong className="block text-[2rem] w-full font-black text-prime">Ahmed Lemssiah </strong>
+                    <span>Mediengestalter & Frontend Webentwickler</span>
                   </h2>
                 </div>
              </div>
