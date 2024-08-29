@@ -3,7 +3,7 @@ import "./KontaktForm.css"
 
 
 interface KontaktFormProps {
-    show: boolean
+  show: string
 }
 const KontaktForm:FC<KontaktFormProps> = ({show, ...props}) => {
 

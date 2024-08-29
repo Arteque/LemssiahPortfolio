@@ -1,24 +1,30 @@
-import { FC } from "react";
+import { ButtonHTMLAttributes, FC } from "react";
 import { cva, VariantProps } from "class-variance-authority";
+import { cn } from "../../libs/utils";
 
-interface ButtonProps {
-    buttonArt:string;
-}
-
-const ButtonVariants = cva(
+const buttonVariants = cva(
     "text-prime py-2 px-5 text-bold",
     {
         variants:{
             variant:{
-                default:"bg-second text-bg hover:bg-second-100 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800",
-                outline:""
-            }
+                default:"inline-block text-prime hover:text-second font-medium p-2 px-4 m-1 transition-all duration-[.3] ease-in-out",
+                outline:"block w-fit p-2 px-4 bg-none text-second border border-2 border-second rounded-sm font-bold uppercase hover:bg-second-100 hover:text-prime transition-all duration-[.3] ease-in-out",
+                full:"block w-fit p-2 px-4 bg-second text-bg rounded-sm font-bold uppercase hover:bg-second-100 hover:text-prime transition-all duration-[.3] ease-in-out"
+            },
+        },
+        defaultVariants: {
+            variant:"default"
         }
     }
 )
-
-const Button:FC<ButtonProps> = ({...props}) => {
-    <button type="submit" className="" {...props}>Submit</button>
+interface  ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
+        className:string,
+    }
+const Button : FC<ButtonProps> = ({className, variant, ...props}) => {
+    <button className={cn(buttonVariants(variant, className))} {...props} />
 }
 
-export default Button
+export {Button, buttonVariants}
+
+

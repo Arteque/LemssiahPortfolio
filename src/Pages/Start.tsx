@@ -1,8 +1,7 @@
+import Container from '../Components/Container'
+import { Link } from 'react-router-dom'
 
-import {Link} from "react-router-dom"
-import Container from "./Components/Container"
-function App() {
-
+function Start() {
   return (
     <>
       <main>
@@ -33,4 +32,4 @@ function App() {
   )
 }
 
-export default App
+export default Start

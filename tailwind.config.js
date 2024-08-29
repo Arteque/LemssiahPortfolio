@@ -11,7 +11,8 @@ export default {
       'second':"#45CB53",
       'second-100':"#21bd31",
       'text':"#888",
-      'bg':'whitesmoke'
+      'bg':'whitesmoke',
+      'bg-100':'white'
     },
     fontFamily:{
       title : ["Poppins", "ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
