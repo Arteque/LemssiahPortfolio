@@ -1,6 +1,9 @@
+import PageHero from "../Components/Assets/PageHero"
+
+
 function Leistungen() {
   return (
-    <div>Leistungen</div>
+    <><PageHero pageTitle="Leistungen" /></>
   )
 }
 

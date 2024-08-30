@@ -1,6 +1,8 @@
+import PageHero from "../Components/Assets/PageHero"
+
 function Portfolio() {
   return (
-    <div>Portfolio</div>
+    <><PageHero pageTitle="Portfolio" /></>
   )
 }
 

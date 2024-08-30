@@ -1,6 +1,9 @@
+import PageHero from "../Components/Assets/PageHero"
+
+
 function About() {
   return (
-    <div>About</div>
+    <><PageHero pageTitle="Über mich" pageDescription="Erfaren Sie alles über mich" /></>
   )
 }
 

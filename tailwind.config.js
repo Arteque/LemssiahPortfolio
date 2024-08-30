@@ -6,13 +6,13 @@ export default {
   ],
   theme: {
     colors:{
-      'prime':"#0C254B",
-      'prime-100':"#0c4293",
-      'second':"#45CB53",
-      'second-100':"#21bd31",
-      'text':"#888",
-      'bg':'whitesmoke',
-      'bg-100':'white'
+      'prime':"var(--prime)",
+      'prime-100':"var(--prime-100)",
+      'second':"var(--second)",
+      'second-100':"var(--second-100)",
+      'text':"var(--text)",
+      'bg':'vart(--bg)',
+      'bg-100':'var(--bg-100)'
     },
     fontFamily:{
       title : ["Poppins", "ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],

@@ -1,12 +1,26 @@
 import { Outlet } from "react-router-dom"
 import MainHeader from "../Components/MainHeader"
 import MainFooter from "../Components/MainFooter"
+import { useLocation } from "react-router-dom"
+import { useState } from "react"
 function Root() {
+  const locationPath = useLocation()
+
+  const [formState, setFormState] = useState(false)
+
+  const changetheFormState = () => {
+    setFormState(prev => !prev)
+  }
+
   return (
     <>
-        <MainHeader />
-        <Outlet />
-        <MainFooter />
+    
+          <MainHeader toggleForm={changetheFormState}/>
+            <main className={`page-${locationPath.pathname.replace("/","")}`}>
+              <Outlet />
+            </main>
+          <MainFooter showkontakt={formState} changeShowKontaktState={changetheFormState}/>
+    
     </>
   )
 }

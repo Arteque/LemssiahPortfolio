@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root{
+    --prime:#0C254B;
+    --prime-100:#0c4293;
+    --second:#45CB53;
+    --second-100:#21bd31;
+    --text: #888;
+    --bg: whitesmoke;
+    --bg-100: white;
+}
+.main-nav ul a{
+    border-block-end:3px solid transparent;
+}
+.main-nav ul a.active{
+    border-block-end:3px solid var(--second);
+}
+
+@media screen and ( min-width: 768px ){
+    .main-nav ul{
+        opacity: 1 !important;
+        pointer-events: all !important;
+    }
+}

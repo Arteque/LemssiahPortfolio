@@ -2,19 +2,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Container from "./Container"
 import KontaktForm from "./KontaktForm"
 import { faMessage } from "@fortawesome/free-solid-svg-icons"
-import { useState } from "react"
+import { FC, useState } from "react"
 import Logo from "./Logo"
 import MainNav from "./MainNav"
 import Socials from "./Socials"
 import Header from "./Header"
 
-function MainFooter() {
+interface MainFooterProps{
+    showkontakt?:any,
+    changeShowKontaktState?:any
+}
+
+const MainFooter:FC<MainFooterProps>=({showkontakt,changeShowKontaktState}) => {
 
     const thisYear  = () => {
         return new Date().toLocaleDateString("de-DE",{year:'numeric'})
     }
 
-    const [showkontakt, setShowkontakt] = useState(false)
+   // const [showkontakt, setShowkontakt] = useState(false)
 
   return (
     <>
@@ -23,7 +28,7 @@ function MainFooter() {
                 <Container >
                     <div className="md:flex md:justify-between pt-11">
                         <Logo />
-                        <MainNav />
+                        <MainNav variant="footer" />
                         <Socials />
                     </div>
                 </Container>
@@ -36,7 +41,8 @@ function MainFooter() {
             </div>
         </footer>
         <KontaktForm show={showkontakt ? 'show' : ''}/>
-        <button className="text-prime hover:text-prime-100 hover:bg-bg duration-[.3s] fixed bottom-10 right-10 rounded-[50%] bg-bg w-[4rem] h-[4rem] flex justify-center items-center shadow-lg" onClick={() => {setShowkontakt(prev => !prev)}}>
+        <button className="text-prime hover:text-prime-100 hover:bg-bg duration-[.3s] fixed bottom-10 right-10 rounded-[50%] bg-bg w-[4rem] h-[4rem] flex justify-center items-center shadow-lg" 
+        onClick={changeShowKontaktState}>
             <FontAwesomeIcon icon={faMessage} size="xl" />
         </button>
     </>
