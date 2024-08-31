@@ -10,6 +10,7 @@
     --text: #888;
     --bg: whitesmoke;
     --bg-100: white;
+    --bg-200:#b5becc; 
 }
 .main-nav ul a{
     border-block-end:3px solid transparent;

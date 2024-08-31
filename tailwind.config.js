@@ -11,14 +11,26 @@ export default {
       'second':"var(--second)",
       'second-100':"var(--second-100)",
       'text':"var(--text)",
-      'bg':'vart(--bg)',
-      'bg-100':'var(--bg-100)'
+      'bg':'var(--bg)',
+      'bg-100':'var(--bg-100)',
+      'bg-200':'var(--bg-200)'
     },
     fontFamily:{
       title : ["Poppins", "ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
       text : ["Poppins", "ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
     },
-    extend: {},
+    extend: {
+      animation: {
+        'spin-slow': 'spin 200s linear infinite',
+        'spin-slower': 'spin 300s linear infinite',
+        'bounce-slow':'bounce 50s infinite;'
+      },
+      keyframes: {
+        'spin-slow':{
+           '100%':{rotate:'10deg'}
+        }
+      }
+    },
   },
   plugins: [],
 }

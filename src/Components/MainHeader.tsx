@@ -13,7 +13,7 @@ interface MainHeaderProps{
 
 const MainHeader: FC<MainHeaderProps> = ({toggleForm}) => {
   return (
-    <Header className="relative md:sticky top-0 md:w-full backdrop-blur-lg">
+    <Header variant="default" className="relative md:sticky top-0 md:w-full backdrop-blur-lg z-[999999]">
         <div className="flex justify-between items-center p-3 m-3">
           <button className="flex gap-2 items-center font-bold">
             <FontAwesomeIcon icon={faMoon} />
