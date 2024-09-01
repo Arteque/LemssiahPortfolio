@@ -8,7 +8,7 @@ import ColorMode from "./ColorMode"
 import { useState, useEffect } from "react"
 
 interface MainHeaderProps{
-  toggleForm: any
+  toggleForm: () => void
 }
 
 
@@ -17,16 +17,18 @@ interface MainHeaderProps{
 
 const MainHeader: FC<MainHeaderProps> = ({toggleForm}) => {
 
-  const [darkMode, setDarkMode] = useState(true)
+  const [darkModeState, setDarkModeState] = useState(false)
 
-  useEffect(() => {
-    darkMode ? document.body.classList.add("dark:bg-prime") : document.body.classList.remove("dark:bg-prime")
-  },[darkMode])
+  const switchMode = () => {
+    setDarkModeState(prev => !prev)
+  }
+
+
 
   return (
     <Header variant="default" className="relative md:sticky top-0 md:w-full backdrop-blur-lg z-[999999]">
         <div className="flex justify-between items-center py-3 ">
-          <ColorMode isDark={() => (setDarkMode(prev => !prev))}/>
+          <ColorMode isDark={switchMode}/>
           <Socials />
         </div>
         <Container>

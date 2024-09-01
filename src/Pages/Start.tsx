@@ -34,7 +34,7 @@ function Start() {
              </div>
           </Container>
         </section>
-        <section id="service-section" className="section bg-bg-100">
+        <section id="service-section" className="section bg-bg-100 dark:bg-prime-100">
           <Container>
             <div className="section__content flex gap-2 justify-between">
               <div className="card--media max-w-[450px] p-5  rounded-lg  border-bg-100">

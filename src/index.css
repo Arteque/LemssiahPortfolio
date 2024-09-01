@@ -5,9 +5,13 @@
 :root{
     --prime:#0C254B;
     --prime-100:#0c4293;
+    --prime-200:#0e4fb1;
     --second:#45CB53;
     --second-100:#21bd31;
-    --text: #888;
+    --second-200:#27ee3a;
+    --text: #24163f;
+    --text-100: #4b4b4b;
+    --text-200: #919191;
     --bg: whitesmoke;
     --bg-100: white;
     --bg-200:#b5becc; 
@@ -22,17 +26,26 @@
 #checkdark + label span{
     transition: all 0.5s;
 }
-#checkdark + label .color-mode__dark{
-    transform:translateY(-24px);
+
+
+[data-mode="dark"] #checkdark:checked + label .color-mode__dark,
+[data-mode="dark"] #checkdark:checked + label .color-mode__light{
+    transform:translateY(0);
 }
-#checkdark + label .color-mode__light{
-    transform:translateY(-24px);
-}
+
 #checkdark:checked + label .color-mode__dark,
 #checkdark:checked + label .color-mode__light
 {
     transform:translateY(0);
 }
+
+#checkdark + label .color-mode__dark,
+#checkdark + label .color-mode__light
+{
+    transform:translateY(-26px) ;
+}
+
+
 .main-nav ul a{
     border-block-end:3px solid transparent;
 }
