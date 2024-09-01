@@ -39,7 +39,7 @@ const Socials = () => {
                 {
                     data.map((item)=>{
                         return <li key={item.id}>
-                                    <a href={item.url} title={`Ich bin auf ${item.title}`} target="_blank" rel="noopener noreferrer nofollow" className="text-prime hover:text-prime-100 hover:bg-bg duration-[.3s]">
+                                    <a href={item.url} title={`Ich bin auf ${item.title}`} target="_blank" rel="noopener noreferrer nofollow" className="text-prime hover:text-prime-100 duration-[.3s] dark:text-bg-200">
                                         <FontAwesomeIcon icon={item.icon} size="lg"/>
                                     </a>
                                </li>

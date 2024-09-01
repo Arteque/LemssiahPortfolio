@@ -11,8 +11,9 @@ function Start() {
     <>
         <section id="hero-section">
           <Container>
-             <div className="hero md:flex md:flex-col-reverse md:justify-start md:min-h-[70svh] ">
-                <div className="hero__media">
+             <div className="hero 
+             md:flex md:items-center gap-2 md:justify-start md:min-h-[50svh] ">
+                <div className="hero__media md:w-2/5">
                   <div className="hero__main-image">
                     <img className="max-w-[70vw] mx-auto md:max-w-[50svh]" src="./AvatarMain.svg" alt="Ahmed Lemssiah Avatar" />
                   </div>
@@ -33,13 +34,10 @@ function Start() {
              </div>
           </Container>
         </section>
-        <section id="service-section" className="section bg-bg-200">
+        <section id="service-section" className="section bg-bg-100">
           <Container>
-            <Header variant="section">
-              <h2 className="text-bold text-center w-full text-[2rem] text-prime uppercase font-black">Leistungen</h2>
-            </Header>
             <div className="section__content flex gap-2 justify-between">
-              <div className="card--media max-w-[450px] bg-bg p-5  rounded-lg shadow-lg border-bg-100">
+              <div className="card--media max-w-[450px] p-5  rounded-lg  border-bg-100">
                   <div className="card__header relative">
                      <img className="w-[70%] mx-auto block" src="./cartoonFinder.svg" alt="Ideen Erfinder" />
                      <div className="mediacollection absolute top-0 left-0 w-full h-full animate-spin-slower">
@@ -66,7 +64,7 @@ function Start() {
                     </div>
                   </div>
               </div>
-              <div className="card--media max-w-[450px] bg-bg p-5  rounded-lg shadow-lg border-bg-100">
+              <div className="card--media max-w-[450px] p-5  rounded-lg  border-bg-100">
                   <div className="card__header relative">
                      <img className="w-[70%] mx-auto block" src="./cartoonDesign.svg" alt="Ideen Künstler" />
                      <div className="mediacollection absolute top-0 left-0 w-full h-full rotate-306 animate-spin-slower">
@@ -93,7 +91,7 @@ function Start() {
                     </div>
                   </div>
               </div>
-              <div className="card--media max-w-[450px] bg-bg p-5  rounded-lg shadow-lg border-bg-100">
+              <div className="card--media max-w-[450px] p-5  rounded-lg  border-bg-100">
                   <div className="card__header relative">
                      <img className="w-[70%] mx-auto block" src="./cartoonDev.svg" alt="Ideen Erfinder" />
                      <div className="mediacollection absolute top-0 left-0 w-full h-full animate-spin-slower">

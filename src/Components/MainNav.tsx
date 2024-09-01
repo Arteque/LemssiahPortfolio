@@ -47,22 +47,22 @@ const MainNav : FC<NavProps>= ({variant, ...props}) => {
         }
         <ul className={`${cn(mainNavVariants({variant}))} ${navState ? "opacity-1 pointer-events-auto":"opacity-0 pointer-events-none"}`} {...props}>
             <li>
-                <NavLink to="/" className={`${buttonVariants({variant:"default"})} `} {...props}> 
+                <NavLink to="/" className={`${buttonVariants({variant:"default"})}  dark:text-bg`} {...props}> 
                     Start
                 </NavLink>
             </li>
             <li>
-                <NavLink to="/uebermich" className={`${buttonVariants({variant:"default"})}`} {...props}> 
+                <NavLink to="/uebermich" className={`${buttonVariants({variant:"default"})} dark:text-bg`} {...props}> 
                     About
                 </NavLink>
             </li>
             <li>
-                <NavLink to="/leistungen" className={`${buttonVariants({variant:"default"})}`} {...props}> 
+                <NavLink to="/leistungen" className={`${buttonVariants({variant:"default"})} dark:text-bg`} {...props}> 
                     Services
                 </NavLink>
             </li>
             <li>
-                <NavLink to="/portfolio" className={`${buttonVariants({variant:"default"})}`} {...props}> 
+                <NavLink to="/portfolio" className={`${buttonVariants({variant:"default"})} dark:text-bg`} {...props}> 
                     Portfolio
                 </NavLink>
             </li>

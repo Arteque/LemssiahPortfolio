@@ -12,6 +12,27 @@
     --bg-100: white;
     --bg-200:#b5becc; 
 }
+
+/*DarkMode*/
+#checkdark + label{
+    user-select:none;
+    cursor:pointer;
+    transition: all 0.5s;
+}
+#checkdark + label span{
+    transition: all 0.5s;
+}
+#checkdark + label .color-mode__dark{
+    transform:translateY(-24px);
+}
+#checkdark + label .color-mode__light{
+    transform:translateY(-24px);
+}
+#checkdark:checked + label .color-mode__dark,
+#checkdark:checked + label .color-mode__light
+{
+    transform:translateY(0);
+}
 .main-nav ul a{
     border-block-end:3px solid transparent;
 }

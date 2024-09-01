@@ -1,0 +1,11 @@
+[
+    {
+        "id":1,
+        "title1":"Ideen",
+        "title2":"erfinden",
+        "text":"Durch Besprechungen mit den Kunden werden die Ziele und die hinein Wege skiziert. \nAnhand von was erwartet ist und was im Webberreich möglich ist, werden Ideen und Konzepte Entwickelt!",
+        "links":{
+            "1":"/about"
+        }
+    }
+]
