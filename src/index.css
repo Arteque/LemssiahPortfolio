@@ -33,6 +33,7 @@
     --bg-100: #0c4293;
     --bg-200:#0e4fb1; 
 }
+
 [data-mode="dark"] .logo img{
     filter:invert(1) grayscale(0) brightness(3) hue-rotate(182deg);
 
