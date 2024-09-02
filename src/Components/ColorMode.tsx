@@ -1,15 +1,20 @@
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { FC } from "react"
+import { useState, useEffect } from "react"
 
-interface ColorModeProps {
-    isDark:() => void
-}
 
-const ColorMode:FC<ColorModeProps> = ({isDark}) => {
+const ColorMode = () => {
+
+    const [darkmode, setDarkmode] = useState(false)
+
+    useEffect(() => {
+        document.body.dataset.mode  = darkmode ? "dark" : "light"
+    },[darkmode])
     
-    return  <div className={`color-mode flex`} onClick={isDark}>
-                <input type="checkbox" id="checkdark" name="checkdark" className="color-mode__checkbox hidden" />
+    return  <div className={`color-mode flex`} >
+                <input type="checkbox" id="checkdark" name="checkdark" className="color-mode__checkbox" 
+                
+                onChange={(e) => {setDarkmode(e.target.checked)}}/>
                 <label htmlFor="checkdark" className="h-6 overflow-hidden">
                     <span className="color-mode__dark block translate-y-[-26px] dark:translate-y-[0]">
                         <FontAwesomeIcon icon={faMoon} className="text-second" /> <span className="text-second-100">Darkmode</span>

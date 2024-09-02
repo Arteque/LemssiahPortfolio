@@ -1,7 +1,6 @@
 import { Button, buttonVariants } from '../Components/Assets/Button'
 import Container from '../Components/Container'
 import { Link } from 'react-router-dom'
-import Header from '../Components/Header'
 
 function Start() {
   
@@ -11,8 +10,7 @@ function Start() {
     <>
         <section id="hero-section">
           <Container>
-             <div className="hero 
-             md:flex md:items-center gap-2 md:justify-start md:min-h-[50svh] ">
+             <div className="hero md:flex md:items-center gap-2 md:justify-start md:min-h-[50svh] ">
                 <div className="hero__media md:w-2/5">
                   <div className="hero__main-image">
                     <img className="max-w-[70vw] mx-auto md:max-w-[50svh]" src="./AvatarMain.svg" alt="Ahmed Lemssiah Avatar" />
@@ -34,7 +32,7 @@ function Start() {
              </div>
           </Container>
         </section>
-        <section id="service-section" className="section bg-bg-100 dark:bg-prime-100">
+        <section id="service-section" className="section bg-bg-100 ">
           <Container>
             <div className="section__content flex gap-2 justify-between">
               <div className="card--media max-w-[450px] p-5  rounded-lg  border-bg-100">

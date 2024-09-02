@@ -17,6 +17,26 @@
     --bg-200:#b5becc; 
 }
 
+
+
+[data-mode="dark"]{
+    --prime: whitesmoke;
+    --prime-100:white;
+    --prime-200:#b5becc;
+    --second:#45CB53;
+    --second-100:#21bd31;
+    --second-200:#27ee3a;
+    --text: whitesmoke;
+    --text-100: #d8d8d8;
+    --text-200: #919191;
+    --bg: #0C254B;
+    --bg-100: #0c4293;
+    --bg-200:#0e4fb1; 
+}
+[data-mode="dark"] .logo img{
+    filter:invert(1) grayscale(0) brightness(3) hue-rotate(182deg);
+
+}
 /*DarkMode*/
 #checkdark + label{
     user-select:none;
