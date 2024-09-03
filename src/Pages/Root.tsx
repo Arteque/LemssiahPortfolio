@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom"
 import MainHeader from "../Components/MainHeader"
 import MainFooter from "../Components/MainFooter"
 import { useLocation } from "react-router-dom"
-import { useState } from "react"
+import { useState} from "react"
 function Root() {
   const locationPath = useLocation()
 
@@ -11,8 +11,6 @@ function Root() {
   const changetheFormState = () => {
     setFormState(prev => !prev)
   }
-
-
 
 
 
