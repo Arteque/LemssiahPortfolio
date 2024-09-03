@@ -11,6 +11,8 @@ export default {
       'second':"var(--second)",
       'second-100':"var(--second-100)",
       'text':"var(--text)",
+      'text-100':'var(--text-100)',
+      'text-200':'var(--text-200)',
       'bg':'var(--bg)',
       'bg-100':'var(--bg-100)',
       'bg-200':'var(--bg-200)'
