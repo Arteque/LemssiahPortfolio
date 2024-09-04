@@ -31,6 +31,11 @@ export default {
         'spin-slow':{
            '100%':{rotate:'10deg'}
         }
+      },
+      dropShadow: {
+        'soft' : '-20px -10px 10px rgba(0,0,0,0.5)',
+        'mid' : '0 0 10px rgba(0,0,0,0.8)',
+        'hard' : '0 0 10px rgba(0,0,0,1)',
       }
     },
   },
