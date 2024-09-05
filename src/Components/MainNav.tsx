@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom"
 import { buttonVariants } from "./Assets/Button"
 import { FC, useState } from "react"
 import { cn } from "../libs/utils"
-import { cva, VariantProps } from "class-variance-authority"
+import { cva } from "class-variance-authority"
 
 
 const mainNavVariants = cva(
@@ -22,8 +22,9 @@ const mainNavVariants = cva(
     }
 )
 
-interface NavProps extends  VariantProps<typeof mainNavVariants> {
-    variant:any,
+interface NavProps{
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    variant?:any,
 }
 
 

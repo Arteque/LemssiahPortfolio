@@ -14,10 +14,10 @@ function Start() {
         <section id="hero-section" className="relative hero-section" >
           <div className="hero-section__bg-animation">
               <img src="./Canvas/Hero/Moon.svg" alt="" 
-              className="hero-section__moon" />
+              className="hero-section__moon animate-pulse" />
 
               <img src="./Canvas/Hero/Sun.svg" alt="" 
-              className="hero-section__sun" />
+              className="hero-section__sun origin-center" />
           </div>
           <Container>
              <div className="hero md:flex md:gap-2 md:flex-row-reverse md:items-center md:justify-end md:min-h-[70svh] ">
@@ -54,7 +54,7 @@ function Start() {
 
               {
                 Services && Services.map(item => (
-                  <Card variant="default" className="card p-0 px-5 mx-auto md:mx-0 md:px-0 overflow-x-clip" key={item.id}>
+                  <Card variant="default" className="card p-0 px-5 mx-auto md:mx-0 md:px-0 overflow-x-clip md:overflow-x-visible" key={item.id}>
                     <div className="card__header relative max-h-[270px]">
                         <div className="card__bg-img">
                           <img src={item.media.bg} className="absolute top-0 left-0 w-full h-full z-0 mix-blend-multiply object-cover blur-[1px]" alt={item.media.bg.replace(/[./ .de jpg svg jpeg]/g,"")} />
@@ -65,7 +65,7 @@ function Start() {
                           <div className="mediacollection absolute top-0 left-0 w-full h-[400px] animate-spin-slower">
                               { item.media.animated && item.media.animated.map((el, index) => (
                                     index == 0 ? (
-                                      <img key={index}  className="block z-10 rotate-10 origin-center animate-spin-slow  absolute top-0 left-[50%]  max-w-[100px] max-h-[100px]" src={el} alt={el} />
+                                      <img key={index}  className="block z-10 rotate-180 origin-center animate-spin-slow  absolute top-0 left-[50%]  max-w-[100px] max-h-[100px]" src={el} alt={el} />
                                     ) : index == 1 ? (
                                       <img key={index} className="block z-10 rotate-180 origin-center animate-spin-slow  absolute top-[50%] left-0 max-w-[100px] max-h-[100px]" src={el} alt={el} />
                                     ) : index == 2 ? (
