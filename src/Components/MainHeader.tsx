@@ -27,7 +27,7 @@ const MainHeader: FC<MainHeaderProps> = ({toggleForm}) => {
           <div className="w-full flex justify-between rounded-lg bg-bg overflow-hidden">
               <Logo />
               <MainNav variant="header"/>
-              <button className="hidden md:block w-fit p-2 px-4 bg-second text-bg rounded-sm font-bold uppercase hover:bg-second-100 hover:text-prime transition-all duration-[.3] ease-in-out"
+              <button className="hidden md:block w-fit p-2 px-4 bg-second text-prime dark:text-bg rounded-sm font-bold uppercase hover:bg-second-100 hover:text-prime transition-all duration-[.3] ease-in-out"
                 onClick={toggleForm}
               >Kontakt</button>
           </div>

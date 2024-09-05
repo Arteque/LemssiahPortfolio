@@ -10,7 +10,7 @@ import Header from "./Header"
 
 interface MainFooterProps{
     showkontakt:unknown,
-    changeShowKontaktState:unknown
+    changeShowKontaktState:() => void
 }
 
 const MainFooter:FC<MainFooterProps>=({showkontakt,changeShowKontaktState}) => {

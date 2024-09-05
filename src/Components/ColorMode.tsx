@@ -30,7 +30,6 @@ const ColorMode = () => {
     
     useEffect(() => {
        if(window.localStorage.getItem("portfolioTheme")){
-        console.log(window.localStorage.getItem("portfolioTheme"))
         document.body.dataset.mode = String(window.localStorage.getItem("portfolioTheme"))
        }else{
         document.body.dataset.mode = isDarkEnabled ? "dark" : "light"

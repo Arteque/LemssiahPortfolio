@@ -10,7 +10,7 @@ const KontaktForm:FC<KontaktFormProps> = ({show, ...props}) => {
 
 
     return <>
-        <form  className={`main-kontaktform bg-bg max-w-[450px] shadow-lg p-5 rounded-lg fixed left-5 bottom-1 right-5 pb-[3rem] top-[10vh] md:bottom-10 md:right-[5rem] md:top-[10vh] overflow-y-auto overflow-hidden z-[9999999] ${show}`} {...props}>
+        <form  className={`main-kontaktform bg-bg max-w-[450px] shadow-lg p-5 rounded-lg fixed left-5 bottom-1 right-5 pb-[3rem] top-[10vh] md:bottom-10 md:right-[6rem] md:left-auto md:top-[20vh] overflow-y-auto overflow-hidden z-[9999999] text-prime ${show}`} {...props}>
             
                 <h2 className="font-bold uppercase text-prime border border-bg rounded-lg p-5 text-center mb-5">Kontaktieren Sie mich</h2>
             
@@ -40,27 +40,27 @@ const KontaktForm:FC<KontaktFormProps> = ({show, ...props}) => {
             <div className="md:flex gap-5">
                 <div className="mb-6">
                     <label htmlFor="vorname" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Vorname *</label>
-                    <input type="text" id="vorname" className="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                    <input type="text" id="vorname" className="block w-full text-bg p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
                 </div>
                 <div className="mb-6">
                     <label htmlFor="nachname" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nachname *</label>
-                    <input type="text" id="nachname" className="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                    <input type="text" id="nachname" className="block w-full text-bg p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
                 </div>
             </div>
             <div>
                 <div className="mb-6">
                     <label htmlFor="mail" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">E-Mail *</label>
-                    <input type="mail" id="mail" className="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                    <input type="mail" id="mail" className="block w-full text-bg p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
                 </div>
                 <div className="mb-6">
                     <label htmlFor="tel" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tel</label>
-                    <input type="tel" id="tel" className="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                    <input type="tel" id="tel" className="block w-full text-bg p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
                 </div>
             </div>
             <div className="nachricht mb-6">
                 
                 <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nachricht *</label>
-                <textarea id="message" style={{resize:'none', minHeight:'200px'}} required className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Hier können Sie Ihre Nachricht eintragen..."></textarea>
+                <textarea id="message" style={{resize:'none', minHeight:'200px'}} required className="block text-bg  p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Hier können Sie Ihre Nachricht eintragen..."></textarea>
 
             </div>
             <div className="flex items-start mb-6">
