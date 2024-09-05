@@ -1,0 +1,56 @@
+[
+    {
+        "id":1,
+        "title":{
+            "1":"Ideen",
+            "2":"erfinder"
+        },
+        "media":{
+            "main":"./cartoonFinder.svg",
+            "bg":"./AdobeStock_852213050.jpeg",
+            "animated":[
+                "./Erfinder/Element 3.svg",
+                "./Erfinder/LaborMischFlasche1.svg",
+                "./Erfinder/LaborFlasche1.svg",
+                "./Erfinder/Mikroskop.svg"
+            ]
+        },
+        "text":"Durch Besprechungen mit den Kunden werden die Ziele und die hinein Wege skiziert.  \n Anhand von was erwartet ist und was im Webberreich möglich ist, werden Ideen und Konzepte Entwickelt!"
+    },
+    {
+        "id":2,
+        "title":{
+            "1":"Pixel",
+            "2":" Artiste"
+        },
+        "media":{
+            "main":"./cartoonDesign.svg",
+            "bg":"./AdobeStock_792048373.jpeg",
+            "animated":[
+                "./Designer/brush.svg",
+                "./Designer/colorBlue_1.svg",
+                "./Designer/piplette.svg",
+                "./Designer/colorplaett.svg"
+            ]
+        },
+        "text":"Als Pixel-Artist verwandle ich das Web in eine surrealistische Traumwelt mit kreativen, traumhaften Designs und optischen Illusionen…🤯 Boah!! Eigentlich bin ich nur jemand, der Websites designt."
+    },
+    {
+        "id":3,
+        "title":{
+            "1":"DOM-",
+            "2":"Dompteur"
+        },
+        "media":{
+            "main":"./cartoonDev.svg",
+            "bg":"./AdobeStock_804070373.jpeg",
+            "animated":[
+                "./Entwickler/calendar.svg",
+                "./Entwickler/keyboard.svg",
+                "./Entwickler/mouse.svg",
+                "./Entwickler/screen.svg"
+            ]
+        },
+        "text":"Ein \" DOM-Dompteur \" entwickelt nicht nur beeindruckende Webseiten, sondern pflegt und aktualisiert sie kontinuierlich. Ich sorge dafür, dass die Website stets sicher, funktional und auf dem neuesten Stand bleibt."
+    }
+]
