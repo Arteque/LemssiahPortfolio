@@ -1,9 +1,11 @@
-import {  buttonVariants } from '../Components/Assets/Button'
+import {  Button, buttonVariants } from '../Components/Assets/Button'
 import Container from '../Components/Container'
 import { Link } from 'react-router-dom'
 import Header from '../Components/Header'
 import Card from '../Components/Assets/Card'
 import Services from "../Data/Services.json"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faThumbsUp } from '@fortawesome/free-solid-svg-icons'
 
 function Start() {
 
@@ -95,6 +97,28 @@ function Start() {
                 ))
               }
             </div>
+          </Container>
+        </section>
+        <section id="latest-section" className="latest-section">
+          <Header variant="section">
+              <h2>Aktuelles</h2>
+              <p>Da ich ein Vollzeitjob habe, habe ich leider nicht viele Zeit für meine Private Projekte. Hier ein paar davon</p>
+          </Header>
+          <Container>
+              <Card variant="mediaCard" className="project">
+                <div className="card__header">
+                    <img src="" alt="" />
+                </div>
+                <div className="card__footer">
+                  <ul>
+                    <li>
+                      <Button variant="rounded">
+                          <FontAwesomeIcon icon={faThumbsUp} className="text-bg" />
+                      </Button>
+                    </li>
+                  </ul>
+                </div>
+              </Card>
           </Container>
         </section>
     </>
