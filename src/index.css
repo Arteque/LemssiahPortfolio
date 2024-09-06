@@ -90,14 +90,23 @@
     transition: all 1s;
 }
 [data-mode='light'] .hero-section::before{
-    background: url(/Bg/customBG__Day.png);
+    background: url(/Bg/customBG__Day--mobile.png);
     background-position:bottom;
     background-size: cover;
 }
 [data-mode='dark'] .hero-section::before{
-    background: url(/Bg/customBG__Night.png);
+    background: url(/Bg/customBG__Night--mobile.png);
     background-position:bottom;
     background-size: cover;
+}
+
+@media screen and ( min-width: 768px ){
+    [data-mode='light'] .hero-section::before{
+        background: url(/Bg/customBG__Day.png);
+    }
+    [data-mode='dark'] .hero-section::before{
+        background: url(/Bg/customBG__Night.png);
+    }
 }
 
 .hero-section::before{

@@ -14,19 +14,18 @@ function Start() {
         <section id="hero-section" className="relative hero-section" >
           <div className="hero-section__bg-animation">
               <img src="./Canvas/Hero/Moon.svg" alt="" 
-              className="hero-section__moon animate-pulse" />
+              className="hero-section__moon" />
 
               <img src="./Canvas/Hero/Sun.svg" alt="" 
               className="hero-section__sun origin-center" />
           </div>
           <Container>
              <div className="hero 
-             min-h-[100svh] flex flex-col justify-end
+             flex flex-col justify-end
              md:gap-2 md:flex-row-reverse md:items-center md:justify-end md:min-h-[80svh] ">
-                
                 <div className="hero__content
-                p-[2rem] translate-y-[70px] md:backdrop-blur-md
-                md:self-end  shadow-lg md:mb-5 
+                p-[2rem] translate-y-[70px] backdrop-blur-sm shadow-lg
+                md:translate-y-0 md:self-end md:mb-5 
                 ">
                   <h2 className="text-center">
                     <span className='block  p-0 w-full text-prime text-center md:text-left'>Ich heiße</span> 
@@ -35,7 +34,6 @@ function Start() {
                     ">Ahmed <em className="uppercase not-italic text-second-100">Lemssiah</em> </strong>
                     <span className="text-[1rem] md:text-[1.8rem] text-text">Ich gestalte Sachen und entwickle Websites</span>
                   </h2>
-                 
                   <div className="hero__call flex justify-center mt-5 gap-5 md:justify-normal">
                     <Link className={`${buttonVariants({variant:"full"})} text-bg`} to="/kontakt">kontakt</Link>
                     <Link className={`${buttonVariants({variant:"outline"})} dark:text-prime`} to="/portfolio">Portfolio</Link>
