@@ -18,15 +18,15 @@ const MainHeader: FC<MainHeaderProps> = ({toggleForm}) => {
 
 
   return (
-    <Header variant="default" className="relative md:sticky top-0 md:w-full backdrop-blur-lg z-[999999]">
-        <div className="flex justify-between items-center py-3 ">
-          <ColorMode  />
+    <Header variant="default" className="main-header relative md:sticky top-0 md:w-full backdrop-blur-lg z-[999999]">
+        <div className="main-header__top-nav hidden md:flex justify-between items-center py-3">
+          <ColorMode />
           <Socials />
         </div>
         <Container>
-          <div className="w-full flex justify-between rounded-lg bg-bg overflow-hidden">
-              <Logo />
-              <MainNav variant="header"/>
+          <div className="main-header__bottom-nav w-full flex justify-between rounded-lg md:bg-bg overflow-hidden">
+              <Logo className="main-header__main-logo"/>
+              <MainNav variant="header" className="main-header__main-nav"/>
               <button className="hidden md:block w-fit p-2 px-4 bg-second text-prime dark:text-bg rounded-sm font-bold uppercase hover:bg-second-100 hover:text-prime transition-all duration-[.3] ease-in-out"
                 onClick={toggleForm}
               >Kontakt</button>

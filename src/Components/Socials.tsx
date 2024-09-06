@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMastodon, faYoutube, faBehance, faReddit, faGithubAlt } from "@fortawesome/free-brands-svg-icons"
+import { FC } from "react"
 
 const data = [
     {
@@ -34,8 +35,12 @@ const data = [
     }
 ]
 
-const Socials = () => {
-    return <ul className="flex items-center gap-3">
+interface socialsProps{
+    className?:string
+}
+
+const Socials:FC<socialsProps> = ({className}) => {
+    return <ul className={`flex items-center gap-3 ${className}`}>
                 {
                     data.map((item)=>{
                         return <li key={item.id}>

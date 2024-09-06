@@ -1,8 +1,12 @@
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { useState, useEffect } from "react"
+import { useState, useEffect, FC } from "react"
 
-const ColorMode = () => {
+interface colorModeProps{
+    className?:string
+}
+
+const ColorMode:FC<colorModeProps> = ({className}) => {
 
     const isDarkEnabled = window.matchMedia && window.matchMedia(`(prefers-color-scheme: dark)`).matches
 
@@ -36,9 +40,11 @@ const ColorMode = () => {
          window.localStorage.portfolioTheme = isDarkEnabled ? "dark" : "light"
        }
     },[])
-    
-    
-    return  <div className={`color-mode flex`} >
+
+
+   
+
+    return  <div className={`color-mode flex ${className}`} >
                 <input type="checkbox" id="checkdark" name="checkdark" className="color-mode__checkbox hidden" 
                 checked={darkmode}
                 onChange={(e) => {setDarkmode(e.target.checked)}}/>
