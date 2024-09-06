@@ -20,10 +20,13 @@ function Start() {
               className="hero-section__sun origin-center" />
           </div>
           <Container>
-             <div className="hero md:flex md:gap-2 md:flex-row-reverse md:items-center md:justify-end md:min-h-[80svh] ">
+             <div className="hero 
+             min-h-[100svh] flex flex-col justify-end
+             md:gap-2 md:flex-row-reverse md:items-center md:justify-end md:min-h-[80svh] ">
                 
-                <div className="hero__content p-[2rem] md:self-end md:backdrop-blur-md shadow-lg 
-                 md:mb-5 
+                <div className="hero__content
+                p-[2rem] translate-y-[70px] md:backdrop-blur-md
+                md:self-end  shadow-lg md:mb-5 
                 ">
                   <h2 className="text-center">
                     <span className='block  p-0 w-full text-prime text-center md:text-left'>Ich heiße</span> 
