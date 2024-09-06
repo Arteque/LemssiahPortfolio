@@ -172,22 +172,19 @@
     pointer-events: none;
     transition: all 0.5s;
 }
-.setup.open button{
-    background-color: var(--bg-200);
-}
 .setup.open .setup__items-list{
     opacity: 1;
     transform: translateY(-50%,0);
     pointer-events: all;
 }
 .setup__items{
-    background-color: var(--bg-200);
+    background-color: var(--bg-100);
     position:absolute;
-    left: 120%;
+    left: 100%;
     transform-origin: left;
     top: 0;
-    bottom: 0;
-    /* transform:translateY(-50%); */
+    height: 90%;
+    padding-inline-start:10px;
 }
 
 .setup__items label input + *{
@@ -202,7 +199,6 @@
 .setup__items-toggler svg{
     color: var(--prime);
     padding: .5rem;
-    border-block-end: 1px solid var(--bg-100);
     transition: all .5s;
 }
 .setup__items{

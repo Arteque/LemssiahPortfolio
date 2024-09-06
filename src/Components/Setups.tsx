@@ -1,32 +1,18 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { buttonVariants } from "./Assets/Button"
 import { faComputer, faFlag, faGear, faMoon, faPalette, faSun } from "@fortawesome/free-solid-svg-icons"
-import { useState, useEffect} from "react"
+import { useState} from "react"
 import Languages from "../Data/Languages.json"
 
 const Setups = () => {
 
     const [setup, setSetup] = useState(false)
-    const [lang, setLang] = useState("")
-    
-
-    const changetheInputCheckedValue = (e) => {
-        setLang(e.target.dataset.abrv)
-        e.target.checked = true
-        document.firstElementChild.lang = e.target.dataset.abrv
-    }
 
 
     const changeSetupVisibility = () => {
         setSetup(prev => !prev)
 
     }
-    const language = String(document.firstElementChild.lang)
-
-    useEffect(() => {
-        console.log(language)
-        setLang(language)
-    },[])
 
   return (
     <div className={`setup fixed bottom-1 left-1 ${setup ? 'open':''}`}>
@@ -34,14 +20,14 @@ const Setups = () => {
             <FontAwesomeIcon className="setup__opener current" icon={faGear} />
         </button>
     {/* Items Start */}
-        <div className="setup__items-list absolute bottom-0 right-0 pb-20 bg-bg-200 rounded-2xl w-fit left-[50%] translate-x-[-50%]">
+        <div className="setup__items-list absolute bottom-0 right-0 pb-12 bg-bg-200 w-fit left-[50%] translate-x-[-50%]">
        {/* Color Mode Elements Start */} 
             <div className="setup__items-container relative setup__color-mode">
                 <div className="setup__items-toggler">
                     <label htmlFor="palette">
                         <input type="radio" 
                         name="items-toggler" id="palette"   />
-                        <FontAwesomeIcon icon={faPalette} size="lg" className="rounded-t-[50%]"/>
+                        <FontAwesomeIcon icon={faPalette} size="lg" />
                     </label>
                 </div>
                 <div className="setup__items flex gap-2 items-center">
@@ -86,7 +72,7 @@ const Setups = () => {
                         Languages?.map((item) => (
                             <label htmlFor={item.name} key={item.id}>
                                 <input type="radio" 
-                                name="languages" id={item.name} data-abrv={item.abrv} checked={lang == item.abrv && true} onChange={(e) => {changetheInputCheckedValue(e)}}/>
+                                name="languages" id={item.name} data-abrv={item.abrv} />
                                 <span className="setup__text">
                                     {item.abrv}
                                 </span>
