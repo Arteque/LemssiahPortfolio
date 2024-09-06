@@ -1,0 +1,22 @@
+[
+    {
+        "id":1,
+        "name":"Deutsch",
+        "abrv": "de"
+    },
+    {
+        "id":2,
+        "name":"Französisch",
+        "abrv": "fr"
+    },
+    {
+        "id":3,
+        "name":"Englisch",
+        "abrv": "eng"
+    },
+    {
+        "id":4,
+        "name":"Arabisch",
+        "abrv": "ar"
+    }
+]

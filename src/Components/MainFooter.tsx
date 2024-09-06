@@ -7,6 +7,7 @@ import Logo from "./Logo"
 import MainNav from "./MainNav"
 import Socials from "./Socials"
 import Header from "./Header"
+import { buttonVariants } from "./Assets/Button"
 
 interface MainFooterProps{
     showkontakt:unknown,
@@ -41,7 +42,7 @@ const MainFooter:FC<MainFooterProps>=({showkontakt,changeShowKontaktState}) => {
             </div>
         </footer>
         <KontaktForm show={showkontakt ? 'show' : ''}/>
-        <button className="z-[99999999] text-prime hover:text-prime-100 hover:bg-bg duration-[.3s] fixed bottom-1 right-1 md:bttom-5 md:right-5 rounded-[50%] bg-bg w-[3rem] h-[3rem] md:w-[4rem] md:h-[4rem] flex justify-center items-center shadow-lg" 
+        <button className={`z-[999999] fixed bottom-1 right-1 md:bttom-5 md:right-5 ${buttonVariants({variant:"rounded"})} `} 
         onClick={changeShowKontaktState}>
             <FontAwesomeIcon icon={faMessage} size="lg" />
         </button>

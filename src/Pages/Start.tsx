@@ -24,7 +24,8 @@ function Start() {
              flex flex-col justify-end
              md:gap-2 md:flex-row-reverse md:items-center md:justify-end md:min-h-[80svh] ">
                 <div className="hero__content
-                p-[2rem] translate-y-[70px] backdrop-blur-sm shadow-lg
+                p-[2rem] translate-y-[70px] 
+                md:backdrop-blur-sm shadow-lg
                 md:translate-y-0 md:self-end md:mb-5 
                 ">
                   <h2 className="text-center">
