@@ -4,7 +4,7 @@ import Container from "./Container"
 import Logo from "./Logo"
 import MainNav from "./MainNav"
 import { FC } from "react"
-import ColorMode from "./ColorMode"
+// import ColorMode from "./ColorMode"
 
 interface MainHeaderProps{
   toggleForm: () => void
@@ -20,7 +20,7 @@ const MainHeader: FC<MainHeaderProps> = ({toggleForm}) => {
   return (
     <Header variant="default" className="main-header relative md:sticky top-0 md:w-full backdrop-blur-lg z-[999999]">
         <div className="main-header__top-nav flex justify-between items-center py-3">
-          <ColorMode />
+          {/* <ColorMode /> */}
           <Socials />
         </div>
         <Container>

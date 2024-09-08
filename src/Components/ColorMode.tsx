@@ -17,7 +17,6 @@ const ColorMode:FC<colorModeProps> = ({className}) => {
         const savedLocalStorageTheme = window.localStorage.getItem("portfolioTheme")
 
         return savedLocalStorageTheme ? savedLocalStorageTheme === "dark" :isDarkEnabled
-
        
     })
 
@@ -37,7 +36,7 @@ const ColorMode:FC<colorModeProps> = ({className}) => {
         document.body.dataset.mode = String(window.localStorage.getItem("portfolioTheme"))
        }else{
         document.body.dataset.mode = isDarkEnabled ? "dark" : "light"
-         window.localStorage.portfolioTheme = isDarkEnabled ? "dark" : "light"
+        window.localStorage.portfolioTheme = isDarkEnabled ? "dark" : "light"
        }
     },[])
 

@@ -1,19 +1,38 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { buttonVariants } from "./Assets/Button"
 import { faComputer, faFlag, faGear, faMoon, faPalette, faSun } from "@fortawesome/free-solid-svg-icons"
-import { useState} from "react"
+import { ChangeEvent, FormEvent, useEffect, useState} from "react"
 import Languages from "../Data/Languages.json"
 
 const Setups = () => {
 
-    const [setup, setSetup] = useState(false)
 
+   //Setup Btn to open the color mode and langues option items
+    const [setup, setSetup] = useState(false)
 
     const changeSetupVisibility = () => {
         setSetup(prev => !prev)
-
     }
 
+
+    // setup the darkmode element 
+    // 1 - Get the system prefered color scheme (if its not dark is light ;))
+    // 2 - check if in the localStorage the "PortfolioTheme" mode is saved.
+    // 3 - the "CheckedMode" variable is onload set to the localsotrage first if not to the system color scheme
+    const isDarkMode = window.matchMedia && window.matchMedia((`(prefers-color-scheme:dark)`)).matches
+    const storageColorTheme = window.localStorage.getItem("portfolioTheme")
+    
+    const [colorMode, setColorMode] = useState(() => {
+        if(storageColorTheme){
+            return storageColorTheme
+        }else{
+            return ""
+        }
+    })
+    const changeColorMode = (e) => {
+        setColorMode(e.target.value)
+    }
+    
   return (
     <div className={`setup fixed bottom-1 left-1 ${setup ? 'open':''}`}>
         <button onClick={changeSetupVisibility} className={`setup__toggler relative z-10 ${buttonVariants({variant:"rounded", sizes:"sm"})}`}>
@@ -30,10 +49,13 @@ const Setups = () => {
                         <FontAwesomeIcon icon={faPalette} size="lg" />
                     </label>
                 </div>
-                <div className="setup__items flex gap-2 items-center">
+                <div className="setup__items flex gap-2 items-center" onChange={(e) => {changeColorMode(e)}}>
                     <label htmlFor="dark">
                         <input type="radio" 
                         name="color-mode" id="dark"
+                        value="dark"
+                        checked={colorMode === 'dark'}
+                        
                         />
                         <span className="setup__text">
                             <FontAwesomeIcon icon={faMoon} size="lg" />
@@ -41,7 +63,10 @@ const Setups = () => {
                     </label>
                     <label htmlFor="light">
                         <input type="radio" 
-                        name="color-mode" id="light"     
+                        name="color-mode" id="light" 
+                        value="light"
+                        checked={colorMode === 'light'}
+                        
                         />
                         <span className="setup__text">
                             <FontAwesomeIcon icon={faSun} size="lg" />
@@ -49,7 +74,11 @@ const Setups = () => {
                     </label>
                     <label htmlFor="system">
                         <input type="radio" 
-                        name="color-mode" id="system" />
+                        name="color-mode" id="system" 
+                        value="system"
+                        checked={colorMode === 'system'}
+                        
+                        />
                         <span className="setup__text">
                             <FontAwesomeIcon icon={faComputer} size="lg" />
                         </span>
