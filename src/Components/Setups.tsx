@@ -1,8 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { buttonVariants } from "./Assets/Button"
-import { faComputer, faFlag, faGear, faMoon, faPalette, faSun } from "@fortawesome/free-solid-svg-icons"
-import { ChangeEvent, FormEvent, useEffect, useState} from "react"
+import { faComputer, faFlag, faGear, faMoon, faPalette, faSun, faTimes } from "@fortawesome/free-solid-svg-icons"
+import {  useEffect, useState} from "react"
 import Languages from "../Data/Languages.json"
+import { cn } from "../libs/utils"
 
 const Setups = () => {
 
@@ -24,19 +25,52 @@ const Setups = () => {
     
     const [colorMode, setColorMode] = useState(() => {
         if(storageColorTheme){
-            return storageColorTheme
+            if(storageColorTheme == "dark"){
+                return "dark"
+            }else{
+                return "light"
+            }
         }else{
-            return ""
+          if(isDarkMode){
+            return "dark"
+          }else{
+            return "light"
+          }
         }
     })
-    const changeColorMode = (e) => {
+
+    
+
+    useEffect(() => {
+        if(storageColorTheme){
+            document.body.dataset.mode = storageColorTheme
+        }else{
+            document.body.dataset.mode = isDarkMode ? "dark" : "light"
+        }
+    },[])
+
+
+    const changeColorMode = (e:React.ChangeEvent<HTMLInputElement>) => {
         setColorMode(e.target.value)
     }
+
+    useEffect(() => {
+        document.body.dataset.mode = colorMode
+        window.localStorage.setItem("portfolioTheme", colorMode)
+        if(colorMode === 'system') {
+            window.localStorage.removeItem("portfolioTheme")
+            document.body.dataset.mode = isDarkMode ? "dark" : "light"
+        }
+    },[colorMode, isDarkMode])
     
+
   return (
     <div className={`setup fixed bottom-1 left-1 ${setup ? 'open':''}`}>
-        <button onClick={changeSetupVisibility} className={`setup__toggler relative z-10 ${buttonVariants({variant:"rounded", sizes:"sm"})}`}>
-            <FontAwesomeIcon className="setup__opener current" icon={faGear} />
+        <button onClick={changeSetupVisibility} className={cn("setup__toggler relative z-10", buttonVariants({variant:"rounded", sizes:"sm"}))}>
+           {
+            setup ? ( <FontAwesomeIcon className="setup__opener current" icon={faTimes} size="xl"/>)
+            : ( <FontAwesomeIcon className="setup__opener current" icon={faGear} size="xl"/>)
+           }
         </button>
     {/* Items Start */}
         <div className="setup__items-list absolute bottom-[100%] left-0 right-0 " >
@@ -49,7 +83,8 @@ const Setups = () => {
                         <FontAwesomeIcon icon={faPalette} size="lg" className="text-prime p-4 bg-bg-100"/>
                     </label>
                 </div>
-                <div className="setup__items absolute top-0 -right-5 flex gap-2 items-center" onChange={(e) => {changeColorMode(e)}}>
+                <div className="setup__items absolute top-0 bottom-0 left-[100%] flex items-center" 
+                onChange={(e:React.ChangeEvent<HTMLInputElement>) => {changeColorMode(e)}}>
                     <label htmlFor="dark">
                         <input type="radio" hidden 
                         name="color-mode" id="dark"
@@ -95,14 +130,14 @@ const Setups = () => {
                         <FontAwesomeIcon icon={faFlag} size="lg" className="text-prime  p-4 bg-bg-100"/>
                     </label>
                 </div>
-                <div className="setup__items absolute top-0 -right-5 flex gap-2 items-center">
+                <div className="setup__items absolute top-0 bottom-0 left-[100%] flex items-center">
                     
                     {
                         Languages?.map((item) => (
                             <label htmlFor={item.name} key={item.id}>
                                 <input type="radio" hidden 
                                 name="languages" id={item.name} data-abrv={item.abrv} />
-                                <span className="setup__text">
+                                <span className="setup__text" >
                                     {item.abrv}
                                 </span>
                             </label>

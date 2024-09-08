@@ -3,7 +3,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import { cn } from "../../libs/utils";
 
 const buttonVariants = cva(
-    "text-prime py-2 px-5 text-bold",
+    "text-prime py-2 text-bold",
     {
         variants:{
             variant:{
@@ -14,7 +14,7 @@ const buttonVariants = cva(
                 rounded:"text-prime hover:text-prime-100 hover:bg-bg-100 duration-[.3s]  rounded-[50%] bg-bg w-[3rem] h-[3rem] md:w-[4rem] md:h-[4rem] flex justify-center items-center shadow-lg"
             },
             sizes:{
-                sm:"w-[2.5rem] h-[2.5rem]"
+                sm:"w-[2rem] h-[2rem]"
             }
         },
         defaultVariants: {

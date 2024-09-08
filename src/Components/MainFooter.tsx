@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Container from "./Container"
 import KontaktForm from "./KontaktForm"
-import { faMessage } from "@fortawesome/free-solid-svg-icons"
+import { faMessage, faTimes } from "@fortawesome/free-solid-svg-icons"
 import { FC } from "react"
 import Logo from "./Logo"
 import MainNav from "./MainNav"
@@ -45,7 +45,9 @@ const MainFooter:FC<MainFooterProps>=({showkontakt,changeShowKontaktState}) => {
         <KontaktForm show={showkontakt ? 'show' : ''}/>
         <button className={`z-[999999] fixed bottom-1 right-1 md:bttom-5 md:right-5 ${buttonVariants({variant:"rounded"})} `} 
         onClick={changeShowKontaktState}>
-            <FontAwesomeIcon icon={faMessage} size="lg" />
+            {
+                showkontakt ? <FontAwesomeIcon icon={faTimes} size="lg" /> : <FontAwesomeIcon icon={faMessage} size="lg" />
+            }
         </button>
         <Setups />
     </>
