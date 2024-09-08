@@ -5,7 +5,7 @@ import Header from '../Components/Header'
 import Card from '../Components/Assets/Card'
 import Services from "../Data/Services.json"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faThumbsUp } from '@fortawesome/free-solid-svg-icons'
+import { faSave, faShareAlt, faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons'
 
 function Start() {
 
@@ -105,15 +105,33 @@ function Start() {
               <p>Da ich ein Vollzeitjob habe, habe ich leider nicht viele Zeit für meine Private Projekte. Hier ein paar davon</p>
           </Header>
           <Container>
-              <Card variant="mediaCard" className="project">
+              <Card variant="mediaCard" className="project relative">
                 <div className="card__header">
-                    <img src="" alt="" />
+                    <img src="./Projects/DefaultThumb.jpg" alt="" />
+                </div>
+                <div className="card__header">
+                  <h3 className="absolute top-0 text-text px-2 py-2 w-full bg-bg text-lg font-medium">Project Überschrift</h3>
                 </div>
                 <div className="card__footer">
-                  <ul>
+                  <ul className='absolute bottom-0 left-0 flex gap-2'>
                     <li>
-                      <Button variant="rounded">
-                          <FontAwesomeIcon icon={faThumbsUp} className="text-bg" />
+                      <Button variant="roundedLight">
+                          <FontAwesomeIcon icon={faThumbsUp}  />
+                      </Button>
+                    </li>
+                    <li>
+                      <Button variant="roundedLight">
+                          <FontAwesomeIcon icon={faThumbsDown}  />
+                      </Button>
+                    </li>
+                    <li>
+                      <Button variant="roundedLight">
+                          <FontAwesomeIcon icon={faShareAlt}  />
+                      </Button>
+                    </li>
+                    <li>
+                      <Button variant="roundedLight">
+                          <FontAwesomeIcon icon={faSave}  />
                       </Button>
                     </li>
                   </ul>

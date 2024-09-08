@@ -90,7 +90,7 @@ const Setups = () => {
                         name="color-mode" id="dark"
                         value="dark"
                         checked={colorMode === 'dark'}
-                        
+                        readOnly
                         />
                         <span className="setup__text">
                             <FontAwesomeIcon icon={faMoon} size="lg" />
@@ -101,7 +101,7 @@ const Setups = () => {
                         name="color-mode" id="light" 
                         value="light"
                         checked={colorMode === 'light'}
-                        
+                        readOnly
                         />
                         <span className="setup__text">
                             <FontAwesomeIcon icon={faSun} size="lg" />
@@ -112,7 +112,7 @@ const Setups = () => {
                         name="color-mode" id="system" 
                         value="system"
                         checked={colorMode === 'system'}
-                        
+                        readOnly
                         />
                         <span className="setup__text">
                             <FontAwesomeIcon icon={faComputer} size="lg" />
