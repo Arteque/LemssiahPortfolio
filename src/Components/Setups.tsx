@@ -39,19 +39,19 @@ const Setups = () => {
             <FontAwesomeIcon className="setup__opener current" icon={faGear} />
         </button>
     {/* Items Start */}
-        <div className="setup__items-list absolute bottom-0 right-0 pb-12 bg-bg-200 w-fit left-[50%] translate-x-[-50%]">
+        <div className="setup__items-list absolute bottom-[100%] left-0 right-0 " >
        {/* Color Mode Elements Start */} 
-            <div className="setup__items-container relative setup__color-mode">
-                <div className="setup__items-toggler">
+            <div className="setup__items-container relative setup__color-mode flex justify-center items-center">
+                <div className="setup__items-toggler ">
                     <label htmlFor="palette">
-                        <input type="radio" 
+                        <input type="radio" hidden 
                         name="items-toggler" id="palette"   />
-                        <FontAwesomeIcon icon={faPalette} size="lg" />
+                        <FontAwesomeIcon icon={faPalette} size="lg" className="text-prime p-4 bg-bg-100"/>
                     </label>
                 </div>
-                <div className="setup__items flex gap-2 items-center" onChange={(e) => {changeColorMode(e)}}>
+                <div className="setup__items absolute top-0 -right-5 flex gap-2 items-center" onChange={(e) => {changeColorMode(e)}}>
                     <label htmlFor="dark">
-                        <input type="radio" 
+                        <input type="radio" hidden 
                         name="color-mode" id="dark"
                         value="dark"
                         checked={colorMode === 'dark'}
@@ -62,7 +62,7 @@ const Setups = () => {
                         </span>
                     </label>
                     <label htmlFor="light">
-                        <input type="radio" 
+                        <input type="radio" hidden 
                         name="color-mode" id="light" 
                         value="light"
                         checked={colorMode === 'light'}
@@ -73,7 +73,7 @@ const Setups = () => {
                         </span>
                     </label>
                     <label htmlFor="system">
-                        <input type="radio" 
+                        <input type="radio" hidden 
                         name="color-mode" id="system" 
                         value="system"
                         checked={colorMode === 'system'}
@@ -87,20 +87,20 @@ const Setups = () => {
             </div>
             {/* Color Mode Elements End */}
             {/* Languages Elements Start */}
-            <div className="setup__items-container relative setup__lang">
+            <div className="setup__items-container relative setup__lang flex justify-center items-center">
                 <div className="setup__items-toggler">
                     <label htmlFor="languages">
-                        <input type="radio" 
+                        <input type="radio" hidden 
                         name="items-toggler" id="languages" />
-                        <FontAwesomeIcon icon={faFlag} size="lg" />
+                        <FontAwesomeIcon icon={faFlag} size="lg" className="text-prime  p-4 bg-bg-100"/>
                     </label>
                 </div>
-                <div className="setup__items flex gap-2 items-center">
+                <div className="setup__items absolute top-0 -right-5 flex gap-2 items-center">
                     
                     {
                         Languages?.map((item) => (
                             <label htmlFor={item.name} key={item.id}>
-                                <input type="radio" 
+                                <input type="radio" hidden 
                                 name="languages" id={item.name} data-abrv={item.abrv} />
                                 <span className="setup__text">
                                     {item.abrv}
