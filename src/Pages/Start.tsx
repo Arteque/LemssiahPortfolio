@@ -111,7 +111,7 @@ function Start() {
                 <div className="card__header overflow-hidden">
                     <img src="./Projects/DefaultThumb.jpg" alt="DefaultThumb" className="
                      transition-all duration-[5s] grayscale
-                    group-hover:scale-[1.1] group-hover:grayscale-0"/>
+                    group-hover:scale-[1.01] group-hover:grayscale-0"/>
                 </div>
                 <div className="card__body">
                   <h3 className="text-prime text-lg flex gap-2 pt-5 px-3">
