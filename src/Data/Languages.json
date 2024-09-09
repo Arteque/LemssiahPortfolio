@@ -2,21 +2,25 @@
     {
         "id":1,
         "name":"Deutsch",
-        "abrv": "de"
+        "abrv": "de",
+        "state":true
     },
     {
         "id":2,
         "name":"Französisch",
-        "abrv": "fr"
+        "abrv": "fr",
+        "state":true
     },
     {
         "id":3,
         "name":"Englisch",
-        "abrv": "eng"
+        "abrv": "eng",
+        "state":true
     },
     {
         "id":4,
         "name":"Arabisch",
-        "abrv": "ar"
+        "abrv": "ar",
+        "state":false
     }
 ]

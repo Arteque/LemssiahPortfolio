@@ -12,7 +12,7 @@ const buttonVariants = cva(
                 full:"block w-fit p-2 px-4 bg-second-100 text-prime rounded-sm font-bold uppercase hover:bg-second hover:text-prime transition-all duration-[.3] ease-in-out",
                 inline:"inline m-0 px-0 pr-2 underline text-prime-100 hover:text-prime target?pr-10",
                 rounded:"text-prime hover:text-prime-100 hover:bg-bg-100 duration-[.3s]  rounded-[50%] bg-bg w-[2.5rem] h-[2.5rem] md:w-[3rem] md:h-[3rem] flex justify-center items-center shadow-lg",
-                roundedLight:"text-prime-300 bg-prime hover:text-bg-100 hover:bg-prime-100 duration-[.3s]  rounded-[50%] w-[2.5rem] h-[2.5rem] md:w-[3rem] md:h-[3rem] flex justify-center items-center shadow-lg"
+                roundedLight:"text-bg-200 bg-prime hover:text-bg-100 hover:bg-prime-100 duration-[.3s]  rounded-[50%] w-[2.5rem] h-[2.5rem] md:w-[3rem] md:h-[3rem] flex justify-center items-center shadow-lg"
             },
             sizes:{
                 sm:"w-[2rem] h-[2rem] p-0 md:w-[3rem] md:h-[3rem]"

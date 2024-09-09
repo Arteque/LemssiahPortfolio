@@ -47,6 +47,11 @@ const Setups = () => {
         }else{
             document.body.dataset.mode = isDarkMode ? "dark" : "light"
         }
+
+        //Languages
+        setLang(() => {
+            return document.documentElement.lang
+        })
     },[])
 
 
@@ -63,6 +68,21 @@ const Setups = () => {
         }
     },[colorMode, isDarkMode])
     
+
+
+    const [lang, setLang] = useState(() => {
+        return document.documentElement.lang
+    })
+
+
+    const checkedLanguage = (e:React.ChangeEvent<HTMLInputElement>) => {
+        setLang(e.target.value)
+    }
+
+    
+    useEffect(() => {
+        document.documentElement.lang = lang
+    },[lang])
 
   return (
     <div className={`setup fixed bottom-1 left-1 ${setup ? 'open':''}`}>
@@ -130,17 +150,22 @@ const Setups = () => {
                         <FontAwesomeIcon icon={faFlag} size="lg" className="text-prime  p-4 bg-bg-100"/>
                     </label>
                 </div>
-                <div className="setup__items absolute top-0 bottom-0 left-[100%] flex items-center">
+                <div className="setup__items absolute top-0 bottom-0 left-[100%] flex items-center" onChange={(e:React.ChangeEvent<HTMLInputElement>) => {checkedLanguage(e)}}>
                     
                     {
                         Languages?.map((item) => (
-                            <label htmlFor={item.name} key={item.id}>
-                                <input type="radio" hidden 
-                                name="languages" id={item.name} data-abrv={item.abrv} />
-                                <span className="setup__text" >
-                                    {item.abrv}
-                                </span>
-                            </label>
+                            item.state && (
+                                <label htmlFor={item.name} key={item.id}>
+                                    <input type="radio" hidden  
+                                    readOnly 
+                                    value={item.abrv} 
+                                    checked={lang === item.abrv}
+                                    name="languages" id={item.name} data-abrv={item.abrv} />
+                                    <span className="setup__text" >
+                                        {item.abrv}
+                                    </span>
+                                </label>
+                            )
                         ))
                     }
                 </div>

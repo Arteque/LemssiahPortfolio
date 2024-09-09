@@ -5,7 +5,8 @@ import Header from '../Components/Header'
 import Card from '../Components/Assets/Card'
 import Services from "../Data/Services.json"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSave, faShareAlt, faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons'
+import { faGlobeAfrica, faSave, faShareAlt, faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons'
+import { faCss3, faHtml5, faJs, faReact } from '@fortawesome/free-brands-svg-icons'
 
 function Start() {
 
@@ -105,15 +106,36 @@ function Start() {
               <p>Da ich ein Vollzeitjob habe, habe ich leider nicht viele Zeit für meine Private Projekte. Hier ein paar davon</p>
           </Header>
           <Container>
-              <Card variant="mediaCard" className="project relative">
-                <div className="card__header">
-                    <img src="./Projects/DefaultThumb.jpg" alt="" />
+              <Card variant="mediaCard" className="project relative group cursor-pointer  overflow-hidden bg-bg my-5 
+               shadow-sm shadow-prime-200 group-hover:shadow-lg ">
+                <div className="card__header overflow-hidden">
+                    <img src="./Projects/DefaultThumb.jpg" alt="DefaultThumb" className="
+                     transition-all duration-[5s] grayscale
+                    group-hover:scale-[1.1] group-hover:grayscale-0"/>
                 </div>
-                <div className="card__header">
-                  <h3 className="absolute top-0 text-text px-2 py-2 w-full bg-bg text-lg font-medium">Project Überschrift</h3>
+                <div className="card__body">
+                  <h3 className="text-prime text-lg flex gap-2 pt-5 px-3">
+                    <span className="card__icon">
+                      <FontAwesomeIcon icon={faGlobeAfrica} />
+                    </span>
+                    <span className="card__text">
+                    Project Überschrift |
+                    <span  className="text-text-200 text-xs"> 
+                    <small> Marokko</small> - <small>29.11.2024</small>
+                    </span>
+                    </span>
+                  </h3>
+                  <h4 className="px-3 text-xs text-text-200">
+                    <span>100 Views</span> | <span>10 Likes</span>
+                  </h4>
+                  <p className="card__description p-5 text-prime">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ipsam amet vitae, esse expedita eaque eius ducimus aspernatur sunt? Soluta.
+                  </p>
                 </div>
                 <div className="card__footer">
-                  <ul className='absolute bottom-0 left-0 flex gap-2'>
+                  <ul className='absolute flex flex-col gap-2 top-2 right-[-20%] transition-all duration-[.5s]
+                  group-hover:right-0 
+                  '>
                     <li>
                       <Button variant="roundedLight">
                           <FontAwesomeIcon icon={faThumbsUp}  />
@@ -133,6 +155,20 @@ function Start() {
                       <Button variant="roundedLight">
                           <FontAwesomeIcon icon={faSave}  />
                       </Button>
+                    </li>
+                  </ul>
+                  <ul className="card__tek flex justify-end p-2 gap-1 text-text-100">
+                    <li>
+                      <FontAwesomeIcon icon={faHtml5} />
+                    </li>
+                    <li>
+                      <FontAwesomeIcon icon={faCss3} />
+                    </li>
+                    <li>
+                      <FontAwesomeIcon icon={faJs} />
+                    </li>
+                    <li>
+                      <FontAwesomeIcon icon={faReact} />
                     </li>
                   </ul>
                 </div>
