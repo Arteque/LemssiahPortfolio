@@ -19,9 +19,9 @@ const MainHeader: FC<MainHeaderProps> = ({toggleForm}) => {
 
   return (
     <Header variant="default" className="main-header relative md:sticky top-0 md:w-full backdrop-blur-lg z-[999999]">
-        <div className="main-header__top-nav flex justify-between items-center py-3">
+        <div className="main-header__top-nav flex justify-end items-center py-3">
           {/* <ColorMode /> */}
-          <Socials />
+          <Socials className="hidden md:flex"/>
         </div>
         <Container>
           <div className="main-header__bottom-nav w-full flex justify-between rounded-lg md:bg-bg overflow-hidden">

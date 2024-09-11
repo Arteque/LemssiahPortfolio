@@ -7,6 +7,7 @@ import Services from "../Data/Services.json"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGlobeAfrica, faSave, faShareAlt, faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons'
 import { faCss3, faHtml5, faJs, faReact } from '@fortawesome/free-brands-svg-icons'
+import ProjectSingle from '../Components/Assets/ProjectSingle'
 
 function Start() {
 
@@ -115,15 +116,17 @@ function Start() {
                 </div>
                 <div className="card__body">
                   <h3 className="text-prime text-lg flex gap-2 pt-5 px-3">
-                    <span className="card__icon">
-                      <FontAwesomeIcon icon={faGlobeAfrica} />
-                    </span>
-                    <span className="card__text">
-                    Project Überschrift |
-                    <span  className="text-text-200 text-xs"> 
-                    <small> Marokko</small> - <small>29.11.2024</small>
-                    </span>
-                    </span>
+                    <a href="#" title="project-title">
+                      <span className="card__icon">
+                        <FontAwesomeIcon icon={faGlobeAfrica} />
+                      </span>
+                      <span className="card__text">
+                      Project Überschrift |
+                      <span  className="text-text-200 text-xs"> 
+                      <small> Marokko</small> - <small>29.11.2024</small>
+                      </span>
+                      </span>
+                    </a>
                   </h3>
                   <h4 className="px-3 text-xs text-text-200">
                     <span>100 Views</span> | <span>10 Likes</span>
@@ -173,6 +176,7 @@ function Start() {
                   </ul>
                 </div>
               </Card>
+              <ProjectSingle />
           </Container>
         </section>
     </>

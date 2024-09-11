@@ -19,7 +19,9 @@
     --bg-200:#b5becc; 
 }
 
-
+section{
+    overflow-x: hidden;
+}
 
 [data-mode="dark"]{
     --prime: whitesmoke;
