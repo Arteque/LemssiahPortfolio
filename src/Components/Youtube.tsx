@@ -10,7 +10,7 @@ interface YoutubeVideoSnippet {
   description: string;
   videoId:string;
   publishedAt:string;
-  resourceId:string;
+  resourceId:object;
   thumbnails: {
     default: { url: string };
     medium: { url: string };
@@ -36,7 +36,7 @@ const Youtube: React.FC = () => {
     const fetchYoutubeData = async (): Promise<void> => {
       try {
         const response = await fetch(
-          `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLRSKNDpLx5fIMfpQI6-2y7WtShBHfLL_u&maxResults=3&key=${import.meta.env.VITE_YOUTUBE_API_KEY}`
+          `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLRSKNDpLx5fIMfpQI6-2y7WtShBHfLL_u&maxResults=6&key=${import.meta.env.VITE_YOUTUBE_API_KEY}`
         );
         const data: YoutubeApiResponse = await response.json();
         const videos = data.items;
@@ -54,7 +54,7 @@ const Youtube: React.FC = () => {
     <>
         {youtubeData.length > 0 ? (
           youtubeData.map((item, index) => (
-            <Card className="relative group cursor-pointer  overflow-hidden bg-bg my-5 
+            <Card className="relative group cursor-pointer  overflow-hidden bg-bg my-5
                shadow-sm shadow-prime-200 group-hover:shadow-lg " key={index} variant="mediaCard">
               <div className="card__header">
                 <img src={item.snippet.thumbnails.high.url} alt={item.snippet.title} className="

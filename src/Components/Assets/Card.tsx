@@ -25,7 +25,7 @@ interface cardProps extends VariantProps<typeof cardVariants>{
 }
 
 const Card:FC<cardProps> = ({className,variant, children}) => {
-    return <div className={`${cn(cardVariants({variant}), className)}`} >
+    return <div className={`${cn(cardVariants({variant}), className)} mx-auto md:mx-0`} >
         {children}
     </div>
 }
