@@ -7,11 +7,9 @@ import Services from "../Data/Services.json"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGlobeAfrica, faSave, faShareAlt, faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons'
 import { faCss3, faHtml5, faJs, faReact } from '@fortawesome/free-brands-svg-icons'
-import ProjectSingle from '../Components/Assets/ProjectSingle'
+import Youtube from '../Components/Youtube'
 
 function Start() {
-
-
 
   return (
     <>
@@ -176,9 +174,18 @@ function Start() {
                   </ul>
                 </div>
               </Card>
-              <ProjectSingle />
           </Container>
         </section>
+       <section>
+              <Header variant="section">
+                  <h2>Youtube</h2>
+              </Header>
+              <Container>
+                <div className="section__content md:flex md:gap-2 md:justify-between">
+                  <Youtube />
+                </div>
+              </Container>
+       </section>
     </>
   )
 }
