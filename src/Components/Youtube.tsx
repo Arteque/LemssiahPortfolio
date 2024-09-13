@@ -53,7 +53,7 @@ const Youtube: React.FC = () => {
 
   return (
     <>
-        {youtubeData.length > 0 ? (
+        {youtubeData ? (
           youtubeData.map((item, index) => (
             <Card className="relative group cursor-pointer  overflow-hidden bg-bg my-5
                shadow-sm shadow-prime-200 group-hover:shadow-lg " key={index} variant="mediaCard">
