@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Card from "./Assets/Card";
 import { buttonVariants } from "./Assets/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendarAlt, faPlay } from "@fortawesome/free-solid-svg-icons";
+import { faCalendarAlt, faCircle, faPlay } from "@fortawesome/free-solid-svg-icons";
 
 // Define the types for the API response
 interface YoutubeVideoSnippet {
@@ -53,17 +53,19 @@ const Youtube: React.FC = () => {
 
   return (
     <>
-        {youtubeData ? (
+        {youtubeData.length > 0 ? (
           youtubeData.map((item, index) => (
             <Card className="relative group cursor-pointer  overflow-hidden bg-bg my-5
                shadow-sm shadow-prime-200 group-hover:shadow-lg " key={index} variant="mediaCard">
               <div className="card__header">
                 <img src={item.snippet.thumbnails.high.url} alt={item.snippet.title} className="
-                transition-all mix-blend-screen
+                transition-all mix-blend-lighten
                 group-hover:opacity-5"/>
               </div>
               <div className="card__body">
-                <h3 className="text-prime line-clamp-4 absolute -bottom-20 left-3 right-3
+                <h3 className="text-prime line-clamp-4 
+                   p-5
+                   md:absolute md:-bottom-20 md:left-3 md:right-3
                     transition-all group-hover:bottom-2 
                 ">{item.snippet.title} <br />
                  <small className="text-bg-200"> 
@@ -73,16 +75,24 @@ const Youtube: React.FC = () => {
               </div>
               <div className="card__footer">
                 <a className={`${buttonVariants({variant:'rounded'})} 
-                block text-prime bg-bg absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 transition-all
-                opacity-0 group-hover:opacity-[1] scale-0 group-hover:scale-[1]
+                text-prime bg-bg 
+                transition-all
+                absolute top-5 left-5
+                p-5 flex gap-2
+                md:opacity-0 md:group-hover:opacity-[1] md:scale-0 md:group-hover:scale-[1]
+                 md:left-[50%] md:top-[50%] md:-translate-x-1/2 md:-translate-y-1/2 
                 `} href={`https://www.youtube.com/watch?v=${item.snippet.resourceId.videoId}`} title={item.snippet.title} target="_blank">
-                    <FontAwesomeIcon icon={faPlay} size="xl" />
+                    <FontAwesomeIcon icon={faPlay} size="sm" />
+                    <span className="md:hidden"> Play</span>
                 </a>
               </div>
             </Card>
           ))
         ) : (
-          <p>Loading YouTube data...</p>
+          <p className="flex items-center justify-center gap-5">
+            <FontAwesomeIcon icon={faCircle} />
+            <span>Loading ...</span>
+          </p>
         )}
     </>
   );
