@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import { cva,  VariantProps} from "class-variance-authority";
 import { cn } from "../../libs/utils";
 
@@ -20,14 +20,12 @@ const cardVariants = cva(
 
 
 interface cardProps extends VariantProps<typeof cardVariants>{
-    className:string
-    children:any 
+    className:string,
+    children: ReactNode
 }
 
-const Card:FC<cardProps> = ({className,variant, children}) => {
-    return <div className={`${cn(cardVariants({variant}), className)} mx-auto md:mx-0`} >
-        {children}
-    </div>
+const Card:FC<cardProps> = ({className , variant, children}) => {
+    return <div className={`${cn(cardVariants({variant}), className)} mx-auto md:mx-0`}>{children}</div>
 }
 
 export default Card

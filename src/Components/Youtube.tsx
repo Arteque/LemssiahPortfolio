@@ -8,9 +8,10 @@ import { faCalendarAlt, faPlay } from "@fortawesome/free-solid-svg-icons";
 interface YoutubeVideoSnippet {
   title: string;
   description: string;
-  videoId:string;
   publishedAt:string;
-  resourceId:object;
+  resourceId:{
+    videoId:string;
+  },
   thumbnails: {
     default: { url: string };
     medium: { url: string };
