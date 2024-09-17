@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Card from "./Assets/Card";
 import { buttonVariants } from "./Assets/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendarAlt, faCircle, faPlay } from "@fortawesome/free-solid-svg-icons";
+import { faCircle, faPlay } from "@fortawesome/free-solid-svg-icons";
 
 // Define the types for the API response
 interface YoutubeVideoSnippet {
@@ -37,7 +37,7 @@ const Youtube: React.FC = () => {
     const fetchYoutubeData = async (): Promise<void> => {
       try {
         const response = await fetch(
-          `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLRSKNDpLx5fIMfpQI6-2y7WtShBHfLL_u&maxResults=6&key=${import.meta.env.VITE_YOUTUBE_API_KEY}`
+          `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLRSKNDpLx5fIMfpQI6-2y7WtShBHfLL_u&maxResults=3&key=${import.meta.env.VITE_YOUTUBE_API_KEY}`
         );
         const data: YoutubeApiResponse = await response.json();
         const videos = data.items;
@@ -48,8 +48,8 @@ const Youtube: React.FC = () => {
       }
     };
 
-    fetchYoutubeData(); // Call the function inside useEffect
-  }, []); // Empty dependency array to ensure it runs only once
+    fetchYoutubeData(); 
+  }, []);
 
   return (
     <>
@@ -59,27 +59,37 @@ const Youtube: React.FC = () => {
                shadow-sm shadow-prime-200 group-hover:shadow-lg " key={index} variant="mediaCard">
               <div className="card__header">
                 <img src={item.snippet.thumbnails.high.url} alt={item.snippet.title} className="
-                transition-all mix-blend-lighten
-                group-hover:opacity-5"/>
+                
+                transition-[transform]
+                duration-[10s]
+                ease-in-out
+                scale-[1]
+                opacity-[1]
+                group-hover:opacity-[0.2]
+                group-hover:scale-[1.01]
+                group-hover:rotate-[2deg]
+                
+                "/>
               </div>
               <div className="card__body">
-                <h3 className="text-prime line-clamp-4 
-                   p-5
-                   md:absolute md:-bottom-20 md:left-3 md:right-3
-                    transition-all group-hover:bottom-2 
+                <h3 className="
+                 text-prime line-clamp-4 p-5 transition-all duration-[1s]
+                  md:absolute md:bottom-[-100px] md:left-3 md:right-3
+                  group-hover:bottom-0 
                 ">{item.snippet.title} <br />
-                 <small className="text-bg-200"> 
-                    <FontAwesomeIcon icon={faCalendarAlt} /> {item.snippet.publishedAt.split("T")[0].split("-").reverse().join(".")}  </small>
+                
                 </h3>
                
               </div>
               <div className="card__footer">
-                <a className={`${buttonVariants({variant:'rounded'})} 
+                <a className={`
+                ${buttonVariants({variant:'rounded'})} 
+                w-fit rounded-none
                 text-prime bg-bg 
                 transition-all
-                absolute top-5 left-5
+                absolute top-1 left-1
                 p-5 flex gap-2
-                md:opacity-0 md:group-hover:opacity-[1] md:scale-0 md:group-hover:scale-[1]
+                md:opacity-[0.9] md:group-hover:opacity-[1] md:scale-0 md:group-hover:scale-[1]
                  md:left-[50%] md:top-[50%] md:-translate-x-1/2 md:-translate-y-1/2 
                 `} href={`https://www.youtube.com/watch?v=${item.snippet.resourceId.videoId}`} title={item.snippet.title} target="_blank">
                     <FontAwesomeIcon icon={faPlay} size="sm" />
