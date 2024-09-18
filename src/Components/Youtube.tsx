@@ -42,7 +42,6 @@ const Youtube: React.FC = () => {
         const data: YoutubeApiResponse = await response.json();
         const videos = data.items;
         setYoutubeData(videos);
-        console.log(videos)
       } catch (err) {
         console.error("Error fetching YouTube data:", err);
       }

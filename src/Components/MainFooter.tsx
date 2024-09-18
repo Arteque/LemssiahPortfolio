@@ -10,7 +10,7 @@ import Header from "./Header"
 import { buttonVariants } from "./Assets/Button"
 import Setups from "./Setups"
 import Details from "./Details"
-
+import readme from "../Projects/dictionary-api/readme.md"
 interface MainFooterProps{
     showkontakt:unknown,
     changeShowKontaktState:() => void
@@ -51,7 +51,7 @@ const MainFooter:FC<MainFooterProps>=({showkontakt,changeShowKontaktState}) => {
             }
         </button>
         <Setups />
-        <Details />
+        <Details projectPath={readme}/>
     </>
   )
 }
