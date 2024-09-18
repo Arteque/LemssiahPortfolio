@@ -9,6 +9,7 @@ import Socials from "./Socials"
 import Header from "./Header"
 import { buttonVariants } from "./Assets/Button"
 import Setups from "./Setups"
+import Details from "./Details"
 
 interface MainFooterProps{
     showkontakt:unknown,
@@ -50,6 +51,7 @@ const MainFooter:FC<MainFooterProps>=({showkontakt,changeShowKontaktState}) => {
             }
         </button>
         <Setups />
+        <Details />
     </>
   )
 }

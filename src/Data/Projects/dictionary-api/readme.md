@@ -1,6 +1,5 @@
-# Frontend Mentor - Dictionary web app
+# Dictionary Web App
 
-This is a solution to the [Dictionary web app](https://www.frontendmentor.io/challenges/manage-landing-page-SLXqC6P5).
 
 ## Table of contents
 
@@ -27,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![the desktop version](https://github.com/Arteque/dictionary-api/blob/main/src/screenshot.png)
+![the desktop version](https://raw.githubusercontent.com/Arteque/dictionary-api/main/src/screenshot.png)
 
 ### Links
 
