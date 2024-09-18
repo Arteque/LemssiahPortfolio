@@ -8,20 +8,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGlobeAfrica, faSave, faShareAlt, faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons'
 import { faCss3, faHtml5, faJs, faReact } from '@fortawesome/free-brands-svg-icons'
 import Youtube from '../Components/Youtube'
-import { FC, useState } from 'react'
-
-interface StartProps{
-  toggleForm: () => void
-}
 
 
-const Start:FC<StartProps>= () =>  {
+const Start = () =>  {
 
-  const [formState, setFormState] = useState(false)
-
-  const toggleForm = () => {
-    setFormState(prev => !prev)
-  }
 
   
 
@@ -52,7 +42,7 @@ const Start:FC<StartProps>= () =>  {
                     <span className="text-[1rem] md:text-[1.8rem] text-text">Ich gestalte Sachen und entwickle Websites</span>
                   </h2>
                   <div className="hero__call flex justify-center mt-5 gap-5 md:justify-normal">
-                    <Link className={`${buttonVariants({variant:"full"})} text-bg`} to="/kontakt" onClick={toggleForm}>kontakt</Link>
+                    <Link className={`${buttonVariants({variant:"full"})} text-bg`} to="/kontakt" >kontakt</Link>
                     <Link className={`${buttonVariants({variant:"outline"})} dark:text-prime`} to="/portfolio">Portfolio</Link>
                   </div>
                 </div>
