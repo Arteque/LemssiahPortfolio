@@ -3,9 +3,14 @@ import MainHeader from "../Components/MainHeader"
 import MainFooter from "../Components/MainFooter"
 import { useLocation } from "react-router-dom"
 import { useState} from "react"
+// import Details from "../Components/Details"
+// import readme from "../Projects/dictionary-api/readme.md"
 function Root() {
+
+
   const locationPath = useLocation()
 
+  //FormState
   const [formState, setFormState] = useState(false)
 
   const changetheFormState = () => {
@@ -22,7 +27,7 @@ function Root() {
               <Outlet />
             </main>
           <MainFooter showkontakt={formState} changeShowKontaktState={changetheFormState}/>
-    
+          {/* <Details projectPath={readme}/> */}
     </>
   )
 }

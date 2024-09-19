@@ -1,7 +1,7 @@
 
 import Markdown from "react-markdown"
 import Container from './Container'
-import {FC, useEffect} from "react"
+import {FC} from "react"
 
 interface detailsProps {
   projectPath:string
@@ -10,9 +10,6 @@ interface detailsProps {
 const Details:FC<detailsProps> = ({projectPath}) => {  
 
 
-useEffect(() => {
-  
-},[])
 
   return (
     <Container className="project-details fixed top-10 right-10 left-10 bottom-10 rounded-sm overflow-y-auto z-[999999] backdrop-blur-lg">
