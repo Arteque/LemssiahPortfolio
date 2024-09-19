@@ -43,7 +43,7 @@ const MainFooter:FC<MainFooterProps>=({showkontakt,changeShowKontaktState}) => {
             </div>
         </footer>
         <KontaktForm show={showkontakt ? 'show' : ''}/>
-        <button className={`z-[999999] fixed bottom-1 right-1 md:bttom-5 md:right-5 ${buttonVariants({variant:"rounded"})} `} 
+        <button className={`z-[99999999] fixed bottom-1 right-1 md:bttom-5 md:right-5 ${buttonVariants({variant:"rounded"})} `} 
         onClick={changeShowKontaktState}>
             {
                 showkontakt ? <FontAwesomeIcon icon={faTimes} size="lg" /> : <FontAwesomeIcon icon={faMessage} size="lg" />

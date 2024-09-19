@@ -10,8 +10,7 @@ import ProjectCard from '../Components/ProjectCard'
 
 const Start = () =>  {
 
-
-  
+ 
 
   return (
     <>
@@ -28,7 +27,8 @@ const Start = () =>  {
              flex flex-col justify-end
              md:gap-2 md:flex-row-reverse md:items-center md:justify-end md:min-h-[80svh] ">
                 <div className="hero__content
-                p-[2rem] translate-y-[70px] 
+                p-[2rem] translate-y-[100px]
+                backdrop-blur-sm 
                 md:backdrop-blur-sm shadow-lg
                 md:translate-y-0 md:self-end md:mb-5 
                 ">
@@ -116,12 +116,18 @@ const Start = () =>  {
               </div>
           </Container>
         </section>
-       <section>
+       <section
+         onClick={(e) => {
+          console.log(e.target)
+        }}
+       >
               <Header variant="section">
                   <h2 className="text-[3.45rem] text-second-100 text-black uppercase font-black shadow-text">Youtube</h2>
               </Header>
               <Container>
-                <div className="section__content md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-10">
+                <div className="section__content md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-10"
+              
+                >
                   <Youtube />
                 </div>
               </Container>

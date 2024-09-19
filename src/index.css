@@ -84,7 +84,26 @@ section{
         pointer-events: all !important;
     }
 }
-
+/* Mobile Nav start */
+body::after{
+    content:"";
+    position: absolute;
+    inset: 50vh 0 0 0;
+    opacity: 0;
+    pointer-events: none;
+    background:linear-gradient(to top, #000 10%, transparent);
+    backdrop-filter: grayscale(1);
+    transition: all 0.5s;
+}
+body[data-nav='open']::after{  
+    opacity: 1;
+    inset: 0;
+}
+form input, form textarea{
+    /* border:1px solid var(--prime) */
+    background:var(--prime);
+}
+/* Mobile Nav end*/
 
 /* Hero Section Start page*/
 [data-mode] .hero-section::before{
@@ -180,6 +199,9 @@ section{
     bottom: 100%;
     pointer-events: all;
 }
+.setup__items-toggler{
+    z-index: 100;
+}
 .setup__items-toggler svg{
     cursor: pointer;
     transition: all 0.5s;
@@ -195,7 +217,6 @@ section{
     transition: all 0.5s; 
 }
 .setup__items label {
-    height: 100%;
     min-width: 60px;
     display: flex;
     align-items: center;
@@ -204,13 +225,14 @@ section{
     color: var(--text);
     font-weight: 900;
     cursor: pointer;
+    height: 100%;
     transition: all 0.5s;
 }
 .setup__items label:hover{
     background:var(--bg-100);
 }
 .setup__items label:has(input:checked){
-    background:var(--second);
+    background:var(--second-100);
     color: var(--bg);
 }
 
@@ -222,4 +244,7 @@ section{
  opacity: 1;
  left: 100%;
  pointer-events: all; 
+}
+.svg-inline--fa{
+    display: block;
 }

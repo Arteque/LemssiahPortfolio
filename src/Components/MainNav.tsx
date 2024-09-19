@@ -1,4 +1,4 @@
-import { faBars } from "@fortawesome/free-solid-svg-icons"
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { NavLink } from "react-router-dom"
 import { buttonVariants } from "./Assets/Button"
@@ -35,6 +35,7 @@ const MainNav : FC<NavProps>= ({className, variant, ...props}) => {
 
     const changeNavState = () => {
         setNavState(prev => !prev)
+        document.body.dataset.nav = navState ? "close" : "open" 
     }
 
   return (
@@ -42,7 +43,13 @@ const MainNav : FC<NavProps>= ({className, variant, ...props}) => {
         {
             variant == "header" && (
             <div className="burger md:hidden h-fit" onClick={changeNavState}> 
-                <FontAwesomeIcon icon={faBars} className="size-8 text-prime p-0 m-0 block py-5 pr-3"/> 
+                {
+                    navState ? (
+                        <FontAwesomeIcon icon={faTimes} className="size-8 text-prime p-0 m-0 block py-5 pr-3"/> 
+                    ): (
+                        <FontAwesomeIcon icon={faBars} className="size-8 text-prime p-0 m-0 block py-5 pr-3"/> 
+                    )
+                }
             </div>)
         }
         <ul className={`${cn(mainNavVariants({variant}))} ${navState ? "opacity-1 pointer-events-auto":"opacity-0 pointer-events-none"}`} {...props}>

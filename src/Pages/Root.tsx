@@ -28,6 +28,7 @@ function Root() {
             </main>
           <MainFooter showkontakt={formState} changeShowKontaktState={changetheFormState}/>
           {/* <Details projectPath={readme}/> */}
+          
     </>
   )
 }

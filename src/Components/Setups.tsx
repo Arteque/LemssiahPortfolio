@@ -85,8 +85,8 @@ const Setups = () => {
     },[lang])
 
   return (
-    <div className={`setup fixed bottom-1 left-1 ${setup ? 'open':''}`}>
-        <button onClick={changeSetupVisibility} className={cn("setup__toggler relative z-10", buttonVariants({variant:"rounded", sizes:"sm"}))}>
+    <div className={`setup fixed bottom-1 left-1 ${setup ? 'open':''} z-[999999999]`}>
+        <button onClick={changeSetupVisibility} className={cn(buttonVariants({variant:"rounded"}),  "setup__toggler relative z-10")}>
            {
             setup ? ( <FontAwesomeIcon className="setup__opener current" icon={faTimes} size="xl"/>)
             : ( <FontAwesomeIcon className="setup__opener current" icon={faGear} size="xl"/>)

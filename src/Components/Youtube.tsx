@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState } from "react";
 import Card from "./Assets/Card";
 import { buttonVariants } from "./Assets/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle, faPlay } from "@fortawesome/free-solid-svg-icons";
+import VideoPlayer from "./Assets/VideoPlayer";
 
 // Define the types for the API response
 interface YoutubeVideoSnippet {
@@ -27,10 +28,15 @@ interface YoutubeApiResponse {
   items: YoutubeVideo[];
 }
 
-const Youtube: React.FC = () => {
+type singleVideoData = {
+  url:string,
+  title:string
+}
+
+const Youtube:React.FC = () => {
   const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playlistItems";
 
-  // Type your state as an array of YoutubeVideo or an empty array
+
   const [youtubeData, setYoutubeData] = useState<YoutubeVideo[]>([]);
 
   useEffect(() => {
@@ -50,12 +56,34 @@ const Youtube: React.FC = () => {
     fetchYoutubeData(); 
   }, []);
 
+const [videoUrl, setVideoUrl] = useState<singleVideoData>()
+const [player, setPlayer] = useState(false)
+
+const openVideo = (e:any) => {
+  e.preventDefault()
+  console.log(e)
+  const url = e.target.href 
+  const title = e.target.title 
+  setVideoUrl({
+      url:url,
+      title:title
+    })
+}
+
+
+
+  useEffect(() => {
+    setPlayer(videoUrl ? true : false)
+  },[videoUrl])
+
   return (
     <>
         {youtubeData.length > 0 ? (
           youtubeData.map((item, index) => (
             <Card className="relative group cursor-pointer  overflow-hidden bg-bg my-5
-               shadow-sm shadow-prime-200 group-hover:shadow-lg " key={index} variant="mediaCard">
+               shadow-sm shadow-prime-200 group-hover:shadow-lg " key={index} variant="mediaCard" 
+           
+               >
               <div className="card__header">
                 <img src={item.snippet.thumbnails.high.url} alt={item.snippet.title} className="
                 
@@ -90,8 +118,12 @@ const Youtube: React.FC = () => {
                 p-5 flex gap-2
                 md:opacity-[0.9] md:group-hover:opacity-[1] md:scale-0 md:group-hover:scale-[1]
                  md:left-[50%] md:top-[50%] md:-translate-x-1/2 md:-translate-y-1/2 
-                `} href={`https://www.youtube.com/watch?v=${item.snippet.resourceId.videoId}`} title={item.snippet.title} target="_blank">
-                    <FontAwesomeIcon icon={faPlay} size="sm" />
+                `} href={`https://www.youtube.com/watch?v=${item.snippet.resourceId.videoId}`} 
+                title={item.snippet.title} 
+                target="_blank"
+                onClick={(e) => {openVideo(e)}}
+                >
+                    <FontAwesomeIcon icon={faPlay} size="sm" className=" pointer-events-none"/>
                     <span className="md:hidden"> Play</span>
                 </a>
               </div>
@@ -103,6 +135,23 @@ const Youtube: React.FC = () => {
             <span>Loading ...</span>
           </p>
         )}
+        <div className={`${player ? 'open':'close'} videoplayer-container
+          fixed top-5 left-5 right-5 bottom-5 z-[999999999] flex items-center justify-center bg-bg
+          md:top-20 md:left-20 md:right-20 md:bottom-20 rounded-lg shadow-md 
+        `}
+          
+        >
+          {
+            player ? (
+             <>
+               <h2 className="absolute top-1 text-prime">{videoUrl?.title}</h2>
+               <VideoPlayer videoUrl={videoUrl?.url} />
+             </>
+            ):(
+              <></>
+            )
+          }
+        </div>
     </>
   );
 };
