@@ -1,9 +1,10 @@
 import {useEffect, useState } from "react";
 import Card from "./Assets/Card";
-import { buttonVariants } from "./Assets/Button";
+import { Button, buttonVariants } from "./Assets/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircle, faPlay } from "@fortawesome/free-solid-svg-icons";
+import { faCircle, faPlay, faTimes } from "@fortawesome/free-solid-svg-icons";
 import VideoPlayer from "./Assets/VideoPlayer";
+import { Link } from "react-router-dom";
 
 // Define the types for the API response
 interface YoutubeVideoSnippet {
@@ -60,14 +61,16 @@ const [videoUrl, setVideoUrl] = useState<singleVideoData>()
 const [player, setPlayer] = useState(false)
 
 const openVideo = (e:any) => {
+  setPlayer(false)
   e.preventDefault()
-  console.log(e)
   const url = e.target.href 
-  const title = e.target.title 
+  const title = e.target.title
+  setVideoUrl({url:'',title:''}) 
   setVideoUrl({
       url:url,
       title:title
     })
+    console.log(e)
 }
 
 
@@ -135,16 +138,30 @@ const openVideo = (e:any) => {
             <span>Loading ...</span>
           </p>
         )}
-        <div className={`${player ? 'open':'close'} videoplayer-container
-          fixed top-5 left-5 right-5 bottom-5 z-[999999999] flex items-center justify-center bg-bg
+        <Link className={`${buttonVariants({variant:'full'})} m-2`} to="videos">
+          Mehr...
+        </Link>
+        <div className={`${player ? 'opacity-1 pointer-events-auto':'opacity-0 pointer-events-none'} 
+          videoplayer-container transition-all duration-100
+          fixed top-0 left-0 right-0 bottom-0 z-[999999999] 
+          flex flex-col p-2 items-center justify-center bg-bg
           md:top-20 md:left-20 md:right-20 md:bottom-20 rounded-lg shadow-md 
+          
         `}
           
         >
           {
             player ? (
+              
              <>
-               <h2 className="absolute top-1 text-prime">{videoUrl?.title}</h2>
+                <Button variant="rounded" className="absolute top-0 right-0 bg-second"
+                  onClick={() => {
+                    setPlayer(false)
+                  }}
+                >
+                  <FontAwesomeIcon icon={faTimes} size="xl" />
+                </Button>
+               <h2 className="text-prime mt-5 py-5">{videoUrl?.title}</h2>
                <VideoPlayer videoUrl={videoUrl?.url} />
              </>
             ):(
