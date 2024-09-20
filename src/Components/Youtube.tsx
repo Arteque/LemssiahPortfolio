@@ -44,7 +44,7 @@ const Youtube:React.FC = () => {
     const fetchYoutubeData = async (): Promise<void> => {
       try {
         const response = await fetch(
-          `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLRSKNDpLx5fIMfpQI6-2y7WtShBHfLL_u&maxResults=3&key=${import.meta.env.VITE_YOUTUBE_API_KEY}`
+          `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLRSKNDpLx5fIMfpQI6-2y7WtShBHfLL_u&maxResults=6&key=${import.meta.env.VITE_YOUTUBE_API_KEY}`
         );
         const data: YoutubeApiResponse = await response.json();
         const videos = data.items;
@@ -138,9 +138,7 @@ const openVideo = (e:any) => {
             <span>Loading ...</span>
           </p>
         )}
-        <Link className={`${buttonVariants({variant:'full'})} m-2`} to="videos">
-          Mehr...
-        </Link>
+        
         <div className={`${player ? 'opacity-1 pointer-events-auto':'opacity-0 pointer-events-none'} 
           videoplayer-container transition-all duration-100
           fixed top-0 left-0 right-0 bottom-0 z-[999999999] 

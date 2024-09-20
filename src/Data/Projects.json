@@ -19,26 +19,5 @@
                 "icon":"faReact"
             }
         ]
-    },
-    {
-        "id":2,
-        "date":"01.01.2024",
-        "type":"Web",
-        "title":"Dictionary web app",
-        "lang":"de",
-        "description":"./readme.md",
-        "headerImage":"./headerimg.jpg",
-        "tech":[
-            {
-                "id":"1",
-                "name":"Vite",
-                "icon":"faVite"
-            },
-            {
-                "id":"2",
-                "name":"Reactjs",
-                "icon":"faReact"
-            }
-        ]
     }
 ]

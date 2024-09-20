@@ -6,7 +6,7 @@ import Card from '../Components/Assets/Card'
 import Services from "../Data/Services.json"
 import Projects from "../Data/Projects.json"
 import Youtube from '../Components/Youtube'
-import ProjectCard from '../Components/ProjectCard'
+import ProjectCard from '../Components/Assets/ProjectCard'
 
 const Start = () =>  {
 
@@ -110,10 +110,15 @@ const Start = () =>  {
               <div className='md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-10'>
                 {
                   Projects && Projects.map((item) => (
-                    <ProjectCard key={`${item.title}${item.id}`}/>
+                    <ProjectCard key={`${item.title}${item.id}`} 
+                    title={item.title} 
+                    />
                   ))
                 }
               </div>
+              <Link className={`${buttonVariants({variant:'full'})} my-2`} to="portfolio">
+                Mehr...
+              </Link>  
           </Container>
         </section>
        <section
@@ -129,7 +134,11 @@ const Start = () =>  {
               
                 >
                   <Youtube />
+
                 </div>
+                <Link className={`${buttonVariants({variant:'full'})} my-2`} to="videos">
+                  Mehr...
+                </Link>
               </Container>
        </section>
     </>

@@ -1,10 +1,17 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import Card from "./Assets/Card"
+import Card from "./Card"
 import { faGlobeAfrica, faSave, faShareAlt, faThumbsDown, faThumbsUp } from "@fortawesome/free-solid-svg-icons"
-import { Button } from "./Assets/Button"
+import { Button } from "./Button"
 import { faCss3, faHtml5, faJs, faReact } from "@fortawesome/free-brands-svg-icons"
+import { FC } from "react"
 
-const ProjectCard = () => {
+interface projectCardProps{
+  title?:string,
+  location?:string,
+  date?:string
+}
+
+const ProjectCard:FC<projectCardProps> = ({title, location, date}) => {
   return (
     <Card variant="mediaCard" className="project relative group cursor-pointer  overflow-hidden bg-bg my-5 
     shadow-sm shadow-prime-200 group-hover:shadow-lg ">
@@ -20,9 +27,9 @@ const ProjectCard = () => {
               <FontAwesomeIcon icon={faGlobeAfrica} />
             </span>
             <span className="card__text">
-            Project Überschrift |
+            {title} |
             <span  className="text-text-200 text-xs"> 
-            <small> Marokko</small> - <small>29.11.2024</small>
+            <small>{location}</small> - <small>{date}</small>
             </span>
             </span>
           </a>

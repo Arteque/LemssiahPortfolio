@@ -7,7 +7,7 @@ interface videoPlayerProps{
 
 const VideoPlayer:FC<videoPlayerProps> = ({videoUrl}) => {
   return (
-    <ReactPlayer url={videoUrl} width="80%" height="80%" config={{
+    <ReactPlayer url={videoUrl} width="70%" height="100%" style={{maxWidth:"1400px", maxHeight:"800px"}}config={{
         youtube:{
             playerVars:{
                 showinfo:0,
