@@ -2,7 +2,10 @@ import { Outlet } from "react-router-dom"
 import MainHeader from "../Components/MainHeader"
 import MainFooter from "../Components/MainFooter"
 import { useLocation } from "react-router-dom"
-import { useState} from "react"
+import { useEffect, useState} from "react"
+import Container from "../Components/Container"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCircle } from "@fortawesome/free-solid-svg-icons"
 // import Details from "../Components/Details"
 // import readme from "../Projects/dictionary-api/readme.md"
 function Root() {
@@ -18,9 +21,17 @@ function Root() {
   }
 
 
+  const [loadState, setLoadstate] = useState(false)
+
+  useEffect(() => {
+   document.onreadystatechange = () => {
+    setLoadstate(document.readyState == 'complete' ? true:false)
+   }
+  },[])
 
   return (
-    <>
+    loadState ? (
+      <>
     
           <MainHeader toggleForm={changetheFormState}/>
             <main className={`page-${locationPath.pathname.replace("/","")}`}>
@@ -30,6 +41,16 @@ function Root() {
           {/* <Details projectPath={readme}/> */}
           
     </>
+    ):(
+      <>
+        <Container className="bg-bg w-full min-h-[100svh] flex items-center justify-center">
+          <h2 className="text-prime">
+            <span>Loading...</span>
+            <FontAwesomeIcon icon={faCircle} className="animate-spin " />
+          </h2>
+        </Container>
+      </>
+    )
   )
 }
 

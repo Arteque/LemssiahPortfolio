@@ -149,8 +149,7 @@ const openVideo = (e:any) => {
         >
           {
             player ? (
-              
-             <>
+              <>
                 <Button variant="rounded" className="absolute top-0 right-0 bg-second"
                   onClick={() => {
                     setPlayer(false)
