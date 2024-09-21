@@ -110,8 +110,16 @@ const Start = () =>  {
               <div className='md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-10'>
                 {
                   Projects && Projects.map((item) => (
-                    <ProjectCard key={`${item.title}${item.id}`} 
-                    title={item.title} 
+                    <ProjectCard key={`${item.title.de}${item.id}`} 
+                    title={item.title.de} 
+                    screenshot={item.screenshot}
+                    screenshottype={item.screenshottype}
+                    description={item.short.de}
+                    date={item.date}
+                    location={item.location}
+                    teks={item.teks}
+                    type={item.type}
+                    project={item.projectname}
                     />
                   ))
                 }

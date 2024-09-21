@@ -26,7 +26,7 @@ function Root() {
             <main className={`page-${locationPath.pathname.replace("/","")}`}>
               <Outlet />
             </main>
-          <MainFooter showkontakt={formState} changeShowKontaktState={changetheFormState}/>
+          <MainFooter showkontakt={formState} toggleForm={changetheFormState}/>
           {/* <Details projectPath={readme}/> */}
           
     </>

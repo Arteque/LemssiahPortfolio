@@ -10,7 +10,8 @@ const KontaktForm:FC<KontaktFormProps> = ({show, ...props}) => {
 
 
     return <>
-        <form  className={`main-kontaktform bg-bg max-w-[450px] shadow-lg p-5 rounded-lg fixed left-5 bottom-1 right-5 pb-[3rem] top-[10vh] md:bottom-10 md:right-[6rem] md:left-auto md:top-[20vh] overflow-y-auto overflow-hidden z-[9999999] text-prime ${show}`} {...props}>
+        <form  className={`main-kontaktform bg-bg max-w-[450px] shadow-lg p-5 rounded-lg fixed left-5 bottom-1 right-5 pb-[3rem] top-[10vh] md:bottom-10 md:right-[6rem] md:left-auto md:top-[20vh] overflow-y-auto overflow-hidden z-[9999999] text-prime 
+            ${show}`} {...props}>
             
                 <h2 className="font-bold uppercase text-prime border border-bg rounded-lg p-5 text-center mb-5">Kontaktieren Sie mich</h2>
             

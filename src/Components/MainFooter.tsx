@@ -12,10 +12,10 @@ import Setups from "./Setups"
 
 interface MainFooterProps{
     showkontakt:unknown,
-    changeShowKontaktState:() => void
+    toggleForm:() => void
 }
 
-const MainFooter:FC<MainFooterProps>=({showkontakt,changeShowKontaktState}) => {
+const MainFooter:FC<MainFooterProps>=({showkontakt,toggleForm}) => {
 
     const thisYear  = () => {
         return new Date().toLocaleDateString("de-DE",{year:'numeric'})
@@ -44,7 +44,7 @@ const MainFooter:FC<MainFooterProps>=({showkontakt,changeShowKontaktState}) => {
         </footer>
         <KontaktForm show={showkontakt ? 'show' : ''}/>
         <button className={`z-[99999999] fixed bottom-1 right-1 md:bttom-5 md:right-5 ${buttonVariants({variant:"rounded"})} `} 
-        onClick={changeShowKontaktState}>
+        onClick={toggleForm}>
             {
                 showkontakt ? <FontAwesomeIcon icon={faTimes} size="lg" /> : <FontAwesomeIcon icon={faMessage} size="lg" />
             }

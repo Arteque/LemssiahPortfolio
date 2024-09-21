@@ -1,22 +1,34 @@
 [
     {
         "id":1,
-        "date":"01.01.2024",
-        "type":"Web",
-        "title":"Dictionary web app",
-        "lang":"de",
+        "date":"10.02.2024",
+        "type":"webapp",
+        "screenshot":"dictionary-api",
+        "screenshottype":"png",   
+        "title":{
+            "de":"Dictionary web app",
+            "en":"Dictionary web app",
+            "fr":"Application web: Dictionaire anglais"
+        },
+        "projectname":"dictionary-api",
+        "location":"de",
+        "short":{
+            "de": "Das ist eine Beschreibun"
+        },
         "description":"./readme.md",
         "headerImage":"./headerimg.jpg",
-        "tech":[
+        "teks":[
             {
                 "id":"1",
-                "name":"Vite",
-                "icon":"faVite"
+                "name":"Reactjs",
+                "icon":"React",
+                "iconType":"svg"
             },
             {
                 "id":"2",
-                "name":"Reactjs",
-                "icon":"faReact"
+                "name":"Css3",
+                "icon":"Css3",
+                "iconType":"svg"
             }
         ]
     }
