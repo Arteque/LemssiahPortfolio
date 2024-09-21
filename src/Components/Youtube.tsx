@@ -4,7 +4,6 @@ import { Button, buttonVariants } from "./Assets/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle, faPlay, faTimes } from "@fortawesome/free-solid-svg-icons";
 import VideoPlayer from "./Assets/VideoPlayer";
-import { Link } from "react-router-dom";
 
 // Define the types for the API response
 interface YoutubeVideoSnippet {
