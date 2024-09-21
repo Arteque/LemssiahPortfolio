@@ -2,12 +2,7 @@ import { Outlet } from "react-router-dom"
 import MainHeader from "../Components/MainHeader"
 import MainFooter from "../Components/MainFooter"
 import { useLocation } from "react-router-dom"
-import { useEffect, useState} from "react"
-import Container from "../Components/Container"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCircle } from "@fortawesome/free-solid-svg-icons"
-// import Details from "../Components/Details"
-// import readme from "../Projects/dictionary-api/readme.md"
+import { useState} from "react"
 function Root() {
 
 
