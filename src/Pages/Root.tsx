@@ -21,18 +21,11 @@ function Root() {
   }
 
 
-  const [loadState, setLoadstate] = useState(false)
-
-  useEffect(() => {
-   document.onreadystatechange = () => {
-    setLoadstate(document.readyState == 'complete' ? true:false)
-   }
-  },[])
+  
 
   return (
-    loadState ? (
-      <>
     
+      <>
           <MainHeader toggleForm={changetheFormState}/>
             <main className={`page-${locationPath.pathname.replace("/","")}`}>
               <Outlet />
@@ -41,16 +34,6 @@ function Root() {
           {/* <Details projectPath={readme}/> */}
           
     </>
-    ):(
-      <>
-        <Container className="bg-bg w-full min-h-[100svh] flex items-center justify-center">
-          <h2 className="text-prime">
-            <span>Loading...</span>
-            <FontAwesomeIcon icon={faCircle} className="animate-spin " />
-          </h2>
-        </Container>
-      </>
-    )
   )
 }
 
