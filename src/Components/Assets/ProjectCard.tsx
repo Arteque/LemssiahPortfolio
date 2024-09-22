@@ -1,12 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Card from "./Card"
-import { faCalendarAlt,  faExternalLink, faGlobe,  faLink, faTimes } from "@fortawesome/free-solid-svg-icons"
+import { faCalendarAlt,  faExternalLink, faGlobe,  faLink } from "@fortawesome/free-solid-svg-icons"
 import { buttonVariants } from "./Button"
 import { FC, useState } from "react"
 import { cn } from "../../libs/utils"
 import { Link } from "react-router-dom"
-import Markdown from "react-markdown"
-import Container from "../Container"
+import Details from "../Details"
 
 interface projectCardProps{
   title?:string,
@@ -51,13 +50,7 @@ const ProjectCard:FC<projectCardProps> = ({
   }
 
 
-  const markdownBlankLink =  (props:any) => {
-    return (
-      <a href={props.href} target="_blank" rel="noopener noreferrer nofollow">
-        {props.children}
-      </a>
-    )
-  }
+  
 
   return (
     <>
@@ -134,48 +127,9 @@ const ProjectCard:FC<projectCardProps> = ({
     </Card>
     {
       mdContent !== '' ? (
-        <Container className="
-        project-details 
-        fixed top-0 right-0 left-0 bottom-0 
-        rounded-sm overflow-y-auto z-[999999] backdrop-blur-lg
-        bg-[#00000099]
-        ">
-                <button className={`
-                ${buttonVariants({variant:'rounded'})}
-                absolute top-1 right-1`}
-                  onClick={() => {setMdContent('')}}
-                >
-                  <FontAwesomeIcon icon={faTimes} />
-                </button>
-                <div className="
-                project-container 
-                max-w-[50vw] 
-                min-h-full 
-                bg-bg 
-                mx-auto
-                p-5
-                ">
-                  <Markdown className="
-                  prose 
-                  prose-h1:font-black 
-                  prose-h1:text-second
-                  prose-h2:text-prime
-                  prose-h3:text-second
-                  prose-h3:mt-10
-                  prose-h3:font-light
-                  prose-h3:text-2xl
-                  prose-ul:text-prime
-                  prose-li:text-prime
-                  prose-p:text-prime
-                  prose-a:text-prime
-                  "
-                  components={{a:markdownBlankLink}}
-                  >
-                    {mdContent}
-                  </Markdown>
-                </div>
-            
-          </Container>
+        <>
+            <Details projectPath={mdContent} closeDetailsContainer={() => {setMdContent('')}}/>
+        </>
       ):(
         <></>
       )
