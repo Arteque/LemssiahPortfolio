@@ -11,7 +11,9 @@
 Meine Herausforderung bestand darin, diese Wörterbuch-Web-App mit der Dictionary API zu erstellen und das Design so genau wie möglich nachzubilden.
 
 Ich konnte alle Tools verwenden, die mir halfen, die Aufgabe zu erfüllen. Wenn ich etwas hatte, das ich üben wollte, konnte ich es gerne ausprobieren.
-**Ich hatte mich für Reactjs + Vite entschieden.**
+
+**Ich habe mich für Reactjs + Vite entschieden.**
+![Reactjs](./Icons/Reactjs.svg)
 
 ##### Meine Nutzer sollten in der Lage sein:
 
@@ -25,6 +27,18 @@ Ich konnte alle Tools verwenden, die mir halfen, die Aufgabe zu erfüllen. Wenn 
 - Hover- und Fokus-Zustände für alle interaktiven Elemente auf der Seite zu sehen
 
 ### Welche Technologien wurden benutzt
+
+Light mode view
+![Lightmode](./Projects/dictionary-api__lightmode.png)
+
+Wortvorschlaf während das Schreibens
+![HotLoad](./Projects/dictionary-api__hotsearch.png)
+
+_Auch nachaktualisierung der Website, gehen die Einstellung (darkmode und Font Type) nicht verloren_
+![HotLoad](./Projects/dictionary-api__setupstorage.png)
+
+**Wenn vorhanden, wird das gesuchtes Wort als Audioausgabe verfügbar sein**
+![HotLoad](./Projects/dictionary-api__audiofeature.png)
 
 ### Wie funktionniert dieses Projekt?
 
