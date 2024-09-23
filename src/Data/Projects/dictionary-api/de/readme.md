@@ -1,70 +1,25 @@
 ## Wörterbuch Web App
 
-### Screenshot
+### Briefing
 
 ![the desktop version](https://raw.githubusercontent.com/Arteque/dictionary-api/main/src/screenshot.png)
 
-### Beschreibung des Projekts
+Meine Herausforderung bestand darin, diese Wörterbuch-Web-App mithilfe der ["Dictionary API"](https://dictionaryapi.dev/) zu erstellen und das vorgegebene Design möglichst detailgetreu nachzubilden. Dabei lag der Fokus sowohl auf der funktionalen Implementierung als auch auf der visuellen Gestaltung, um ein ansprechendes und nutzerfreundliches Erlebnis zu bieten.
 
-#### Meine Herausforderung
+**Technologie:**  
+![ReactJS](./Icons/Reactjs.svg) **_Ich habe diese Web-App mit ReactJS entwickelt,_**
 
-Meine Herausforderung bestand darin, diese Wörterbuch-Web-App mit der Dictionary API zu erstellen und das Design so genau wie möglich nachzubilden.
+was mir ermöglichte, eine modulare und skalierbare Architektur zu nutzen. ReactJS bietet eine performante Möglichkeit, dynamische UI-Komponenten zu erstellen, die effizient mit der API interagieren. Das Projekt wurde auf GitHub Pages veröffentlicht, um die Anwendung direkt online zugänglich zu machen.
 
-Ich konnte alle Tools verwenden, die mir halfen, die Aufgabe zu erfüllen. Wenn ich etwas hatte, das ich üben wollte, konnte ich es gerne ausprobieren.
+**Features:**
 
-**Ich habe mich für Reactjs + Vite entschieden.**
-![Reactjs](./Icons/Reactjs.svg)
+- Dynamische Abfrage und Anzeige von Wörterbucheinträgen über die Dictionary API
+  ![HotLoad](./Projects/dictionary-api/dictionary-api__hotsearch.png)
+- Einfache und intuitive Benutzeroberfläche, die dem Design-Vorbild treu bleibt
+- Responsives Layout für optimale Darstellung auf verschiedenen Geräten
 
-##### Meine Nutzer sollten in der Lage sein:
-
-- Wörter über das Eingabefeld zu suchen
-- Die Antwort der Free Dictionary API für das gesuchte Wort zu sehen
-- Eine Formular-Validierungsnachricht zu sehen, wenn ich versuchte, ein leeres Formular abzuschicken
-- Die Audiodatei eines Wortes abzuspielen, wenn diese verfügbar war
-- Zwischen Serif-, Sans-Serif- und Monospace-Schriftarten zu wechseln
-- Zwischen hellen und dunklen Themen zu wechseln
-- Das optimale Layout der Oberfläche je nach Bildschirmgröße des **Users** zu sehen
-- Hover- und Fokus-Zustände für alle interaktiven Elemente auf der Seite zu sehen
-
-### Welche Technologien wurden benutzt
-
-Light mode view
-![Lightmode](./Projects/dictionary-api__lightmode.png)
-
-Wortvorschlaf während das Schreibens
-![HotLoad](./Projects/dictionary-api__hotsearch.png)
-
-_Auch nachaktualisierung der Website, gehen die Einstellung (darkmode und Font Type) nicht verloren_
-![HotLoad](./Projects/dictionary-api__setupstorage.png)
-
-**Wenn vorhanden, wird das gesuchtes Wort als Audioausgabe verfügbar sein**
-![HotLoad](./Projects/dictionary-api__audiofeature.png)
-
-### Wie funktionniert dieses Projekt?
-
-### Erwiterungen und Extras
-
-### Links
-
-### Credits
-
-- "Hot Search" wenn der User die buchstaben tipt
-- Dynamic Fetch
-
-### Overview
-
-Dieses Webapp ist auf https://api.dictionaryapi.dev api basiert, um Wörter Definitionen zu suchen
-
-#### The challenge
-
-Users should be able to:
-
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
-- See all testimonials in a horizontal slider
-- Receive an error message when the newsletter sign up `form` is submitted if:
-  - The `input` field is empty
-  - The email address is not formatted correctly
+**Herausforderungen und Lernprozesse:**  
+Die größte Herausforderung bestand darin, die API nahtlos in die Anwendung zu integrieren und gleichzeitig eine benutzerfreundliche Oberfläche zu entwickeln. Dabei konnte ich mein Wissen in ReactJS vertiefen und wertvolle Erfahrungen im Umgang mit externen APIs sammeln.
 
 ### Links
 

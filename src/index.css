@@ -99,6 +99,8 @@ body[data-nav='open']::after{
     opacity: 1;
     inset: 0;
 }
+
+
 form input, form textarea{
     /* border:1px solid var(--prime) */
     background:var(--prime);
@@ -247,4 +249,63 @@ form input, form textarea{
 }
 .svg-inline--fa{
     display: block;
+}
+
+
+/* ###########
+################
+################# For the md Files 
+##################
+#################
+*/
+body:has(.project-details){
+    overflow-y:hidden;
+}
+.project-details img[src$='.svg'] {
+    width: 40px;
+    height: 40px;
+    background: var(--text-200);
+    padding: 5px;
+    border-radius: 10px;
+    display: inline-block;
+}
+.project-details *{
+    color: var(--prime);
+    line-height:2.45rem;
+}
+.project-details > * > *{
+    max-width:800px ;
+    margin-inline:auto;
+}
+.project-details h2{
+    font-size: 3rem;
+    text-align:center;
+    color:var(--second-100);
+    font-weight: 900;
+    margin-block: 3rem;
+}
+.project-details ul{
+    margin-block: 1rem;
+}
+.project-details li{
+    list-style:circle;
+    margin-inline-start:1rem;
+    padding-inline-start: 1rem;
+}
+.project-details h3{
+    color:var(--bg);
+    background:var(--prime-100);
+    padding: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-block-start: 2rem;
+}
+.project-details h4{
+    font-size: 1.8rem;
+}
+.project-details a{
+    text-decoration: underline !important;
+    color: var(--bg-100);
+    background: var(--prime-100);
 }

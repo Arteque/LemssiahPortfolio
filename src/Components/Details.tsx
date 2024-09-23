@@ -32,17 +32,16 @@ const Details:FC<detailsProps> = ({projectPath,closeDetailsContainer}) => {
     <Container className="
           project-details 
           fixed 
-          top-1
-          left-1
-          right-1
-          bottom-1
+          top-0
+          left-0
+          right-0
+          bottom-0
           overflow-y-auto
-          rounded-sm  
           z-[999999] 
-          backdrop-blur-lg
-          md:top-10 md:right-10 md:left-10 md:bottom-10 ">
+          backdrop-blur-2xl
+          ">
           <button className={cn(`${buttonVariants({variant:"rounded"})}
-          fixed top-0 right-0
+          sticky top-0 right-0
           `)}
           onClick={closeDetailsContainer}
           >
@@ -50,40 +49,13 @@ const Details:FC<detailsProps> = ({projectPath,closeDetailsContainer}) => {
           </button>
           <div className="
           project-container 
-          md:max-w-[50vw] 
+          md:max-w-[70vw] 
           min-h-full 
           bg-bg 
           mx-auto
           p-5
           ">
-            <Markdown className="
-            w-full
-            prose 
-            prose-h1:font-black 
-            prose-h1:text-second
-            prose-h2:text-prime
-            prose-h3:text-second
-            prose-h3:mt-10
-            prose-h3:font-light
-            prose-h3:text-2xl
-            prose-h4:text-xl
-            prose-h4:text-bg-200
-            prose-h5:text-bg-200
-            prose-h6:text-bg-200
-            prose-ul:text-prime
-            prose-li:text-prime
-            prose-p:text-prime
-            prose-p:w-full
-            prose-a:text-prime
-            prose-strong:text-prime
-            prose-code:text-prime
-            prose-code:font-bold
-            prose-code:border
-            prose-code:border-bg-100
-            prose-img:block
-            prose-img:w-full
-            prose-img:margin-x-auto
-            "
+            <Markdown
             components={{a:markdownBlankLink}}
             >
               {projectPath}
