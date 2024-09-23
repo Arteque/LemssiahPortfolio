@@ -120,6 +120,7 @@ const Start = () =>  {
                     teks={item.teks}
                     type={item.type}
                     project={item.projectname}
+                    projektFolder={item.projectname}
                     />
                   ))
                 }

@@ -16,6 +16,7 @@ interface projectCardProps{
   description?:string,
   type?:string,
   project?:string,
+  projektFolder?:string,
   teks?: projectTeks[]
 }
 
@@ -34,7 +35,8 @@ const ProjectCard:FC<projectCardProps> = ({
   type, 
   project,
   screenshot,
-  screenshottype
+  screenshottype,
+  projektFolder
 }) => {
 
 
@@ -59,7 +61,7 @@ const ProjectCard:FC<projectCardProps> = ({
       <div className="card__header overflow-hidden">
           {
             screenshot ? (
-              <img src={`./Projects/${screenshot}.${screenshottype}`} alt={title} className="
+              <img src={`./Projects/${projektFolder}/${screenshot}.${screenshottype}`} alt={title} className="
               transition-all duration-[5s] grayscale
               group-hover:scale-[1.01] group-hover:grayscale-0"/>
             ): (

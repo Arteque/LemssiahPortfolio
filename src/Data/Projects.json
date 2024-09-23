@@ -31,5 +31,44 @@
                 "iconType":"svg"
             }
         ]
+    },
+    {
+        "id":2,
+        "date":"5.02.2024",
+        "type":"webapp",
+        "screenshot":"screenshot",
+        "screenshottype":"png",   
+        "title":{
+            "de":"Space tourism multi-page website",
+            "en":"Space tourism multi-page website",
+            "fr":"Space tourism multi-page website"
+        },
+        "projectname":"Space-tourism",
+        "location":"de",
+        "short":{
+            "de": "Das ist eine Beschreibun"
+        },
+        "description":"./readme.md",
+        "headerImage":"./screnshot.npg",
+        "teks":[
+            {
+                "id":"1",
+                "name":"Html",
+                "icon":"Html",
+                "iconType":"svg"
+            },
+            {
+                "id":"2",
+                "name":"Css3",
+                "icon":"Css3",
+                "iconType":"svg"
+            },
+            {
+                "id":"3",
+                "name":"Js",
+                "icon":"Js",
+                "iconType":"svg"
+            }
+        ]
     }
 ]
