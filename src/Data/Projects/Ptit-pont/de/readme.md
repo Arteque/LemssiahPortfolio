@@ -1,5 +1,5 @@
 ## Wörterbuch Web App
-- [![Project live](./Icons/Globe.svg)](https:ptit-pont.net)
+- [![Project live](./Icons/Globe.svg)](https//:ptit-pont.net)
 ### Briefing
 
 ![the desktop version](./Projects/Ptit-pont/screenshot.png)
