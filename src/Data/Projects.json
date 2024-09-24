@@ -74,10 +74,7 @@
     {
         "id":3,
         "date":"14.05.2022",
-        "type":[
-            "Webdesign",
-            "webapp"
-        ],
+        "type":"Website",
         "screenshot":"screenshot",
         "screenshottype":"png",   
         "title":{
