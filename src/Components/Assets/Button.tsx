@@ -15,7 +15,7 @@ const buttonVariants = cva(
                 roundedLight:"text-bg-200 bg-prime hover:text-bg-100 hover:bg-prime-100 duration-[.3s]  rounded-[50%] w-[2.5rem] h-[2.5rem] md:w-[3rem] md:h-[3rem] flex justify-center items-center shadow-lg"
             },
             sizes:{
-                sm:"w-[2rem] h-[2rem] p-0 md:w-[3rem] md:h-[3rem]"
+                sm:"w-[1rem] h-[1rem] p-2 md:w-[2rem] md:h-[2rem]"
             }
         },
         defaultVariants: {

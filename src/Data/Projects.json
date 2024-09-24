@@ -11,7 +11,7 @@
             "fr":"Application web: Dictionaire anglais"
         },
         "projectname":"dictionary-api",
-        "location":"de",
+        "location":"En",
         "short":{
             "de": "Das ist eine Beschreibun"
         },
@@ -44,7 +44,7 @@
             "fr":"Space tourism multi-page website"
         },
         "projectname":"Space-tourism",
-        "location":"de",
+        "location":"En",
         "short":{
             "de": "Das ist eine Beschreibun"
         },
@@ -67,6 +67,60 @@
                 "id":"3",
                 "name":"Js",
                 "icon":"Js",
+                "iconType":"svg"
+            }
+        ]
+    },
+    {
+        "id":3,
+        "date":"14.05.2022",
+        "type":[
+            "Webdesign",
+            "webapp"
+        ],
+        "screenshot":"screenshot",
+        "screenshottype":"png",   
+        "title":{
+            "de":"Website Ptit-Pont Kindergarten",
+            "en":"Website Ptit-Pont Maternelle",
+            "fr":"Website Ptit-Pont Maternelle"
+        },
+        "projectname":"Ptit-pont",
+        "location":"Fr",
+        "short":{
+            "de": "Das ist eine Beschreibun"
+        },
+        "description":"./readme.md",
+        "headerImage":"./screnshot.npg",
+        "teks":[
+            {
+                "id":"1",
+                "name":"Html",
+                "icon":"Html",
+                "iconType":"svg"
+            },
+            {
+                "id":"2",
+                "name":"Css3",
+                "icon":"Css3",
+                "iconType":"svg"
+            },
+            {
+                "id":"3",
+                "name":"Js",
+                "icon":"Js",
+                "iconType":"svg"
+            },
+            {
+                "id":"4",
+                "name":"Php",
+                "icon":"Php",
+                "iconType":"svg"
+            },
+            {
+                "id":"5",
+                "name":"Wp",
+                "icon":"Wp",
                 "iconType":"svg"
             }
         ]

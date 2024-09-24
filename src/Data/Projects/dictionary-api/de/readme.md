@@ -1,5 +1,6 @@
 ## Wörterbuch Web App
-
+- [![Project on Github](./Icons/Github.svg)](https://github.com/Arteque/dictionary-api)
+- [![Project live](./Icons/Globe.svg)](https://arteque.github.io/dictionary-api)
 ### Briefing
 
 ![the desktop version](https://raw.githubusercontent.com/Arteque/dictionary-api/main/src/screenshot.png)
@@ -32,7 +33,7 @@ was mir ermöglichte, eine modulare und skalierbare Architektur zu nutzen. Das P
 **Herausforderungen und Lernprozesse:**  
 Die größte Herausforderung bestand darin, die API nahtlos in die Anwendung zu integrieren und gleichzeitig eine benutzerfreundliche Oberfläche zu entwickeln. Dabei konnte ich mein Wissen in ReactJS vertiefen und wertvolle Erfahrungen im Umgang mit externen APIs sammeln.
 
-## Author
+### Author
 
 - Website - [Ahmed Lemssiah](https://www.artecke.de)
 - Frontend Mentor - [@Arteque](https://www.frontendmentor.io/profile/Arteque)

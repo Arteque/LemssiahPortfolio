@@ -114,7 +114,6 @@ const Start = () =>  {
                     title={item.title.de} 
                     screenshot={item.screenshot}
                     screenshottype={item.screenshottype}
-                    description={item.short.de}
                     date={item.date}
                     location={item.location}
                     teks={item.teks}

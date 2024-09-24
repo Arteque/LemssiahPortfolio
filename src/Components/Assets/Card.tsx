@@ -4,7 +4,7 @@ import { cn } from "../../libs/utils";
 
 
 const cardVariants = cva(
-    "max-w-[450px] p-5  rounded-lg  border-bg bg-bg-100 ",
+    "w-[80svw] max-w-[400px] p-5 rounded-lg  border-bg bg-bg-100 ",
     {
         variants:{
             variant:{
