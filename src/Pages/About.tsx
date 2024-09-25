@@ -69,7 +69,7 @@ function About() {
 
   return (
     <>
-      <PageHero pageTitle="Über mich" pageDescription="Erfaren Sie alles über mich" />
+      <PageHero pageTitle="Über mich" />
       <section>
         <Container >
           <Card variant="mediaCard" className="text-prime prose-p:my-5">
@@ -91,20 +91,21 @@ function About() {
                 </strong>
               </p>
               <p>
-                  Hallo und danke, für deine Enteresse!<br /> <br />
+                  Hallo und danke, für deine Interesse!<br /> <br />
                   Mein Name ist Ahmed Lemssiah, ich bin {calcYears("1982,11,29")} Jahre alt und lebe in Deutschland. 
               </p>
               <p>
-                Ich habe eine Ausbildung als Mediengestalter abgeschlossen. Seit {calcYears("2020,07,24")} Jahren habe ich meine Leidenschaft für die Webentwicklung entdeckt, in der ich mein gestalterisches und technisches Wissen kreativ einsetzen kann.
+                Ich habe eine Ausbildung als Mediengestalter erfolgreich abgeschlossen und arbeite seit {calcYears("2020,07,24")} arbeite als Web Entwickler.
               </p>
              
             </div>
             <div className="card__footer">
               <p>
-                  Als leidenschaftlicher Entwickler strebe ich stets danach, mein Wissen zu erweitern und neue Technologien zu erlernen, um mich kontinuierlich weiterzuentwickeln und am Puls der Zeit zu bleiben.
+                 Mit viel Leidenschaft designe und entwickle ich Webpräsenzen mit der Hoffnung, dass meine Kunden
+                 die Qualität meiner Arbeit zu schätzen wissen!
               </p>
               <p>
-                Ich beherrsche die folgenden Technologien sicher:
+              Hier ist eine noch unvollständige Liste meiner täglichen Begleiter, die sich ständig erweitert, da ich stets neue Dinge lerne.
               </p>
               <ul className="flex flex-wrap gap-2 justify-center my-5">
                 {

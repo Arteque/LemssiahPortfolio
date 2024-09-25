@@ -4,11 +4,12 @@ import Container from "../Container"
 interface pageHeroProps {
     pageTitle?: string,
     pageDescription?: string
+    props?:() => any
 }
 
-const PageHero:FC<pageHeroProps> = ({pageTitle, pageDescription}) => {
+const PageHero:FC<pageHeroProps> = ({pageTitle, pageDescription, ...props}) => {
   return (
-    <section className="bg-bg-200">
+    <section className="bg-bg-200" {...props}>
         <Container>
             <div className="min-h-[25svh] flex flex-col items-center justify-center">
                 <h2 className="text-[2rem] font-black text-prime-100 text-center w-full">{pageTitle}</h2>
