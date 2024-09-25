@@ -20,8 +20,8 @@ const cardVariants = cva(
 
 
 interface cardProps extends VariantProps<typeof cardVariants>{
-    className:string,
-    children: ReactNode
+    className?:string,
+    children?: ReactNode
 }
 
 const Card:FC<cardProps> = ({className , variant, children}) => {
