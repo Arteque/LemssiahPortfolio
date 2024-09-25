@@ -25,19 +25,24 @@ const MainFooter:FC<MainFooterProps>=({showkontakt,toggleForm}) => {
 
   return (
     <>
-        <footer className="bg-bg pt-10">
+        <footer className="bg-bg">
            <Header>
                 <Container >
-                    <div className="md:flex md:justify-between pt-11">
-                        <Logo />
+                    <div className="md:flex md:justify-between pt-5">
+                        <Logo  isHeader={false}/>
                         <MainNav variant="footer" />
-                        <Socials />
+                        <Socials className="mx-auto my-5 w-fit"/>
                     </div>
                 </Container>
                
            </Header>
            <div className="footer__legal  bg-prime">
-                <p className="md:max-w-[50%] mx-auto text-center text-second pt-5 pb-2">
+                <p className="
+                md:max-w-[50%] 
+                mx-auto 
+                text-center 
+                text-second 
+                pt-5 pb-2">
                     <samp>Ahmed <em className="not-italic uppercase">Lemssiah</em> {thisYear()} &copy;  alle Rechte vorbehalten</samp>
                 </p>
             </div>

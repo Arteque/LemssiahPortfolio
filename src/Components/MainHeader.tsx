@@ -25,7 +25,7 @@ const MainHeader: FC<MainHeaderProps> = ({toggleForm}) => {
         </div>
         <Container>
           <div className="main-header__bottom-nav w-full flex justify-between rounded-lg md:bg-bg overflow-hidden">
-              <Logo className="main-header__main-logo"/>
+              <Logo className="main-header__main-logo" isHeader={true}/>
               <MainNav variant="header" className="main-header__main-nav"/>
               <button className="hidden md:block w-fit p-2 px-4 bg-second text-prime dark:text-bg rounded-sm font-bold uppercase hover:bg-second-100 hover:text-prime transition-all duration-[.3] ease-in-out"
                 onClick={toggleForm}

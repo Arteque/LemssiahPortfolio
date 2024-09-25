@@ -75,7 +75,7 @@ fetch('data.json')
 
 Durch die Verwendung von einfachem HTML, CSS und JavaScript konnte ich eine schnelle, responsive und interaktive Website erstellen, ohne viel Overhead. Dieser Ansatz gab mir volle Kontrolle über den Code und die Flexibilität, Dinge leicht anzupassen. Es war ein spaßiger und effizienter Prozess!
 
-## Author
+### Author
 
 - Website - [Ahmed Lemssiah](https://www.artecke.de)
 - Frontend Mentor - [@Arteque](https://www.frontendmentor.io/profile/Arteque)

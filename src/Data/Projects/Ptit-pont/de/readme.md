@@ -1,11 +1,18 @@
 ## Wörterbuch Web App
-- [![Project live](./Icons/Globe.svg)](https//:ptit-pont.net)
+- [![Project live](./Icons/Globe.svg)](https://ptit-pont.net)
 ### Briefing
 
 ![the desktop version](./Projects/Ptit-pont/screenshot.png)
 
-**P'tit Pont Maternelle** ist ein Kindergarten in Kénitra - Marokko. Die Inhaberin ist meine geliebter Großer Schwester Aicha!
-Die Website habe ich von A bis Z entworfen, in "Plain" **HTML, Css, Js und Php** entwickelt, dann in **Wordpress** intergriert. 
+
+### Projektbeschreibung
+
+**P'tit Pont Maternelle – Kindergarten in Kénitra, Marokko**
+P'tit Pont Maternelle ist ein liebevoll geführter Kindergarten in Kénitra, der von meiner Schwester Aicha geleitet wird.
+Ich habe die Website von Grund auf entworfen und in reinem **HTML, CSS, JavaScript und PHP** entwickelt. Anschließend wurde sie in **WordPress** integriert, um die Pflege und Aktualisierung der Inhalte zu erleichtern.
+
+Die Website bietet eine benutzerfreundliche Oberfläche, die den Werten des Kindergartens – Wärme, Sicherheit und Bildung – gerecht wird. Eltern können sich einfach über das Angebot informieren und einen Einblick in die Arbeit des Teams erhalten. 
+
 ![XD Screenshot](./Projects/Ptit-pont/Ptit-pont__design.png).
 
 ### Das Design

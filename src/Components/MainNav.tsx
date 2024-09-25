@@ -8,12 +8,12 @@ import { cva, VariantProps } from "class-variance-authority"
 
 
 const mainNavVariants = cva(
-    "md:flex md:items-center md:justify-center md:gap-2 md:bg-[unset] md:shadow-[none] md:border-none md:relative md:left-auto md:right-auto md:top-auto",
+    " md:flex md:items-center md:justify-center md:gap-2 md:bg-[unset] md:shadow-[none] md:border-none md:relative md:left-auto md:right-auto md:top-auto",
     {
         variants:{
             variant:{
                 header: "absolute top-[100%] right-2 left-[25svw] bg-bg py-5 z-[999] rounded-lg shadow-lg border border-bg-100 md:flex md:items-center md:justify-center md:gap-2 md:bg-[unset] md:shadow-[none] md:border-none md:relative md:left-auto md:right-auto md:top-auto transition-all duration-100",
-                footer: "list-disc m-0 p-0 mx-5 md:list-none md:flex md:gap-2 md:justify-center md:items-center py-5"
+                footer: "m-0 p-0 mx-5 md:list-none md:flex md:gap-2 md:justify-center md:items-center py-5"
             }
         },
         defaultVariants:{
@@ -52,28 +52,55 @@ const MainNav : FC<NavProps>= ({className, variant, ...props}) => {
                 }
             </div>)
         }
-        <ul className={`${cn(mainNavVariants({variant}))} ${navState ? "opacity-1 pointer-events-auto":"opacity-0 pointer-events-none"}`} {...props}>
-            <li>
-                <NavLink to="/" className={`${buttonVariants({variant:"default"})} block text-center w-full m-0`} {...props}> 
-                    Start
-                </NavLink>
-            </li>
-            <li>
-                <NavLink to="/uebermich" className={`${buttonVariants({variant:"default"})} block text-center w-full m-0`} {...props}> 
-                    About
-                </NavLink>
-            </li>
-            <li>
-                <NavLink to="/leistungen" className={`${buttonVariants({variant:"default"})} block text-center w-full m-0`} {...props}> 
-                    Services
-                </NavLink>
-            </li>
-            <li>
-                <NavLink to="/portfolio" className={`${buttonVariants({variant:"default"})} block text-center w-full m-0`} {...props}> 
-                    Portfolio
-                </NavLink>
-            </li>
-        </ul>
+        {
+            variant == 'header' ? (
+                <ul className={`${cn(mainNavVariants({variant}))} ${navState ? "opacity-1 pointer-events-auto":"opacity-0 pointer-events-none"}`} {...props}>
+                    <li>
+                        <NavLink to="/" className={`${buttonVariants({variant:"default"})} block text-center w-full m-0`} {...props}> 
+                            Start
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/uebermich" className={`${buttonVariants({variant:"default"})} block text-center w-full m-0`} {...props}> 
+                            About
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/leistungen" className={`${buttonVariants({variant:"default"})} block text-center w-full m-0`} {...props}> 
+                            Services
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/portfolio" className={`${buttonVariants({variant:"default"})} block text-center w-full m-0`} {...props}> 
+                            Portfolio
+                        </NavLink>
+                    </li>
+                </ul>
+            ):(
+                <ul className={`${cn(mainNavVariants({variant}))} "}`} {...props}>
+                    <li>
+                        <NavLink to="/" className={`${buttonVariants({variant:"default"})} block text-center w-full m-0`} {...props}> 
+                            Start
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/uebermich" className={`${buttonVariants({variant:"default"})} block text-center w-full m-0`} {...props}> 
+                            About
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/leistungen" className={`${buttonVariants({variant:"default"})} block text-center w-full m-0`} {...props}> 
+                            Services
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/portfolio" className={`${buttonVariants({variant:"default"})} block text-center w-full m-0`} {...props}> 
+                            Portfolio
+                        </NavLink>
+                    </li>
+                </ul>
+            )
+        }
     </nav>
   )
 }
