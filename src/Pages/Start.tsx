@@ -36,11 +36,16 @@ const Start = () =>  {
                     <span className='block  p-0 w-full text-prime text-center md:text-left'>Ich heiße</span> 
                     <strong className="block text-[2rem] w-full font-black text-prime
                     md:text-[4rem] drop-shadow-lg
-                    ">Ahmed <em className="uppercase not-italic text-second-100">Lemssiah</em> </strong>
-                    <span className="text-[1rem] md:text-[1.8rem] text-text">Ich gestalte Sachen und entwickle Websites</span>
+                    ">Ahmed <em className="uppercase not-italic text-second-100">Lemssiah,</em> </strong>
+                    <span className="text-[1rem] md:text-[1.8rem] text-text md:text-left w-full block">Frontend <em className="uppercase not-italic text-second-100 font-black">Web</em> Entwickler</span>
                   </h2>
+                  <ul>
+                    <li>
+
+                    </li>
+                  </ul>
                   <div className="hero__call flex justify-center mt-5 gap-5 md:justify-normal">
-                    <Link className={`${buttonVariants({variant:"full"})} text-bg`} to="/kontakt" >kontakt</Link>
+                    <Link className={`${buttonVariants({variant:"full"})} text-bg`} to="/uebermich" >Über mich</Link>
                     <Link className={`${buttonVariants({variant:"outline"})} dark:text-prime`} to="/portfolio">Portfolio</Link>
                   </div>
                 </div>

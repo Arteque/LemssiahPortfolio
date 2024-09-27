@@ -4,7 +4,6 @@ import Container from "./Container"
 import Logo from "./Logo"
 import MainNav from "./MainNav"
 import { FC } from "react"
-// import ColorMode from "./ColorMode"
 
 interface MainHeaderProps{
   toggleForm: () => void
