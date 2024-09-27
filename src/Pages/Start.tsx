@@ -112,7 +112,7 @@ const Start = () =>  {
               <p>Da ich ein Vollzeitjob habe, habe ich leider nicht viele Zeit für meine Private Projekte. Hier ein paar davon</p>
           </Header>
           <Container>
-              <div className='md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-10'>
+              <div className='md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-10 md:justify-items-center'>
                 {
                   Projects && Projects.map((item) => (
                     <ProjectCard key={`${item.title.de}${item.id}`} 
@@ -143,8 +143,8 @@ const Start = () =>  {
                   <h2 className="text-[3.45rem] text-second-100 text-black uppercase font-black shadow-text">Youtube</h2>
               </Header>
               <Container>
-                <div className="section__content md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-10"
-              
+                <div className="section__content md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-10  md:justify-items-center"
+                
                 >
                   <Youtube />
 
