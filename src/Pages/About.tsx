@@ -79,8 +79,8 @@ function About() {
       <section>
         <Container >
           <Card variant="mediaCard" className="text-prime prose-p:my-1
-            md:grid md:grid-cols-[1.2fr,.8fr] md-grid-rows-2 md:w-full md:max-w-[100%] md:gap-5
-            md:items-end
+            md:grid md:grid-cols-[1fr,1fr] md-grid-rows-2 md:w-full md:max-w-[100%] md:gap-10
+            
           ">
             <div className="card__header bg-bg dark:bg-bg  px-5 pt-5 rounded-xl overflow-hidden
               md:col-1 md:row-start-1 md:row-span-2
@@ -88,7 +88,7 @@ function About() {
               <div className="overflow-hidden">
                   <img src="https://res.cloudinary.com/www-arteque-de/image/upload/v1554565460/arteque/profil/amd.png" 
                   alt="Ahmed Lemssiah Profilbild" 
-                  className="translate-y-4 md:translate-y-20"
+                  className="translate-y-4 md:translate-y-16"
                   />
                 <p className=" bg-bg p-3 rounded-lg text-prime text-center z-10 relative">
                 <small>
@@ -99,27 +99,28 @@ function About() {
               </p>
               </div>
             </div>
-            <div className="card__body prose-strong:text-second my-5">
+            <div className="card__body prose-strong:text-second my-5 md:max-w-[80%]">
               
               <p>
-                  Hallo und danke, für deine Interesse!<br /> <br />
+                  Hallo und danke, für deine Interesse!<br />
               Mein Name ist <strong>Ahmed <span className="uppercase">Lemssiah</span></strong>, ich bin {calcYears("1982,11,29")} Jahre alt und lebe in Deutschland. 
               </p>
               <p>
                 Ich bin gelernter <strong>Mediengestalter </strong> und arbeite seit {calcYears("2020,07,24")} Jahren als <strong>Web Entwickler</strong>.
               </p>
-              <p className="bg-bg py-10 pl-3 rounded-md text-center font-bold">
+              <p>
                  Mit viel Leidenschaft designe und entwickle ich Webpräsenzen. 
               </p>
               <p>
                  - Hier ist eine noch unvollständige Liste meiner täglichen Begleiter, die sich ständig erweitert, da ich stets neue Dinge lerne.
               </p>
-              <ul className="flex flex-wrap gap-20 justify-start my-5">
+              <ul className="flex flex-wrap justify-center md:grid md:grid-cols-3 gap-5 mt-5">
                 {
                   tools && (
                     tools.map(item => (
                       <li key={item.id} title={item.name}
                         className="
+                        
                         flex flex-col gap-2 justify-center items-center 
                         p-2 uppercase 
                         min-w-[7rem] aspect-square rounded-lg
