@@ -119,12 +119,12 @@ function About() {
         <Container >
           <Card variant="mediaCard" className="text-prime prose-p:my-1
             md:grid md:grid-cols-[1fr,1fr] md-grid-rows-2 md:w-full md:max-w-[100%] md:gap-10
-            md:items-start
+           
           ">
             <div className="card__header bg-bg dark:bg-bg  px-5 pt-5 rounded-xl overflow-hidden
-              md:col-1 md:row-start-1 md:row-span-2 md:sticky
+              md:col-1 md:row-start-1 md:row-span-2 md:self-start
             ">
-              <div className="overflow-hidden">
+              <div className="overflow-hidden h-fit md:sticky  md:sticky">
                   <img src="https://res.cloudinary.com/www-arteque-de/image/upload/v1554565460/arteque/profil/amd.png" 
                   alt="Ahmed Lemssiah Profilbild" 
                   className="translate-y-4 md:translate-y-16"
@@ -273,7 +273,9 @@ function About() {
                     }
                   </ul>
               </div>
-              
+              <p>
+                
+              </p>
             </div>
           </Card>
           
