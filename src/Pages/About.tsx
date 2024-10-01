@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PageHero from "../Components/Assets/PageHero"
 import Container from "../Components/Container";
-import { faReact, faHtml5, faCss3, faJs, faWordpress, faTypo3, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faReact, faHtml5, faCss3, faJs, faWordpress, faTypo3, faGithub, faBootstrap } from "@fortawesome/free-brands-svg-icons";
 import Card from "../Components/Assets/Card";
 
 const webtools = [
@@ -9,7 +9,8 @@ const webtools = [
     id:1,
     name:"HTML5",
     iconName: faHtml5,
-    iconType:"svg",
+    imgPath:"",
+    iconType:"fontawesome",
     bg:"linear-gradient(to right, #DD4C25 50%, #EA6227 50%)",
     color:"white"
   },
@@ -17,7 +18,8 @@ const webtools = [
     id:2,
     name:"CSS3",
     iconName: faCss3,
-    iconType:"svg",
+    imgPath:"",
+    iconType:"fontawesome",
     bg:"linear-gradient(to right, #1755A2 50%, #2663EA 50%)",
     color:"white"
   },
@@ -25,7 +27,8 @@ const webtools = [
     id:3,
     name:"Javascript",
     iconName: faJs,
-    iconType:"svg",
+    imgPath:"",
+    iconType:"fontawesome",
     bg:"#EDD61A",
     color:"black"
   },
@@ -33,7 +36,8 @@ const webtools = [
     id:4,
     name:"Reactjs",
     iconName: faReact,
-    iconType:"svg",
+    imgPath:"",
+    iconType:"fontawesome",
     bg:"black",
     color:"#03D1F7"
   },
@@ -41,7 +45,8 @@ const webtools = [
     id:5,
     name:"Wordpress",
     iconName: faWordpress,
-    iconType:"svg",
+    imgPath:"",
+    iconType:"fontawesome",
     bg:"#ddd",
     color:"#217196"
   },
@@ -49,7 +54,8 @@ const webtools = [
     id:6,
     name:"Typo3",
     iconName: faTypo3,
-    iconType:"svg",
+    imgPath:"",
+    iconType:"fontawesome",
     bg:"#F78C00",
     color:"white"
   },
@@ -60,7 +66,8 @@ const designtools = [
   {
     id:1,
     name:"Photoshop",
-    iconName: "./Icons/Ps.svg",
+    iconName: "",
+    imgPath:"./Icons/Ps.svg",
     iconType:"img",
     bg:"#001E36",
     color:"white"
@@ -68,7 +75,8 @@ const designtools = [
   {
     id:2,
     name:"Illustrator",
-    iconName: "./Icons/Ai.svg",
+    iconName: "",
+    imgPath:"./Icons/Ai.svg",
     iconType:"img",
     bg:"#330000",
     color:"white"
@@ -76,11 +84,33 @@ const designtools = [
   {
     id:3,
     name:"Adobe XD",
-    iconName: "./Icons/Xd.svg",
+    iconName: "",
+    imgPath:"./Icons/Xd.svg",
     iconType:"img",
     bg:"#470137",
     color:"white"
   },
+]
+
+const libs = [
+  {
+    id:1,
+    name:"Tailwind",
+    iconName: "",
+    imgPath:"./Icons/Tailwind.svg",
+    iconType:"img",
+    bg:"#1D2434",
+    color:"white"
+  },
+  {
+    id:1,
+    name:"Bootstrap",
+    iconName: faBootstrap,
+    imgPath:"",
+    iconType:"fontawesome",
+    bg:"linear-gradient(to right, #8712F7, #6E10EE)",
+    color:"white"
+  }
 ]
 
 const versiontools = [
@@ -88,7 +118,8 @@ const versiontools = [
     id:1,
     name:"Github",
     iconName: faGithub,
-    iconType:"svg",
+    imgPath:"",
+    iconType:"fontawesome",
     bg:"#001E36",
     color:"white"
   },
@@ -114,17 +145,15 @@ function About() {
 
   return (
     <>
-      <PageHero pageTitle="Über mich" bgImg="./Bg/Arabeske.svg"/>
+      <PageHero pageTitle="Über mich" bgImg="./Bg/OfficeTopView.svg"/>
       <section>
         <Container >
           <Card variant="mediaCard" className="text-prime prose-p:my-1
-            md:grid md:grid-cols-[1fr,1fr] md-grid-rows-2 md:w-full md:max-w-[100%] md:gap-10
+            md:flex md:gap-10 md:justify-center md:max-w-full 
            
           ">
-            <div className="card__header bg-bg dark:bg-bg  px-5 pt-5 rounded-xl overflow-hidden
-              md:col-1 md:row-start-1 md:row-span-2 md:self-start
-            ">
-              <div className="overflow-hidden h-fit md:sticky  md:sticky">
+            <div className="card__header bg-bg px-5 pt-5 rounded-xl  h-fit">
+              <div className="overflow-hidden">
                   <img src="https://res.cloudinary.com/www-arteque-de/image/upload/v1554565460/arteque/profil/amd.png" 
                   alt="Ahmed Lemssiah Profilbild" 
                   className="translate-y-4 md:translate-y-16"
@@ -173,15 +202,15 @@ function About() {
                         }}
                       >
                         {
-                          item.iconType == "svg" ? (
+                          item.iconType == "fontawesome" ? (
                             <>
-                              {/* @ts-ignore: Unreachable code error */}
+                            
                               <FontAwesomeIcon icon={item.iconName} size="3x" />
                               <h3>{item.name}</h3>
                             </>
                           ):(
                             <>
-                              <img src={item.iconName} alt={item.iconName} title={item.iconName} />
+                              <img src={item.imgPath} alt={item.name} title={item.name} />
                            </>
                           )
                         }
@@ -219,13 +248,52 @@ function About() {
                             }}
                           >
                             {
-                              item.iconType == 'svg' ? (
+                              item.iconType == 'fontawesome' ? (
                                 <FontAwesomeIcon icon={item.iconName} size="3x" />
                               ):(
                                 <img src="${item.iconName}" alt="${item.iconName}" />
                               )
                             }
                             <h3>{item.name}</h3>
+                          </li>
+                        ))
+                      )
+                    }
+                  </ul>
+              </div>
+
+              <div className="items-list mt-10">
+                  <h3 className="mt-5 text-prime-200 list-item ml-5">
+                    Styling<span className="text-second font-black">tools</span>:
+                  </h3>
+                  <ul className="flex flex-wrap justify-center md:grid gap-5 mt-5
+                  //Query
+                    md:grid-cols-3 md:justify-items-center
+                  ">
+                    {
+                      libs && (
+                        libs.map(item => (
+                          <li key={item.id} title={item.name}
+                            className="
+                            
+                            flex flex-col gap-2 justify-center items-center 
+                            p-2 uppercase 
+                            min-w-[7rem] max-w-[100px] aspect-square rounded-lg
+                            shadow-lg
+                            
+                            "
+                            style={{
+                              background:`${item.bg}`, 
+                              color:`${item.color}`
+                            }}
+                          >
+                            {
+                              item.iconType == 'fontawesome' ? 
+                              (<FontAwesomeIcon icon={item.iconName} size="3x" title={item.name}/>) 
+                              : 
+                              (<img src={item.imgPath} alt={item.name} title={item.name}/>)
+                            }
+                           
                           </li>
                         ))
                       )
@@ -260,10 +328,10 @@ function About() {
                             }}
                           >
                             {
-                              item.iconType == 'svg' ? (
+                              item.iconType == 'fontawesome' ? (
                                 <FontAwesomeIcon icon={item.iconName} size="3x" />
                               ):(
-                                <img src="${item.iconName}" alt="${item.iconName}" />
+                                <img src={item.iconName} alt={item.iconName} />
                               )
                             }
                             <h3>{item.name}</h3>

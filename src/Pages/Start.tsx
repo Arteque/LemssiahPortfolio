@@ -28,6 +28,7 @@ const Start = () =>  {
              md:gap-2 md:flex-row-reverse md:items-center md:justify-end md:min-h-[80svh] ">
                 <div className="hero__content
                 p-[2rem] translate-y-[100px]
+                 bg-[#00000010]
                 backdrop-blur-sm 
                 md:backdrop-blur-sm shadow-lg
                 md:translate-y-0 md:self-end md:mb-5 
@@ -37,13 +38,8 @@ const Start = () =>  {
                     <strong className="block text-[2rem] w-full font-black text-prime
                     md:text-[4rem] drop-shadow-lg
                     ">Ahmed <em className="uppercase not-italic text-second-100">Lemssiah,</em> </strong>
-                    <span className="text-[1rem] md:text-[1.8rem] text-text md:text-left w-full block">Frontend <em className="uppercase not-italic text-second-100 font-black">Web</em> Entwickler</span>
+                    <span className="text-[1rem] md:text-[1.8rem] text-text md:text-left w-full block">ich bin Frontend <em className="uppercase not-italic text-second-100 font-black">Web</em> Entwickler</span>
                   </h2>
-                  <ul>
-                    <li>
-
-                    </li>
-                  </ul>
                   <div className="hero__call flex justify-center mt-5 gap-5 md:justify-normal">
                     <Link className={`${buttonVariants({variant:"full"})} text-bg`} to="/uebermich" >Über mich</Link>
                     <Link className={`${buttonVariants({variant:"outline"})} dark:text-prime`} to="/portfolio">Portfolio</Link>
@@ -67,7 +63,7 @@ const Start = () =>  {
 
               {
                 Services && Services.map(item => (
-                  <Card variant="default" className="card p-0 px-5 mx-auto md:mx-0 md:px-0 overflow-x-clip md:overflow-x-visible" key={item.id}>
+                  <Card variant="default" className="card p-0 px-5 mx-auto md:mx-0 md:px-0 overflow-x-clip md:overflow-x-visible " key={item.id}>
                     <div className="card__header relative max-h-[270px]">
                         <div className="card__bg-img">
                           <img src={item.media.bg} className="absolute top-0 left-0 w-full h-full z-0 mix-blend-multiply object-cover blur-[1px]" alt={item.media.bg.replace(/[./ .de jpg svg jpeg]/g,"")} />
@@ -90,7 +86,7 @@ const Start = () =>  {
                               
                           </div>
                         </div>
-                        <div className="card__body bg-bg-200/[1] p-5  mb-5 z-10 backdrop-blur-lg">
+                        <div className="card__body  p-6 z-10 backdrop-blur-lg">
                           <div className="card__title">
                               <h3 className="card__title text-center text-[2rem]"><span className="text-prime">{item.title[1]}</span><span className="text-second font-black uppercase">{item.title[2]}</span></h3>
                           </div>
@@ -104,12 +100,15 @@ const Start = () =>  {
                 ))
               }
             </div>
+            <Link className={`${buttonVariants({variant:'full'})} my-5`} to="leistungen">
+                Mehr...
+              </Link> 
           </Container>
         </section>
         <section id="latest-section" className="latest-section">
           <Header variant="section">
-              <h2 className="text-[3.45rem] text-second-100 text-black uppercase font-black shadow-text">Aktuelles</h2>
-              <p>Da ich ein Vollzeitjob habe, habe ich leider nicht viele Zeit für meine Private Projekte. Hier ein paar davon</p>
+              <h2 className="text-[3.45rem] text-second-100 text-black uppercase font-black shadow-text">Projekt-Ecke</h2>
+              <p>Hier sind meine letzten Projekte. Die Übung macht den Meister</p>
           </Header>
           <Container>
               <div className='md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-10 md:justify-items-center'>
@@ -140,7 +139,7 @@ const Start = () =>  {
         }}
        >
               <Header variant="section">
-                  <h2 className="text-[3.45rem] text-second-100 text-black uppercase font-black shadow-text">Youtube</h2>
+                  <h2 className="text-[3.45rem] text-second-100 text-black uppercase font-black shadow-text">Video-Ecke</h2>
               </Header>
               <Container>
                 <div className="section__content md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-10  md:justify-items-center"
