@@ -3,6 +3,8 @@ import PageHero from "../Components/Assets/PageHero"
 import Container from "../Components/Container";
 import { faReact, faHtml5, faCss3, faJs, faWordpress, faTypo3, faGithub, faBootstrap } from "@fortawesome/free-brands-svg-icons";
 import Card from "../Components/Assets/Card";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
+
 
 const webtools = [
   {
@@ -103,7 +105,7 @@ const libs = [
     color:"white"
   },
   {
-    id:1,
+    id:2,
     name:"Bootstrap",
     iconName: faBootstrap,
     imgPath:"",
@@ -126,7 +128,7 @@ const versiontools = [
 ]
 
 
-function About() {
+const About = () => {
 
   const calcYears = (datum:string) => {
     const birthDate = new Date(datum).getTime(); // November 29, 1982 (Month is 0-based)
@@ -204,8 +206,7 @@ function About() {
                         {
                           item.iconType == "fontawesome" ? (
                             <>
-                            
-                              <FontAwesomeIcon icon={item.iconName} size="3x" />
+                              <FontAwesomeIcon icon={item.iconName as IconProp} size="3x" />
                               <h3>{item.name}</h3>
                             </>
                           ):(
@@ -248,10 +249,10 @@ function About() {
                             }}
                           >
                             {
-                              item.iconType == 'fontawesome' ? (
-                                <FontAwesomeIcon icon={item.iconName} size="3x" />
+                              item.iconType === 'fontawesome' ? (
+                                <FontAwesomeIcon icon={item.iconName as IconProp} size="3x" />
                               ):(
-                                <img src="${item.iconName}" alt="${item.iconName}" />
+                                <img src="${item.imgPath}" alt="${item.name}" />
                               )
                             }
                             <h3>{item.name}</h3>
@@ -288,8 +289,8 @@ function About() {
                             }}
                           >
                             {
-                              item.iconType == 'fontawesome' ? 
-                              (<FontAwesomeIcon icon={item.iconName} size="3x" title={item.name}/>) 
+                              item.iconType === 'fontawesome' ? 
+                              (<FontAwesomeIcon icon={item.iconName as IconProp} size="3x" title={item.name}/>) 
                               : 
                               (<img src={item.imgPath} alt={item.name} title={item.name}/>)
                             }
