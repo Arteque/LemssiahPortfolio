@@ -43,7 +43,6 @@ const ProjectCard:FC<projectCardProps> = ({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const openProject = async (e:any) => {
     e.preventDefault()
-    console.log(e.target)
     const path = await e.target.dataset.path
     import(`../../Data/Projects/${path}/de/readme.md`)
     .then(res => res)
