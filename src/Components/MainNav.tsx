@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { NavLink } from "react-router-dom"
 import { buttonVariants } from "./Assets/Button"
 import { FC, useState } from "react"
-import { cn } from "../libs/utils"
+import { cn } from "../Data/libs/utils"
 import { cva, VariantProps } from "class-variance-authority"
 
 

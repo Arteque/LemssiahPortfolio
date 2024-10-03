@@ -1,6 +1,6 @@
 import { cva,VariantProps } from "class-variance-authority"
 import { FC, HTMLAttributes } from "react"
-import { cn } from "../libs/utils"
+import { cn } from "../Data/libs/utils"
 
 
 const headerVariants = cva(

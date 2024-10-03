@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, FC } from "react";
 import { cva, VariantProps } from "class-variance-authority";
-import { cn } from "../../libs/utils";
+import { cn } from "../../Data/libs/utils";
 
 const buttonVariants = cva(
     "text-prime py-2 text-bold",

@@ -1,6 +1,6 @@
 import { FC, ReactNode } from "react";
 import { cva,  VariantProps} from "class-variance-authority";
-import { cn } from "../../libs/utils";
+import { cn } from "../../Data/libs/utils";
 
 
 const cardVariants = cva(

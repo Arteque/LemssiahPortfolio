@@ -1,129 +1,101 @@
 [
-    { "webtools" : [
+    { 
+    "cat":"webtools", 
+    "details": [
     {
       "id":1,
       "name":"HTML5",
-      "iconName": "faHtml5",
-      "isAwesome":true,
-      "imgPath":"",
-      "iconType":"fontawesome",
+      "imgPath":"faHtml5.svg",
       "bg":"linear-gradient(to right, #DD4C25 50%, #EA6227 50%)",
       "color":"white"
     },
     {
       "id":2,
       "name":"CSS3",
-      "iconName": "faCss3",
-      "isAwesome":true,
-      "imgPath":"",
-      "iconType":"fontawesome",
+      "imgPath":"faCss3.svg",
       "bg":"linear-gradient(to right, #1755A2 50%, #2663EA 50%)",
       "color":"white"
     },
     {
       "id":3,
       "name":"Javascript",
-      "iconName": false,
-      "isAwesome":true,
-      "imgPath":"",
-      "iconType":"fontawesome",
+      "imgPath":"faJs.svg",
       "bg":"#EDD61A",
       "color":"black"
     },
     {
       "id":4,
       "name":"Reactjs",
-      "iconName": "faReact",
-      "isAwesome":true,
-      "imgPath":"",
-      "iconType":"fontawesome",
+      "imgPath":"Reactjs.svg",
       "bg":"black",
       "color":"#03D1F7"
     },
     {
       "id":5,
       "name":"Wordpress",
-      "iconName": "faWordpress",
-      "isAwesome":true,
-      "imgPath":"",
-      "iconType":"fontawesome",
+      "imgPath":"faWordpress.svg",
       "bg":"#ddd",
       "color":"#217196"
     },
     {
       "id":6,
       "name":"Typo3",
-      "iconName": "faTypo3",
-      "isAwesome":true,
-      "imgPath":"",
-      "iconType":"fontawesome",
+      "imgPath":"faTypo3.svg",
       "bg":"#F78C00",
       "color":"white"
     }
   ]},
-  {"designtools":[
+  {
+  "cat":"designtools",
+  "details":[
     {
       "id":1,
       "name":"Photoshop",
-      "iconName": "",
-      "isAwesome":false,
-      "imgPath":"./Icons/Ps.svg",
-      "iconType":"img",
+      "imgPath":"Ps.svg",
       "bg":"#001E36",
       "color":"white"
     },
     {
       "id":2,
       "name":"Illustrator",
-      "iconName": "",
-      "isAwesome":false,
-      "imgPath":"./Icons/Ai.svg",
-      "iconType":"img",
+      "imgPath":"Ai.svg",
       "bg":"#330000",
       "color":"white"
     },
     {
       "id":3,
       "name":"Adobe XD",
-      "iconName": "",
-      "isAwesome":false,
-      "imgPath":"./Icons/Xd.svg",
-      "iconType":"img",
+      "imgPath":"Xd.svg",
       "bg":"#470137",
       "color":"white"
     }
   ]},
- {"libs" : [
+ {
+  "cat":"libs",
+  "details" : [
     {
       "id":1,
       "name":"Tailwind",
-      "iconName": "",
-      "isAwesome":false,
-      "imgPath":"./Icons/Tailwind.svg",
-      "iconType":"img",
+      "imgPath":"Tailwind.svg",
       "bg":"#1D2434",
       "color":"white"
     },
     {
       "id":2,
       "name":"Bootstrap",
-      "iconName": "faBootstrap",
-      "isAwesome":true,
-      "imgPath":"",
-      "iconType":"fontawesome",
+      "imgPath":"faBootstrap.svg",
       "bg":"linear-gradient(to right, #8712F7, #6E10EE)",
       "color":"white"
     }
   ]},
-  {"versiontools": [
+  {
+    "cat":"versiontools",
+    "details": [
     {
       "id":1,
       "name":"Github",
-      "iconName": "faGithub",
-      "isAwesome":true,
-      "imgPath":"",
-      "iconType":"fontawesome",
-      "bg":"#001E36",
+      "imgPath":"Github.svg",
+      "bg":"white",
       "color":"white"
     }
   ]}

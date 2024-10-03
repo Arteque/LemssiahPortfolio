@@ -1,143 +1,7 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PageHero from "../Components/Assets/PageHero"
 import Container from "../Components/Container";
-import { faReact, faHtml5, faCss3, faJs, faWordpress, faTypo3, faGithub, faBootstrap } from "@fortawesome/free-brands-svg-icons";
 import Card from "../Components/Assets/Card";
-import Tools from '../Data/Tools.json'
-
-const webtools = [
-  {
-    id:1,
-    name:"HTML5",
-    iconName: faHtml5,
-    isAwesome:true,
-    imgPath:"",
-    iconType:"fontawesome",
-    bg:"linear-gradient(to right, #DD4C25 50%, #EA6227 50%)",
-    color:"white"
-  },
-  {
-    id:2,
-    name:"CSS3",
-    iconName: faCss3,
-    isAwesome:true,
-    imgPath:"",
-    iconType:"fontawesome",
-    bg:"linear-gradient(to right, #1755A2 50%, #2663EA 50%)",
-    color:"white"
-  },
-  {
-    id:3,
-    name:"Javascript",
-    iconName: faJs,
-    isAwesome:true,
-    imgPath:"",
-    iconType:"fontawesome",
-    bg:"#EDD61A",
-    color:"black"
-  },
-  {
-    id:4,
-    name:"Reactjs",
-    iconName: faReact,
-    isAwesome:true,
-    imgPath:"",
-    iconType:"fontawesome",
-    bg:"black",
-    color:"#03D1F7"
-  },
-  {
-    id:5,
-    name:"Wordpress",
-    iconName: faWordpress,
-    isAwesome:true,
-    imgPath:"",
-    iconType:"fontawesome",
-    bg:"#ddd",
-    color:"#217196"
-  },
-  {
-    id:6,
-    name:"Typo3",
-    iconName: faTypo3,
-    isAwesome:true,
-    imgPath:"",
-    iconType:"fontawesome",
-    bg:"#F78C00",
-    color:"white"
-  },
-]
-
-
-const designtools = [
-  {
-    id:1,
-    name:"Photoshop",
-    iconName: "",
-    isAwesome:false,
-    imgPath:"./Icons/Ps.svg",
-    iconType:"img",
-    bg:"#001E36",
-    color:"white"
-  },
-  {
-    id:2,
-    name:"Illustrator",
-    iconName: "",
-    isAwesome:false,
-    imgPath:"./Icons/Ai.svg",
-    iconType:"img",
-    bg:"#330000",
-    color:"white"
-  },
-  {
-    id:3,
-    name:"Adobe XD",
-    iconName: "",
-    isAwesome:false,
-    imgPath:"./Icons/Xd.svg",
-    iconType:"img",
-    bg:"#470137",
-    color:"white"
-  },
-]
-
-const libs = [
-  {
-    id:1,
-    name:"Tailwind",
-    iconName: "",
-    isAwesome:false,
-    imgPath:"./Icons/Tailwind.svg",
-    iconType:"img",
-    bg:"#1D2434",
-    color:"white"
-  },
-  {
-    id:2,
-    name:"Bootstrap",
-    iconName: faBootstrap,
-    isAwesome:true,
-    imgPath:"",
-    iconType:"fontawesome",
-    bg:"linear-gradient(to right, #8712F7, #6E10EE)",
-    color:"white"
-  }
-]
-
-const versiontools = [
-  {
-    id:1,
-    name:"Github",
-    iconName: faGithub,
-    isAwesome:true,
-    imgPath:"",
-    iconType:"fontawesome",
-    bg:"#001E36",
-    color:"white"
-  },
-]
-
+import Tools from "../Data/Tools.json"
 
 const About = () => {
 
@@ -189,178 +53,38 @@ const About = () => {
                  - Hier ist eine noch unvollständige Liste meiner täglichen Begleiter, die sich ständig erweitert, da ich stets neue Dinge lerne.
               </p>
 
-              <div className="items-list">
-
-             {
-              Tools && Tools.map(item => (
-                item.map(element => (
-                  console.log(element.name)
-                ))
-              ))
-             }
-
-              <h3 className="mt-5 text-prime-200 list-item ml-5">
-                Design<span className="text-second font-black">tools</span>:
-              </h3>
-              <ul className="flex flex-wrap justify-center md:grid gap-5 mt-5
-              //Query
-                md:grid-cols-3 md:justify-items-center
-              ">
+              <div className="skills-list">
                 {
-                  designtools && (
-                    designtools.map(item => (
-                      <li key={item.id} title={item.name}
-                        className="
-                        
-                        flex flex-col gap-2 justify-center items-center 
-                        p-2 uppercase 
-                        min-w-[7rem] max-w-[100px] aspect-square rounded-lg
-                        shadow-lg
-                        
-                        "
-                        style={{
-                          background:`${item.bg}`, 
-                          color:`${item.color}`
-                        }}
-                      >
-                        {
-                          item.isAwesome ? (
-                            <>
-                              <FontAwesomeIcon icon={item.iconName} size="3x" />
-                              <h3>{item.name}</h3>
-                            </>
-                          ):(
-                            <>
-                              <img src={item.imgPath} alt={item.name} title={item.name} />
-                           </>
-                          )
-                        }
-                       
-                      </li>
+                  Tools && (
+                    Tools.map((tool, index) => (
+                      <>
+                        <h3 key={index} className="
+                          uppercase ml-5 mt-10 mb-5 text-second font-black list-item list-disc
+                        ">{tool.cat}</h3>
+                        <ul className="
+                        flex gap-5 justify-start flex-wrap
+                        p-5 border border-[#eeeeee10] bg-[#eeeeee10] rounded-lg
+                        ">
+                          {tool.details.map(detail => (
+                            <li key={detail.id}
+                              style={
+                                {
+                                  background:detail.bg
+                                }
+                              }
+                              className="text-center text-xl mx-auto md:mx-0 rounded-lg shadow-md
+                              transition-all duration-100 hover:scale-[1.05] w-fit mb-5
+                              "
+                            >
+                              <img  title={detail.name} className="p-4 block w-[5rem] aspect-square" src={`./Icons/${detail.imgPath}`} alt={detail.name} />
+                            
+                            </li>
+                          ))}
+                        </ul>
+                      </>  
                     ))
                   )
                 }
-              </ul>
-              </div>
-
-              <div className="items-list mt-10">
-                  <h3 className="mt-5 text-prime-200 list-item ml-5">
-                    Webentwicklungs<span className="text-second font-black">tools</span>:
-                  </h3>
-                  <ul className="flex flex-wrap justify-center md:grid gap-5 mt-5
-                  //Query
-                    md:grid-cols-3 md:justify-items-center
-                  ">
-                    {
-                      webtools && (
-                        webtools.map(item => (
-                          <li key={item.id} title={item.name}
-                            className="
-                            
-                            flex flex-col gap-2 justify-center items-center 
-                            p-2 uppercase 
-                            min-w-[7rem] max-w-[100px] aspect-square rounded-lg
-                            shadow-lg
-                            
-                            "
-                            style={{
-                              background:`${item.bg}`, 
-                              color:`${item.color}`
-                            }}
-                          >
-                            {
-                              item.iconType === 'fontawesome' ? (
-                                <FontAwesomeIcon icon={item.iconName} size="3x" />
-                              ):(
-                                <img src="${item.imgPath}" alt="${item.name}" />
-                              )
-                            }
-                            <h3>{item.name}</h3>
-                          </li>
-                        ))
-                      )
-                    }
-                  </ul>
-              </div>
-
-              <div className="items-list mt-10">
-                  <h3 className="mt-5 text-prime-200 list-item ml-5">
-                    Styling<span className="text-second font-black">tools</span>:
-                  </h3>
-                  <ul className="flex flex-wrap justify-center md:grid gap-5 mt-5
-                  //Query
-                    md:grid-cols-3 md:justify-items-center
-                  ">
-                    {
-                      libs && (
-                        libs.map(item => (
-                          <li key={item.id} title={item.name}
-                            className="
-                            
-                            flex flex-col gap-2 justify-center items-center 
-                            p-2 uppercase 
-                            min-w-[7rem] max-w-[100px] aspect-square rounded-lg
-                            shadow-lg
-                            
-                            "
-                            style={{
-                              background:`${item.bg}`, 
-                              color:`${item.color}`
-                            }}
-                          >
-                            {
-                              item.iconType === 'fontawesome' ? 
-                              (<FontAwesomeIcon icon={item.iconName} size="3x" title={item.name}/>) 
-                              : 
-                              (<img src={item.imgPath} alt={item.name} title={item.name}/>)
-                            }
-                           
-                          </li>
-                        ))
-                      )
-                    }
-                  </ul>
-              </div>
-
-
-              <div className="items-list mt-10">
-                  <h3 className="mt-5 text-prime-200 list-item ml-5">
-                    Version<span className="text-second font-black">tools</span>:
-                  </h3>
-                  <ul className="flex flex-wrap justify-center md:grid gap-5 mt-5
-                  //Query
-                    md:grid-cols-3 md:justify-items-center
-                  ">
-                    {
-                      versiontools && (
-                        versiontools.map(item => (
-                          <li key={item.id} title={item.name}
-                            className="
-                            
-                            flex flex-col gap-2 justify-center items-center 
-                            p-2 uppercase 
-                            min-w-[7rem] max-w-[100px] aspect-square rounded-lg
-                            shadow-lg
-                            
-                            "
-                            style={{
-                              background:`${item.bg}`, 
-                              color:`${item.color}`
-                            }}
-                          >
-                            {
-                              item.iconType == 'fontawesome' ? (
-                                <FontAwesomeIcon icon={item.iconName} size="3x" />
-                              ):(
-                                <img src={item.iconName} alt={item.iconName} />
-                              )
-                            }
-                            <h3>{item.name}</h3>
-                          </li>
-                        ))
-                      )
-                    }
-                  </ul>
               </div>
 
             </div>

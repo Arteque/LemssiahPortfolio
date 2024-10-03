@@ -5,7 +5,7 @@ import {FC} from "react"
 import { buttonVariants } from "./Assets/Button"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTimes } from "@fortawesome/free-solid-svg-icons"
-import { cn } from "../libs/utils"
+import { cn } from "../Data/libs/utils"
 
 interface detailsProps {
   projectPath:string,

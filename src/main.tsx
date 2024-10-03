@@ -8,7 +8,7 @@ import Start from './Pages/Start.tsx'
 import Leistungen from './Pages/Leistungen.tsx'
 import Portfolio from './Pages/Portfolio.tsx'
 import './index.css'
-import './libs/i18next.ts'
+import './Data/libs/i18next.ts'
 
 const router = createBrowserRouter([
   {

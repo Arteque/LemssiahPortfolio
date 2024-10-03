@@ -3,7 +3,7 @@ import { buttonVariants } from "./Assets/Button"
 import { faComputer, faFlag, faGear, faMoon, faPalette, faSun, faTimes } from "@fortawesome/free-solid-svg-icons"
 import {  useEffect, useState} from "react"
 import Languages from "../Data/Languages.json"
-import { cn } from "../libs/utils"
+import { cn } from "../Data/libs/utils"
 
 const Setups = () => {
 
