@@ -3,14 +3,14 @@ import PageHero from "../Components/Assets/PageHero"
 import Container from "../Components/Container";
 import { faReact, faHtml5, faCss3, faJs, faWordpress, faTypo3, faGithub, faBootstrap } from "@fortawesome/free-brands-svg-icons";
 import Card from "../Components/Assets/Card";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
-
+import Tools from '../Data/Tools.json'
 
 const webtools = [
   {
     id:1,
     name:"HTML5",
     iconName: faHtml5,
+    isAwesome:true,
     imgPath:"",
     iconType:"fontawesome",
     bg:"linear-gradient(to right, #DD4C25 50%, #EA6227 50%)",
@@ -20,6 +20,7 @@ const webtools = [
     id:2,
     name:"CSS3",
     iconName: faCss3,
+    isAwesome:true,
     imgPath:"",
     iconType:"fontawesome",
     bg:"linear-gradient(to right, #1755A2 50%, #2663EA 50%)",
@@ -29,6 +30,7 @@ const webtools = [
     id:3,
     name:"Javascript",
     iconName: faJs,
+    isAwesome:true,
     imgPath:"",
     iconType:"fontawesome",
     bg:"#EDD61A",
@@ -38,6 +40,7 @@ const webtools = [
     id:4,
     name:"Reactjs",
     iconName: faReact,
+    isAwesome:true,
     imgPath:"",
     iconType:"fontawesome",
     bg:"black",
@@ -47,6 +50,7 @@ const webtools = [
     id:5,
     name:"Wordpress",
     iconName: faWordpress,
+    isAwesome:true,
     imgPath:"",
     iconType:"fontawesome",
     bg:"#ddd",
@@ -56,6 +60,7 @@ const webtools = [
     id:6,
     name:"Typo3",
     iconName: faTypo3,
+    isAwesome:true,
     imgPath:"",
     iconType:"fontawesome",
     bg:"#F78C00",
@@ -69,6 +74,7 @@ const designtools = [
     id:1,
     name:"Photoshop",
     iconName: "",
+    isAwesome:false,
     imgPath:"./Icons/Ps.svg",
     iconType:"img",
     bg:"#001E36",
@@ -78,6 +84,7 @@ const designtools = [
     id:2,
     name:"Illustrator",
     iconName: "",
+    isAwesome:false,
     imgPath:"./Icons/Ai.svg",
     iconType:"img",
     bg:"#330000",
@@ -87,6 +94,7 @@ const designtools = [
     id:3,
     name:"Adobe XD",
     iconName: "",
+    isAwesome:false,
     imgPath:"./Icons/Xd.svg",
     iconType:"img",
     bg:"#470137",
@@ -99,6 +107,7 @@ const libs = [
     id:1,
     name:"Tailwind",
     iconName: "",
+    isAwesome:false,
     imgPath:"./Icons/Tailwind.svg",
     iconType:"img",
     bg:"#1D2434",
@@ -108,6 +117,7 @@ const libs = [
     id:2,
     name:"Bootstrap",
     iconName: faBootstrap,
+    isAwesome:true,
     imgPath:"",
     iconType:"fontawesome",
     bg:"linear-gradient(to right, #8712F7, #6E10EE)",
@@ -120,6 +130,7 @@ const versiontools = [
     id:1,
     name:"Github",
     iconName: faGithub,
+    isAwesome:true,
     imgPath:"",
     iconType:"fontawesome",
     bg:"#001E36",
@@ -179,6 +190,15 @@ const About = () => {
               </p>
 
               <div className="items-list">
+
+             {
+              Tools && Tools.map(item => (
+                item.map(element => (
+                  console.log(element.name)
+                ))
+              ))
+             }
+
               <h3 className="mt-5 text-prime-200 list-item ml-5">
                 Design<span className="text-second font-black">tools</span>:
               </h3>
@@ -204,9 +224,9 @@ const About = () => {
                         }}
                       >
                         {
-                          item.iconType == "fontawesome" ? (
+                          item.isAwesome ? (
                             <>
-                              <FontAwesomeIcon icon={item.iconName as IconProp} size="3x" />
+                              <FontAwesomeIcon icon={item.iconName} size="3x" />
                               <h3>{item.name}</h3>
                             </>
                           ):(
@@ -250,7 +270,7 @@ const About = () => {
                           >
                             {
                               item.iconType === 'fontawesome' ? (
-                                <FontAwesomeIcon icon={item.iconName as IconProp} size="3x" />
+                                <FontAwesomeIcon icon={item.iconName} size="3x" />
                               ):(
                                 <img src="${item.imgPath}" alt="${item.name}" />
                               )
@@ -290,7 +310,7 @@ const About = () => {
                           >
                             {
                               item.iconType === 'fontawesome' ? 
-                              (<FontAwesomeIcon icon={item.iconName as IconProp} size="3x" title={item.name}/>) 
+                              (<FontAwesomeIcon icon={item.iconName} size="3x" title={item.name}/>) 
                               : 
                               (<img src={item.imgPath} alt={item.name} title={item.name}/>)
                             }
@@ -342,9 +362,7 @@ const About = () => {
                     }
                   </ul>
               </div>
-              <p>
-                
-              </p>
+
             </div>
           </Card>
           
