@@ -62,7 +62,8 @@ const About = () => {
                           uppercase ml-5 mt-10 mb-5 text-second font-black list-item list-disc
                         ">{tool.cat}</h3>
                         <ul className="
-                        flex gap-5 justify-start flex-wrap
+                        flex gap-2 md:gap-5 justify-start flex-wrap
+                        md:grid md:grid-cols-3 place-items-center justify-items-center
                         p-5 border border-[#eeeeee10] bg-[#eeeeee10] rounded-lg
                         ">
                           {tool.details.map(detail => (
@@ -72,11 +73,13 @@ const About = () => {
                                   background:detail.bg
                                 }
                               }
-                              className="text-center text-xl mx-auto md:mx-0 rounded-lg shadow-md
+                              className="text-center text-xl  rounded-lg shadow-md
                               transition-all duration-100 hover:scale-[1.05] w-fit mb-5
                               "
                             >
-                              <img  title={detail.name} className="p-4 block w-[5rem] aspect-square" src={`./Icons/${detail.imgPath}`} alt={detail.name} />
+                              <img  title={detail.name} className="p-4 block w-[5rem] aspect-square
+                              md:w-[6rem]
+                              " src={`./Icons/${detail.imgPath}`} alt={detail.name} />
                             
                             </li>
                           ))}
@@ -86,7 +89,7 @@ const About = () => {
                   )
                 }
               </div>
-
+                
             </div>
           </Card>
           

@@ -65,11 +65,13 @@ const MainNav : FC<NavProps>= ({className, variant, ...props}) => {
                             &Uuml;ber mich
                         </NavLink>
                     </li>
+                    {/*
                     <li>
                         <NavLink to="/leistungen" className={`${buttonVariants({variant:"default"})} block text-center w-full m-0`} {...props}> 
                             Leistungen
                         </NavLink>
                     </li>
+                    */}
                     <li>
                         <NavLink to="/portfolio" className={`${buttonVariants({variant:"default"})} block text-center w-full m-0`} {...props}> 
                             Portfolio

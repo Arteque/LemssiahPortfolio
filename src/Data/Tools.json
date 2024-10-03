@@ -95,7 +95,7 @@
       "id":1,
       "name":"Github",
       "imgPath":"Github.svg",
-      "bg":"white",
+      "bg":"black",
       "color":"white"
     }
   ]}

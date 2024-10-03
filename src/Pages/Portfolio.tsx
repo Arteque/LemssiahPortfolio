@@ -99,9 +99,10 @@ const  Portfolio = () => {
             {/* Fitler end */}
 
             {/* Main Content Start */}
-            <p className="text-prime px-5 my-5">
+            <p className="text-prime px-10 my-5">
               Wir haben {Projects.length} Projekte herutengeladen
             </p>
+            <div className="lg:grid lg:grid-cols-3 lg:place-items-center">
             {
               Projects && Projects.map((item) => (
                 <ProjectCard key={`${item.title.de}${item.id}`} 
@@ -117,6 +118,7 @@ const  Portfolio = () => {
                 />
               ))
             }
+            </div>
             {/* Main Content End */}
           </div>
         </Container>
