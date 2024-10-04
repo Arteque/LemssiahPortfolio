@@ -22,7 +22,12 @@
 section{
     overflow-x: hidden;
 }
-
+.page-portfolio .card .card__header img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    max-height: 280px;
+}
 .latest-section .card__header img {
     width: 100%;
     aspect-ratio: 1;
@@ -140,7 +145,13 @@ form input, form textarea{
         background: url(/Bg/customBG__Night.png);
     }
 }
-
+.card{
+    .card {
+        display: flex;
+        flex-flow: column;
+        justify-content: start;
+    }
+}
 .hero-section::before{
     content:"";
     position:absolute;

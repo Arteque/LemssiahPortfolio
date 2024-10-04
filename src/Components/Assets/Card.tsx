@@ -9,7 +9,7 @@ const cardVariants = cva(
         variants:{
             variant:{
                 default: "transition hover:box-shadow-sm",
-                mediaCard: "p-0 border-none"
+                mediaCard: "p-0 border-none",
             },
         },
         defaultVariants:{
@@ -25,7 +25,7 @@ interface cardProps extends VariantProps<typeof cardVariants>{
 }
 
 const Card:FC<cardProps> = ({className , variant, children}) => {
-    return <div className={`${cn(cardVariants({variant}), className)} mx-auto md:mx-0`}>{children}</div>
+    return <div className={`card ${cn(cardVariants({variant}), className)} mx-auto md:mx-0`}>{children}</div>
 }
 
 export default Card

@@ -102,15 +102,15 @@ const ProjectCard:FC<projectCardProps> = ({
         </p>
       </div>
       <div className="card__footer">
-         <div className="features-container bg-[#bbb] p-2 flex justify-between gap-2">
+        <div className="features-container bg-[#eee] p-2 flex justify-between gap-2">
         <div className="tools-container w-5 h-5 opacity-50">
-        <img src="./Icons/Tools.svg" alt="" />
+          <img src="./Icons/Tools.svg" alt="Tools" />
         </div>
-        <div className="item-container flex gap-2">
+        <div className="item-container flex gap-2 opacity-50">
           {teks &&( teks.map(tek => 
               (
                 <Tag key={tek.id}>
-                  <img className="w-full h-full block " src={`./Icons/${tek.name}.${tek.iconType}`} alt={tek.name} />
+                  <img className="w-full h-full block" src={`./Icons/${tek.name}.${tek.iconType}`} alt={tek.name} title={tek.name}/>
                 </Tag>
               ))
             )}

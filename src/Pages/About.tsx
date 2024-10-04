@@ -38,10 +38,11 @@ const About = () => {
               </div>
             </div>
             <div className="card__body prose-strong:text-second my-5 md:max-w-[80%]">
-              
               <p>
-                  Hallo und danke für deine Interesse!<br />
-              Ich heiße <strong>Ahmed <span className="uppercase">Lemssiah</span></strong>, {calcYears("1982,11,29")} Jahre alt und lebe in Deutschland. 
+                  Hallo und danke für deine Interesse!
+              </p>
+              <p className="pt-5">
+                Ich heiße <strong>Ahmed <span className="uppercase">Lemssiah</span></strong>, {calcYears("1982,11,29")} Jahre alt und lebe in Deutschland. 
               </p>
               <p className="pt-5">
                 Ich bin gelernter <strong>Mediengestalter </strong> und arbeite seit {calcYears("2020,07,24")} Jahren als <strong>Web Entwickler</strong>.
@@ -80,7 +81,9 @@ const About = () => {
                               <img  title={detail.name} className="p-4 block w-[5rem] aspect-square
                               md:w-[6rem]
                               " src={`./Icons/${detail.imgPath}`} alt={detail.name} />
-                            
+                              <h3 className="text-sm pb-2 font-medium"
+                                style={{color:`${detail.color}`}}
+                              >{detail.name}</h3>
                             </li>
                           ))}
                         </ul>

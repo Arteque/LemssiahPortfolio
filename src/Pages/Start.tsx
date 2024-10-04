@@ -8,9 +8,32 @@ import Projects from "../Data/Projects.json"
 import Youtube from '../Components/Youtube'
 import ProjectCard from '../Components/Assets/ProjectCard'
 
+
+
 const Start = () =>  {
 
+  const maxResult:number = 3
  
+  const rewriteDate = (item:string) => {
+    const dateSplit = item.split(".")
+    const theDate = {
+      dd:dateSplit[0],
+      mm:dateSplit[1],
+      yy:dateSplit[2],
+    }
+    return theDate
+  }
+
+const ProjectsSorted = () => {
+   return Projects.sort((a,b) => {    
+    const aDate = rewriteDate(a.date)
+    const bDate = rewriteDate(b.date)
+    const timesA = new Date(`${aDate.mm}-${aDate.dd}-${aDate.yy}`).getTime()
+    const timesB = new Date(`${bDate.mm}-${bDate.dd}-${bDate.yy}`).getTime()
+    return timesA - timesB
+   })
+}
+
 
   return (
     <>
@@ -113,20 +136,23 @@ const Start = () =>  {
           <Container>
               <div className='md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-10 md:justify-items-center'>
                 {
-                  Projects && Projects.map((item) => (
-                    <ProjectCard key={`${item.title.de}${item.id}`} 
-                    title={item.title.de} 
-                    screenshot={item.screenshot}
-                    screenshottype={item.screenshottype}
-                    date={item.date}
-                    location={item.location}
-                    teks={item.teks}
-                    type={item.type}
-                    project={item.projectname}
-                    projektFolder={item.projectname}
-                    />
+                  Projects && ProjectsSorted().map((item,index) => (
+                    index < maxResult && (
+                      <ProjectCard key={`${item.title.de}${item.id}`} 
+                      title={item.title.de} 
+                      screenshot={item.screenshot}
+                      screenshottype={item.screenshottype}
+                      date={item.date}
+                      location={item.location}
+                      teks={item.teks}
+                      type={item.type}
+                      project={item.projectname}
+                      projektFolder={item.projectname}
+                      />
+                    )
                   ))
                 }
+
               </div>
               <Link className={`${buttonVariants({variant:'full'})} my-2`} to="portfolio">
                 Mehr...
@@ -145,7 +171,7 @@ const Start = () =>  {
                 <div className="section__content md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-10  md:justify-items-center"
                 
                 >
-                  <Youtube />
+                  <Youtube result={3} />
 
                 </div>
                 <Link className={`${buttonVariants({variant:'full'})} my-2`} to="videos">

@@ -102,7 +102,9 @@ const  Portfolio = () => {
             <p className="text-prime px-10 my-5">
               Wir haben {Projects.length} Projekte herutengeladen
             </p>
-            <div className="lg:grid lg:grid-cols-3 lg:place-items-center">
+            <div className="
+            lg:grid lg:grid-cols-3 lg:place-items-stretch lg:justify-items-center
+            ">
             {
               Projects && Projects.map((item) => (
                 <ProjectCard key={`${item.title.de}${item.id}`} 
