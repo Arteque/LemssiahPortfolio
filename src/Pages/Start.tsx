@@ -105,8 +105,7 @@ const ProjectsSorted = () => {
                                     ) : index == 3 && (
                                       <img key={index} className="block z-10 rotate-100 origin-center animate-spin-slow  absolute bottom-0 left-[50%] max-w-[100px] max-h-[100px]" src={el} alt={el} />
                                     )
-                              ))}
-                              
+                              ))}                         
                           </div>
                         </div>
                         <div className="card__body  p-6 z-10 backdrop-blur-lg">
