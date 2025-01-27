@@ -77,6 +77,34 @@ const ProjectsSorted = () => {
           </Container>
           
         </section>
+        <section id="leistungen-section">
+          <Header variant="section">
+            <h2 className="text-[3.45rem] text-second-100 text-black uppercase font-black shadow-text">Leistungen</h2>
+          </Header>
+          <Container>
+            <div className="service">
+                <div className="card md:flex  md:items-center  md:justify-center md:gap-10 min-h-[80svh]">
+                  <div className="card__image w-[80%] max-w-[400px] relative">
+                    <div className="main-media overflow-hidden px-3">
+                      <img src="./cartoonFinder.svg" alt="Avtar Erfinder" className=' translate-y-10'/>
+                    </div>
+                    <div className="mediacollection absolute top-0 left-0 w-[120%] h-full animate-spin-slower">
+                        <img className="block z-10 rotate-180 origin-center animate-spin-slow  absolute top-0 left-[50%]  max-w-[100px] max-h-[150px]" src="./Erfinder/Element 3.svg" />
+                        <img className="z-10 rotate-180 origin-center animate-spin-slow  absolute top-[50%] left-0 max-w-[100px] max-h-[200px]" src="./Erfinder/Mikroskop.svg" />
+                        <img className="block z-10 rotate-45 origin-center animate-spin-slow  absolute top-[50%] right-5 max-w-[100px] max-h-[100px]" src="./Erfinder/LaborMischFlasche1.svg" />
+                        <img className="block z-10 rotate-100 origin-center animate-spin-slow  absolute bottom-0 left-[50%] max-w-[90px] max-h-[80px]" src="./Erfinder/LaborFlasche1.svg" />
+                    </div>
+                  </div>
+                  <div className="card__content md:w-[30%] md:h-fit z-10 md:backdrop-blur-sm bg-[#ffffff30] p-5 rounded-lg">
+                    <h3 className="text-[2rem]"><span className="text-prime">Ideen</span><span className="text-second font-black uppercase">erfinder</span></h3>
+                    <p className="text-prime-100">
+                      Um die richtige Idee zu <b>finden</b> werden hier Besprechungen mit der Kunder durchgeführt. 
+                    </p>
+                  </div>
+                </div>
+            </div>
+          </Container>
+        </section>
         <section id="service-section" className="section bg-bg-200 pb-[5rem] ">
           <Header variant="section">
             <h2 className="text-[3.45rem] text-second-100 text-black uppercase font-black shadow-text">Was kann ich?</h2>
@@ -158,7 +186,7 @@ const ProjectsSorted = () => {
               </Link>  
           </Container>
         </section>
-       <section
+       <section id="youtube-section"
          onClick={(e) => {
           console.log(e.target)
         }}
