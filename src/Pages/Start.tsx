@@ -77,82 +77,32 @@ const ProjectsSorted = () => {
           </Container>
           
         </section>
-        <section id="leistungen-section">
+        <section id="leistungen-section" style={{background:'url(./AdobeStock_852213050.jpeg)', backgroundSize:'contain', backgroundRepeat:'no-repeat'}}>
           <Header variant="section">
             <h2 className="text-[3.45rem] text-second-100 text-black uppercase font-black shadow-text">Leistungen</h2>
           </Header>
           <Container>
-            <div className="service">
-                <div className="card md:flex  md:items-center  md:justify-center md:gap-10 min-h-[80svh]">
+            <div className="service" >
+                <div className="card md:flex  md:items-center  md:justify-center md:gap-10 min-h-[80svh]" >
                   <div className="card__image w-[80%] max-w-[400px] relative">
-                    <div className="main-media overflow-hidden px-3">
-                      <img src="./cartoonFinder.svg" alt="Avtar Erfinder" className=' translate-y-10'/>
+                    <div className="main-media px-5">
+                      <img src="./cartoonFinder.svg" alt="Avtar Erfinder" className='animate-bounce-slow'/>
                     </div>
-                    <div className="mediacollection absolute top-0 left-0 w-[120%] h-full animate-spin-slower">
-                        <img className="block z-10 rotate-180 origin-center animate-spin-slow  absolute top-0 left-[50%]  max-w-[100px] max-h-[150px]" src="./Erfinder/Element 3.svg" />
-                        <img className="z-10 rotate-180 origin-center animate-spin-slow  absolute top-[50%] left-0 max-w-[100px] max-h-[200px]" src="./Erfinder/Mikroskop.svg" />
-                        <img className="block z-10 rotate-45 origin-center animate-spin-slow  absolute top-[50%] right-5 max-w-[100px] max-h-[100px]" src="./Erfinder/LaborMischFlasche1.svg" />
-                        <img className="block z-10 rotate-100 origin-center animate-spin-slow  absolute bottom-0 left-[50%] max-w-[90px] max-h-[80px]" src="./Erfinder/LaborFlasche1.svg" />
+                    <div className="mediacollection absolute top-0 left-[-10%] w-[120%] h-full animate-spin-slower">
+                      <img className="block z-10 rotate-180 origin-center animate-spin-slow  absolute top-0 left-[50%]  max-w-[100px] max-h-[150px]" src="./Erfinder/Element 3.svg" />
+                      <img className="z-10 rotate-180 origin-center animate-spin-slow  absolute top-[50%] left-0 max-w-[100px] max-h-[200px]" src="./Erfinder/Mikroskop.svg" />
+                      <img className="block z-10 rotate-45 origin-center animate-spin-slow  absolute top-[50%] right-5 max-w-[100px] max-h-[100px]" src="./Erfinder/LaborMischFlasche1.svg" />
+                      <img className="block z-10 rotate-100 origin-center animate-spin-slow  absolute bottom-0 left-[50%] max-w-[90px] max-h-[80px]" src="./Erfinder/LaborFlasche1.svg" />
                     </div>
                   </div>
-                  <div className="card__content md:w-[30%] md:h-fit z-10 md:backdrop-blur-sm bg-[#ffffff30] p-5 rounded-lg">
+                  <div className="card__content md:w-[30%] md:h-fit z-10 md:backdrop-blur-sm bg-[#ffffff30] p-5 rounded-lg animate-bounce-slow md:-translate-x-[100%]">
                     <h3 className="text-[2rem]"><span className="text-prime">Ideen</span><span className="text-second font-black uppercase">erfinder</span></h3>
                     <p className="text-prime-100">
-                      Um die richtige Idee zu <b>finden</b> werden hier Besprechungen mit der Kunder durchgeführt. 
+                    Um die optimale Idee zu entwickeln, führe ich Besprechungen mit den Kunden, in denen Erwartungen geklärt und Ziele definiert werden. Auf dieser Grundlage erhalten die Kunden ein maßgeschneidertes Angebot.
                     </p>
                   </div>
                 </div>
             </div>
-          </Container>
-        </section>
-        <section id="service-section" className="section bg-bg-200 pb-[5rem] ">
-          <Header variant="section">
-            <h2 className="text-[3.45rem] text-second-100 text-black uppercase font-black shadow-text">Was kann ich?</h2>
-          </Header>
-          <Container>
-            <div className="section__content md:flex md:gap-2 md:justify-between">
-
-              {
-                Services && Services.map(item => (
-                  <Card variant="default" className="card p-0 px-5 mx-auto md:mx-0 md:px-0 overflow-x-clip md:overflow-x-visible " key={item.id}>
-                    <div className="card__header relative max-h-[270px]">
-                        <div className="card__bg-img">
-                          <img src={item.media.bg} className="absolute top-0 left-0 w-full h-full z-0 mix-blend-multiply object-cover blur-[1px]" alt={item.media.bg.replace(/[./ .de jpg svg jpeg]/g,"")} />
-                        </div>
-                          <div className="card__main-img overflow-hidden w-full">
-                            <img className="w-[50%] max-w-[200px] mx-auto block z-5 relative translate-y-5" src={item.media.main} alt={`${item.title[1]}${item.title[2]}`} />
-                          </div>
-                          <div className="mediacollection absolute top-0 left-0 w-full h-[400px] animate-spin-slower">
-                              { item.media.animated && item.media.animated.map((el, index) => (
-                                    index == 0 ? (
-                                      <img key={index}  className="block z-10 rotate-180 origin-center animate-spin-slow  absolute top-0 left-[50%]  max-w-[100px] max-h-[100px]" src={el} alt={el} />
-                                    ) : index == 1 ? (
-                                      <img key={index} className=" z-10 rotate-180 origin-center animate-spin-slow  absolute top-[50%] left-0 max-w-[100px] max-h-[100px]" src={el} alt={el} />
-                                    ) : index == 2 ? (
-                                      <img key={index} className="block z-10 rotate-45 origin-center animate-spin-slow  absolute top-[50%] right-5 max-w-[100px] max-h-[100px]" src={el} alt={el} />
-                                    ) : index == 3 && (
-                                      <img key={index} className="block z-10 rotate-100 origin-center animate-spin-slow  absolute bottom-0 left-[50%] max-w-[100px] max-h-[100px]" src={el} alt={el} />
-                                    )
-                              ))}                         
-                          </div>
-                        </div>
-                        <div className="card__body  p-6 z-10 backdrop-blur-lg">
-                          <div className="card__title">
-                              <h3 className="card__title text-center text-[2rem]"><span className="text-prime">{item.title[1]}</span><span className="text-second font-black uppercase">{item.title[2]}</span></h3>
-                          </div>
-                          <div className="card__text">
-                            <p className="text-text-100 font-medium my-3">
-                              {item.text}
-                            </p>
-                          </div>
-                        </div>
-                  </Card>
-                ))
-              }
-            </div>
-            <Link className={`${buttonVariants({variant:'full'})} my-5`} to="leistungen">
-                Mehr...
-              </Link> 
           </Container>
         </section>
         <section id="latest-section" className="latest-section">
