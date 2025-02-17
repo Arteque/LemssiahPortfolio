@@ -8,7 +8,7 @@ import MainNav from "./MainNav"
 import Socials from "./Socials"
 import Header from "./Header"
 import { buttonVariants } from "./Assets/Button"
-import Setups from "./Setups"
+// import Setups from "./Setups"
 
 interface MainFooterProps{
     showkontakt:unknown,
@@ -54,7 +54,7 @@ const MainFooter:FC<MainFooterProps>=({showkontakt,toggleForm}) => {
                 showkontakt ? <FontAwesomeIcon icon={faTimes} size="lg" /> : <FontAwesomeIcon icon={faMessage} size="lg" />
             }
         </button>
-        <Setups />
+        {/* <Setups /> */}
         
     </>
   )

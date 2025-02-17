@@ -59,7 +59,7 @@ const ProjectsSorted = () => {
                   <h2 className="text-center">
                     <span className='block  p-0 w-full text-prime text-center md:text-left'>Ich heiße</span> 
                     <strong className="block text-[2rem] w-full font-black text-prime
-                    md:text-[4rem] drop-shadow-lg
+                    md:text-[3rem] drop-shadow-lg lg:text-[4rem]
                     ">Ahmed <em className="uppercase not-italic text-second-100">Lemssiah,</em> </strong>
                     <span className="text-[1rem] md:text-[1.8rem] text-text md:text-left w-full block">ich bin Frontend <em className="uppercase not-italic text-second-100 font-black">Web</em> Entwickler</span>
                   </h2>

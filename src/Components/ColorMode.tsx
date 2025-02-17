@@ -48,11 +48,13 @@ const ColorMode:FC<colorModeProps> = ({className}) => {
                 checked={darkmode}
                 onChange={(e) => {setDarkmode(e.target.checked)}}/>
                 <label htmlFor="checkdark" className="h-6 overflow-hidden">
-                    <span className="color-mode__dark block translate-y-[-26px] dark:translate-y-[0]">
-                        <FontAwesomeIcon icon={faMoon} className="text-second" /> <span className="text-second-100 font-medium uppercase">Darkmode</span>
+                    <span className="color-mode__dark">
+                        <FontAwesomeIcon icon={faMoon} className="text-second" /> 
+                        <span className="text-second-100 font-medium uppercase">Darkmode</span>
                     </span>
-                    <span className="color-mode__light block translate-y-[-26px] dark:translate-y-[0]">
-                        <FontAwesomeIcon icon={faSun} className="text-prime" /> <span className="text-prime-100 font-medium uppercase">Lightmode</span>
+                    <span className="color-mode__light">
+                        <FontAwesomeIcon icon={faSun} className="text-prime" /> 
+                        <span className="text-prime-100 font-medium uppercase">Lightmode</span>
                     </span>
                 </label>
             </div>
